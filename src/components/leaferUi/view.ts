@@ -1,4 +1,4 @@
-import { defineComponent, nextTick } from 'vue'
+import { defineComponent, nextTick, provide, renderSlot } from 'vue'
 import { Leafer, Rect } from 'leafer-ui'
 import { type ViewProps, viewProps } from './props'
 
@@ -17,6 +17,7 @@ export const view = defineComponent<ViewProps>({
       view: '__leafer-ui_container',
       ...config,
     })
+    provide('leafer', leafer)
 
     const rect = new Rect({
       width: 200,
@@ -27,6 +28,6 @@ export const view = defineComponent<ViewProps>({
 
     leafer.add(rect)
 
-    return () => slots.default?.()
+    return () => renderSlot(slots, 'default')
   },
 })

@@ -7,15 +7,10 @@ export const view = defineComponent<ViewProps>({
   inheritAttrs: false,
   props: viewProps,
   async setup(props, { slots }) {
-    const config = {
-      width: props.width,
-      height: props.height,
-    }
-
     await nextTick()
     const leafer = new Leafer({
+      ...props,
       view: '__leafer-ui_container',
-      ...config,
     })
     provide('leafer', leafer)
 

@@ -1,34 +1,30 @@
-import { defineComponent, h, nextTick } from 'vue'
-import { Leafer, Rect } from 'leafer-ui'
+import { Suspense, defineComponent, h } from 'vue'
+import { view } from './view'
+import { type ViewProps, viewProps } from './props'
 
-export const leaferUi = defineComponent({
+export const leaferUi = defineComponent<ViewProps>({
   name: 'LeaferUi',
   inheritAttrs: false,
-  setup() {
-    nextTick(() => {
-      const ui_container = document.getElementById('__leafer-ui_container')
-      console.log(ui_container)
-      const leafer = new Leafer({
-        view: '__leafer-ui_container',
-      })
-
-      const rect = new Rect({
-        x: 100,
-        y: 100,
-        width: 200,
-        height: 200,
-        fill: '#32cd79',
-        draggable: true,
-      })
-
-      leafer.add(rect)
-    })
+  props: viewProps,
+  setup(props) {
     return () => h(
-      'div',
+      'canvas',
       {
         id: '__leafer-ui_container',
       },
-      'ssss',
+      h(
+        Suspense,
+        null,
+        {
+          default: () => h(
+            view,
+            {
+              width: props.width,
+              height: props.height,
+            },
+          ),
+        },
+      ),
     )
   },
 })

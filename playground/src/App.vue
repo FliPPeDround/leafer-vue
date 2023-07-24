@@ -4,7 +4,7 @@ import { leaferUi } from 'leafer-vue'
 
 <template>
   <leaferUi
-    :height="200"
-    :width="200"
+    :width="500"
+    :height="500"
   />
 </template>

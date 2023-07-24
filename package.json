@@ -1,0 +1,76 @@
+{
+  "name": "leafer-vue",
+  "type": "module",
+  "version": "0.0.1",
+  "packageManager": "pnpm@8.6.0",
+  "description": "",
+  "author": "Anthony Fu <anthonyfu117@hotmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/FliPPeDround/leafer-vue#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FliPPeDround/leafer-vue.git"
+  },
+  "bugs": "https://github.com/FliPPeDround/leafer-vue/issues",
+  "keywords": [],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./dist/index.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "play": "nr -C playground dev",
+    "lint": "eslint .",
+    "prepublishOnly": "nr build",
+    "release": "bumpp && npm publish",
+    "start": "esno src/index.ts",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "leafer-ui": "1.0.0-beta.6"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.39.4",
+    "@antfu/ni": "^0.21.5",
+    "@antfu/utils": "^0.7.4",
+    "@types/node": "^18.16.16",
+    "bumpp": "^9.1.0",
+    "eslint": "^8.41.0",
+    "esno": "^0.16.3",
+    "lint-staged": "^13.2.2",
+    "pnpm": "^8.6.0",
+    "rimraf": "^5.0.1",
+    "simple-git-hooks": "^2.8.1",
+    "tsup": "^7.1.0",
+    "typescript": "^5.0.4",
+    "vite": "^4.3.9",
+    "vitest": "^0.31.3",
+    "vue": "^3.3.4"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  }
+}

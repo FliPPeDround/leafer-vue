@@ -4,11 +4,13 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import dts from 'vite-plugin-dts'
 import { resolve } from 'pathe'
-import { bold, yellow } from 'kolorist'
+import { bold, gray, green, yellow } from 'kolorist'
 import pkg from './package.json'
 
+const buildBanner = ` ${yellow('⬘')} ${green('⬗')} ${yellow('⬙')} ${green('⬖')}  ${bold('leafer-vue')} ${gray(`v${pkg.version}`)} \n`
+
 // eslint-disable-next-line no-console
-console.log(` ${yellow('▲')} ${bold('leafer-vue')} v${pkg.version}`)
+console.log(buildBanner)
 
 export default defineConfig({
   plugins: [
@@ -28,15 +30,10 @@ export default defineConfig({
     },
     watch: {
       include: [resolve(__dirname, 'src')],
+      clearScreen: true,
     },
     copyPublicDir: false,
     rollupOptions: {
-      // plugins: [
-      //   copy({
-      //     targets: [{ src: 'src/types/tres-components.d.ts', dest: 'dist/types' }],
-      //   }),
-      // ],
-
       external: ['vue', '@vueuse/core', 'leafer-ui'],
       output: {
         exports: 'named',

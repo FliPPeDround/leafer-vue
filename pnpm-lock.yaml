@@ -60,6 +60,9 @@ importers:
       vite:
         specifier: ^4.3.9
         version: 4.3.9(@types/node@18.16.16)
+      vite-plugin-banner:
+        specifier: ^0.7.0
+        version: 0.7.0
       vite-plugin-dts:
         specifier: ^3.3.1
         version: 3.3.1(@types/node@18.16.16)(typescript@5.0.4)(vite@4.3.9)
@@ -1226,7 +1229,7 @@ packages:
       vite: ^4.0.0
       vue: ^3.2.25
     dependencies:
-      vite: 4.3.9(@types/node@18.16.17)
+      vite: 4.3.9(@types/node@18.16.16)
       vue: 3.3.4
     dev: true
 
@@ -4643,6 +4646,10 @@ packages:
       - sugarss
       - supports-color
       - terser
+    dev: true
+
+  /vite-plugin-banner@0.7.0:
+    resolution: {integrity: sha512-g0cm0wbrR6b6wR8FWtfD1RSDPacdumKEOAnneXv+NpJ9ez+j6rklRv6lMOO+aPf+Y6Zb8OzgIk0FXBZ6h+DeZQ==}
     dev: true
 
   /vite-plugin-dts@3.3.1(@types/node@18.16.16)(typescript@5.0.4)(vite@4.3.9):

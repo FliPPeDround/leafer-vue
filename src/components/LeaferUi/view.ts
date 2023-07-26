@@ -13,7 +13,6 @@ export const view = defineComponent<ViewProps>({
       view: '__leafer-ui_container',
     })
     provide('leafer', leafer)
-    const a = 123
 
     const rect = new Rect({
       width: 300,

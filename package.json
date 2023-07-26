@@ -16,19 +16,19 @@
   "sideEffects": false,
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
+      "types": "./dist/types/index.d.ts",
       "require": "./dist/index.cjs",
       "import": "./dist/index.js"
     }
   },
   "main": "./dist/index.js",
   "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "types": "./dist/types/index.d.ts",
   "typesVersions": {
     "*": {
       "*": [
-        "./dist/*",
-        "./dist/index.d.ts"
+        "./dist/types/*",
+        "./dist/types/index.d.ts"
       ]
     }
   },
@@ -36,8 +36,8 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup",
-    "dev": "tsup --watch",
+    "build": "vite build",
+    "dev": "vite build --watch",
     "play": "nr -C playground dev",
     "lint": "eslint .",
     "prepublishOnly": "nr build",
@@ -54,16 +54,19 @@
     "@antfu/ni": "^0.21.5",
     "@antfu/utils": "^0.7.4",
     "@types/node": "^18.16.16",
+    "@vitejs/plugin-vue": "^4.2.3",
     "bumpp": "^9.1.0",
     "eslint": "^8.41.0",
     "esno": "^0.16.3",
+    "kolorist": "^1.8.0",
     "lint-staged": "^13.2.2",
+    "pathe": "^1.1.1",
     "pnpm": "^8.6.0",
     "rimraf": "^5.0.1",
     "simple-git-hooks": "^2.8.1",
-    "tsup": "^7.1.0",
     "typescript": "^5.0.4",
     "vite": "^4.3.9",
+    "vite-plugin-dts": "^3.3.1",
     "vitest": "^0.31.3",
     "vue": "^3.3.4"
   },

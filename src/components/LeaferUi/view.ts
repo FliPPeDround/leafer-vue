@@ -13,10 +13,11 @@ export const view = defineComponent<ViewProps>({
       view: '__leafer-ui_container',
     })
     provide('leafer', leafer)
+    const a = 123
 
     const rect = new Rect({
-      width: 200,
-      height: 200,
+      width: 300,
+      height: 300,
       fill: '#32cd79',
       draggable: true,
     })

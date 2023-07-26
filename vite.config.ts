@@ -14,7 +14,11 @@ console.log(buildBanner)
 
 export default defineConfig({
   plugins: [
-    vue(),
+    vue({
+      script: {
+        propsDestructure: true,
+      },
+    }),
     dts({
       entryRoot: resolve(__dirname, 'src'),
       outDir: 'dist/types',

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import LeaferView from './view.vue'
+import LeaferView from './_view.vue'
 import type { ViewProps } from './props'
 
 const props = defineProps<ViewProps>()
@@ -9,7 +9,9 @@ const props = defineProps<ViewProps>()
   <canvas id="__leafer-ui_container">
     <Suspense>
       <template #default>
-        <LeaferView v-bind="props" />
+        <LeaferView v-bind="props">
+          <slot />
+        </LeaferView>
       </template>
     </Suspense>
   </canvas>

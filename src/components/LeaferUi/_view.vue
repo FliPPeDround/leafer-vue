@@ -6,16 +6,12 @@ import type { ViewProps } from './props'
 const props = defineProps<ViewProps>()
 await nextTick()
 
-console.log(props)
-
 // 遍历props将有值的属性赋值给config
 const config = {}
 for (const key in props) {
   if (Boolean(props[key]) !== false)
     config[key] = props[key]
 }
-
-console.log(config)
 
 const leafer = new Leafer({
   ...config,
@@ -35,5 +31,5 @@ leafer.add(rect)
 </script>
 
 <template>
-  test
+  <slot :leafer="leafer" />
 </template>

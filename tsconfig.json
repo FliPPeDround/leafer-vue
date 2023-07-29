@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "target": "es2018",
     "module": "esnext",
     "lib": ["esnext", "DOM"],
@@ -9,6 +10,9 @@
     "strictNullChecks": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
-    "skipDefaultLibCheck": true
+    "skipDefaultLibCheck": true,
+    "paths": {
+      "@/*": ["src/*"]
+    }
   }
 }

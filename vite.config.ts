@@ -13,6 +13,12 @@ const buildBanner = ` ${yellow('⬘')} ${green('⬗')} ${yellow('⬙')} ${green(
 console.log(buildBanner)
 
 export default defineConfig({
+  // 别名
+  resolve: {
+    alias: {
+      '@': resolve(__dirname, 'src'),
+    },
+  },
   plugins: [
     vue({
       script: {

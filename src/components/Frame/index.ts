@@ -1,15 +1,15 @@
-import { defineComponent, inject, provide, renderSlot } from 'vue'
-import { Frame, type Leafer } from 'leafer-ui'
+import { Frame } from 'leafer-ui'
+import { defineComponent, renderSlot } from 'vue'
+import { useGetContainer } from '@/composables'
 
 export const leaferframe = defineComponent({
   name: 'LeaferFrame',
   inheritAttrs: false,
-  propos: ['width', 'height', 'fill', 'overflow'],
+  propos: ['width', 'height', 'fill', 'overflow', 'test'],
   setup(props, { slots }) {
     const frame = new Frame(props)
-    const leafer = inject<Leafer>('leafer')!
+    const leafer = useGetContainer()
     leafer.add(frame)
-    provide('frame', frame)
     return () => renderSlot(slots, 'default')
   },
 })

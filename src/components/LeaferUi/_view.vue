@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { nextTick, provide } from 'vue'
+import { nextTick } from 'vue'
 import { Leafer, Rect } from 'leafer-ui'
 import type { ViewProps } from './props'
 
@@ -17,8 +17,8 @@ const leafer = new Leafer({
   ...config,
   view: '__leafer-ui_container',
 })
-
-provide('leafer', leafer)
+// eslint-disable-next-line vue/no-expose-after-await
+defineExpose({ leafer })
 
 const rect = new Rect({
   width: 300,
@@ -31,5 +31,5 @@ leafer.add(rect)
 </script>
 
 <template>
-  <slot :leafer="leafer" />
+  <slot />
 </template>

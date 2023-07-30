@@ -7,7 +7,6 @@ export function useGetContainer(): Leafer {
     throw new Error('useGetContainer must be called within a component')
 
   const container = parent.exposed?.container
-
   if (!container)
     throw new Error('useGetContainer must be called within a component')
 

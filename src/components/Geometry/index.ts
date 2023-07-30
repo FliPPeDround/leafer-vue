@@ -1,19 +1,27 @@
-import { defineComponent } from 'vue'
-import { createContainerProps } from './props'
-import type { Container } from './types'
-import { useCreateContainer } from './useCreateContainer'
+import { defineComponent, watch } from 'vue'
+import type { Geometry } from './types'
+import { createGeometry } from './createGeometry'
 import { useGetContainer } from '@/composables'
 
-export function lfContainer(containerName: Container) {
+export function lfGeometry(geometryName: Geometry) {
   return defineComponent({
-    name: `lg${containerName}`,
-    props: createContainerProps(containerName) as unknown as undefined,
-    setup(props, { slots, expose }) {
-      const instance = useCreateContainer(containerName, props)
+    name: `lg${geometryName}`,
+    props: {
+      config: {
+        type: Object,
+        default: () => ({}),
+        required: true,
+      },
+    },
+    setup(props) {
+      const instance = createGeometry(geometryName, props.config)
       const container = useGetContainer()
-      expose({ container })
       container.add(instance)
-      return () => slots.default?.()
+      watch(
+        () => props.config,
+        value => instance.set(value),
+      )
+      return () => null
     },
   })
 }

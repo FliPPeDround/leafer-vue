@@ -11,6 +11,9 @@ const containerProps = {
     type: Number,
     required: true,
   },
+  draggable: {
+    type: Boolean,
+  },
   fill: {
     type: [String, Array] as PropType<string | typeof Paint | typeof Paint[]>,
   },

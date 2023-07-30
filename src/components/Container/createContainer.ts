@@ -7,7 +7,7 @@ const containerConstructors = {
   Group,
 }
 
-export function useCreateContainer(container: Container, config: any) {
+export function createContainer(container: Container, config: any) {
   const constructor = containerConstructors[container]
   const instance = new constructor(config)
   return instance

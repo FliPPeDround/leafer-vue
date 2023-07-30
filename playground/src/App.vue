@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { lfBox, lfFrame, lfUi } from 'leafer-vue'
+import { lfFrame, lfRect, lfUi } from 'leafer-vue'
 import { ref } from 'vue'
 
 const width = ref(100)
@@ -10,8 +10,15 @@ const width = ref(100)
     :width="500"
     :height="500"
   >
-    <lfFrame :width="100" :height="100" fill="#000">
-      <lfBox :width="width" :height="50" fill="#FFF00F" />
+    <lfFrame :width="width + 100" :height="200" fill="#000" draggable>
+      <lfRect
+        :config="{
+          width,
+          height: 100,
+          fill: '#f00',
+          draggable: true,
+        }"
+      />
     </lfFrame>
   </lfUi>
 

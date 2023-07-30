@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { nextTick } from 'vue'
-import { Leafer, Rect } from 'leafer-ui'
+import { Leafer } from 'leafer-ui'
 import type { ViewProps } from './props'
 
 const props = defineProps<ViewProps>()
@@ -13,21 +13,12 @@ for (const key in props) {
     config[key] = props[key]
 }
 
-const leafer = new Leafer({
+const container = new Leafer({
   ...config,
   view: '__leafer-ui_container',
 })
 // eslint-disable-next-line vue/no-expose-after-await
-defineExpose({ container: leafer })
-
-const rect = new Rect({
-  width: 300,
-  height: 300,
-  fill: '#32cd79',
-  draggable: true,
-})
-
-leafer.add(rect)
+defineExpose({ container, type: 'Leafer' })
 </script>
 
 <template>

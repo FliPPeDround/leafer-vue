@@ -1,1 +1,1 @@
-export type Geometry = 'Frame' | 'Box' | 'Group'
+export type Geometry = 'Rect' | 'Ellipse' | 'Polygon' | 'Star' | 'Line'

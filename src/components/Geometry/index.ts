@@ -1,4 +1,4 @@
-import { defineComponent, watch } from 'vue'
+import { defineComponent } from 'vue'
 import { createContainerProps } from './props'
 import type { Container } from './types'
 import { useCreateContainer } from './useCreateContainer'
@@ -10,10 +10,6 @@ export function lfContainer(containerName: Container) {
     props: createContainerProps(containerName) as unknown as undefined,
     setup(props, { slots, expose }) {
       const instance = useCreateContainer(containerName, props)
-      watch(
-        props,
-        () => instance.set(props),
-      )
       const container = useGetContainer()
       expose({ container })
       container.add(instance)

@@ -18,7 +18,7 @@ const leafer = new Leafer({
   view: '__leafer-ui_container',
 })
 // eslint-disable-next-line vue/no-expose-after-await
-defineExpose({ leafer })
+defineExpose({ container: leafer })
 
 const rect = new Rect({
   width: 300,

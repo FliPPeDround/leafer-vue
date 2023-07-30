@@ -2,15 +2,16 @@ import type { Leafer } from 'leafer-ui'
 import { getCurrentInstance } from 'vue'
 
 export function useGetContainer(): Leafer {
-  const exposed = getCurrentInstance()?.parent?.exposed
-  if (!exposed)
+  const parent = getCurrentInstance()?.parent
+  if (!parent)
     throw new Error('useGetContainer must be called within a component')
 
-  const containerList = ['leafer', 'frame', 'box', 'group']
-  const container = containerList.find(item => item in exposed)
+  const container = parent.exposed?.container
 
   if (!container)
     throw new Error('useGetContainer must be called within a component')
 
-  return exposed[container]
+  console.log(container)
+
+  return container
 }

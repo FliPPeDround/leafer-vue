@@ -1,12 +1,14 @@
 <script setup lang="ts">
-import { leaferUi, leaferframe } from 'leafer-vue'
+import { lfBox, lfFrame, lfUi } from 'leafer-vue'
 </script>
 
 <template>
-  <leaferUi
+  <lfUi
     :width="500"
     :height="500"
   >
-    <leaferframe />
-  </leaferUi>
+    <lfFrame :width="100" :height="100" fill="#000">
+      <lfBox :width="50" :height="50" fill="#FFF00F" />
+    </lfFrame>
+  </lfUi>
 </template>

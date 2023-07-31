@@ -7,10 +7,20 @@ const width = ref(100)
 
 <template>
   <lfUi
-    :width="500"
-    :height="500"
+    :config="{
+      width: 500,
+      height: 500,
+      fill: '#000',
+    }"
   >
-    <lfFrame :width="width + 100" :height="200" fill="#000" draggable>
+    <lfFrame
+      :config="{
+        width,
+        height: 100,
+        fill: '#0f0',
+        draggable: true,
+      }"
+    >
       <lfRect
         :config="{
           width,

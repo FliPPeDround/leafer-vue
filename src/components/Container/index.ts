@@ -1,5 +1,4 @@
 import { defineComponent, watch } from 'vue'
-import { createContainerProps } from './props'
 import type { Container } from './types'
 import { createContainer } from './createContainer'
 import { useGetContainer } from '@/composables'
@@ -7,11 +6,17 @@ import { useGetContainer } from '@/composables'
 export function lfContainer(containerName: Container) {
   return defineComponent({
     name: `lg${containerName}`,
-    props: createContainerProps(containerName) as unknown as undefined,
+    props: {
+      config: {
+        type: Object,
+        default: () => ({}),
+        required: containerName === 'Group',
+      },
+    },
     setup(props, { slots, expose }) {
-      const instance = createContainer(containerName, props)
+      const instance = createContainer(containerName, props.config)
       watch(
-        props,
+        () => props.config,
         value => instance.set(value),
       )
       const container = useGetContainer()

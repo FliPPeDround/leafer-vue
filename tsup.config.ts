@@ -3,9 +3,7 @@ import { defineConfig } from 'tsup'
 import pkg from './package.json'
 
 export default defineConfig ((options) => {
-  const buildBanner = ` ${yellow('⬘')} ${green('⬗')} ${yellow('⬙')} ${green('⬖')}  ${bold('leafer-vue')} ${gray(`v${pkg.version}`)} \n`
-  // eslint-disable-next-line no-console
-  console.log(buildBanner)
+  const buildBanner = `\n ${yellow('⬘')} ${green('⬗')} ${yellow('⬙')} ${green('⬖')}  ${bold('leafer-vue')} ${gray(`v${pkg.version}`)} \n`
 
   return {
     entry: ['./src/index.ts'],
@@ -20,5 +18,10 @@ export default defineConfig ((options) => {
       'leafer-ui',
     ],
     minify: !options.watch,
+    onSuccess: async () => {
+      // eslint-disable-next-line no-console
+      console.log(buildBanner)
+      return Promise.resolve()
+    },
   }
 })

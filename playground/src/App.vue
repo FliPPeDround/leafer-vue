@@ -28,6 +28,9 @@ const width = ref(100)
           fill: '#f00',
           draggable: true,
         }"
+        aa="a"
+        @aa="console.log('aa')"
+        @enter="console.log('enter')"
       />
     </lfFrame>
   </lfUi>

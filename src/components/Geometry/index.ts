@@ -1,8 +1,8 @@
-import { defineComponent, watch } from 'vue'
-import { PointerEvent } from 'leafer-ui'
+import { defineComponent, onUnmounted, watch } from 'vue'
 import type { Geometry } from './types'
 import { createGeometry } from './createGeometry'
-import { useGetContainer } from '@/composables'
+import { useGetContainer, useGetPropsAndEventByAttrs } from '@/composables'
+import { diff } from '@/utils'
 
 export function lfGeometry(geometryName: Geometry) {
   return defineComponent({
@@ -15,17 +15,35 @@ export function lfGeometry(geometryName: Geometry) {
         required: true,
       },
     },
-    emits: ['enter', 'leave'],
-    setup(props, { emit, attrs }) {
+    setup(props, { attrs }) {
       const instance = createGeometry(geometryName, props.config)
       const container = useGetContainer()
       container.add(instance)
+      const { events } = useGetPropsAndEventByAttrs(attrs)
       watch(
-        () => props.config,
-        value => instance.set(value),
+        [
+          () => props.config,
+          () => useGetPropsAndEventByAttrs(attrs),
+        ],
+        (
+          [newProps, { config: newConfig }],
+          [oldProps, { config: oldConfig }],
+        ) => {
+          const allNewConfig = { ...newProps, ...newConfig }
+          const allOldConfig = { ...oldProps, ...oldConfig }
+          const diffConfig = diff(allOldConfig, allNewConfig)
+          instance.set(diffConfig)
+        },
       )
 
-      instance.on(PointerEvent.ENTER, () => emit('enter'))
+      Object.keys(events).forEach((key) => {
+        const eventName = key as keyof typeof events
+        instance.on(eventName, events[key])
+
+        onUnmounted(() => {
+          instance.off(eventName, events[key])
+        })
+      })
       return () => null
     },
   })

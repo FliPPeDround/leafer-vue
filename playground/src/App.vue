@@ -23,14 +23,14 @@ const width = ref(100)
     >
       <lfRect
         :config="{
-          width,
+          width: 20,
           height: 100,
           fill: '#f00',
           draggable: true,
         }"
-        aa="a"
-        @aa="console.log('aa')"
-        @enter="console.log('enter')"
+        :width="width"
+        @pointerEnter="console.log('Enter')"
+        @pointerLeave="console.log('Leave')"
       />
     </lfFrame>
   </lfUi>

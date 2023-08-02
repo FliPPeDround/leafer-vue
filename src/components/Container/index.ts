@@ -13,7 +13,7 @@ export function lfContainer(containerName: Container) {
         required: containerName === 'Group',
       },
     },
-    setup(props, { slots, expose }) {
+    setup(props, { slots, expose, attrs }) {
       const instance = createContainer(containerName, props.config)
       watch(
         () => props.config,

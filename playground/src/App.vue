@@ -7,6 +7,7 @@ const width = ref(100)
 
 <template>
   <lfUi
+    @pointerDown="console.log('Down')"
     :config="{
       width: 500,
       height: 500,

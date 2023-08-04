@@ -7,7 +7,6 @@ const width = ref(100)
 
 <template>
   <lfUi
-    @pointerDown="console.log('Down')"
     :config="{
       width: 500,
       height: 500,
@@ -16,22 +15,21 @@ const width = ref(100)
   >
     <lfFrame
       :config="{
-        width,
+        width: 100,
         height: 100,
         fill: '#0f0',
         draggable: true,
       }"
+      :width="width"
+      @pointer-enter="console.log('Down')"
     >
       <lfRect
         :config="{
-          width: 20,
+          width,
           height: 100,
           fill: '#f00',
           draggable: true,
         }"
-        :width="width"
-        @pointerEnter="console.log('Enter')"
-        @pointerLeave="console.log('Leave')"
       />
     </lfFrame>
   </lfUi>

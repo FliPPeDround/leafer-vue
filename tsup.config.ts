@@ -24,6 +24,7 @@ export default defineConfig ((options) => {
     external: [
       'vue',
       'leafer-ui',
+      'lodash-es',
     ],
     minify: !options.watch,
     onSuccess: async () => {

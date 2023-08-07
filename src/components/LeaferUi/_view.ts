@@ -15,7 +15,7 @@ export default defineComponent({
     useEffectUpdate(attrs, container!)
 
     // eslint-disable-next-line vue/no-expose-after-await
-    expose({ container })
+    expose(container)
 
     return () => renderSlot(slots, 'default') || null
   },

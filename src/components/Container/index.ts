@@ -12,7 +12,7 @@ export function lfContainer(containerName: Container) {
       const instance = createContainer(containerName, config)
       const container = useGetContainer()
       container.add(instance)
-      expose({ container: instance })
+      expose(instance)
 
       useEffectUpdate(attrs, instance)
       useCreateEvents(events, instance)

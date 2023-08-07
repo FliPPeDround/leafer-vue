@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { lfFrame, lfRect, lfUi } from 'leafer-vue'
+import { lfFrame, lfImage, lfRect, lfUi } from 'leafer-vue'
 import { ref } from 'vue'
+import testImage from '/test.jpg'
 
 const width = ref(100)
 </script>
@@ -15,13 +16,12 @@ const width = ref(100)
   >
     <lfFrame
       v-bind="{
-        width,
+        width: 200,
         height: 100,
         fill: '#0f0',
         draggable: true,
 
       }"
-      :x="100"
       @double_click="(e) => console.log(e)"
       @click="console.log('Click')"
       @pointer-enter="console.log('Down')"
@@ -33,6 +33,15 @@ const width = ref(100)
           fill: '#f00',
           draggable: true,
         }"
+      />
+      <lfImage
+        v-bind="{
+          width: 100,
+          height: 100,
+        }"
+        :x="100"
+        :draggable="true"
+        :url="testImage"
       />
     </lfFrame>
   </lfUi>

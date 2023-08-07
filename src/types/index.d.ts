@@ -3,7 +3,14 @@ import type {
   DragEvent,
   DropEvent,
   IFrameInputData,
+  IBoxInputData,
   IImageInputData,
+  ICanvasInputData,
+  IEllipseInputData,
+  IRectInputData,
+  IStarInputData,
+  ILineInputData,
+  IPolygonInputData,
 
   ILeaferConfig,
   MoveEvent,
@@ -11,9 +18,11 @@ import type {
   RotateEvent,
   SwipeEvent,
   ZoomEvent,
+  ImageEvent,
 } from 'leafer-ui'
+import { type } from 'os'
 
-type LeaferEvent = Partial<{
+type LeaferBaseEvent = Partial<{
   /**
      * @description PointerEvent
      * @param e
@@ -92,18 +101,27 @@ type LeaferEvent = Partial<{
   onRotateEnd: (e: RotateEvent) => void
 }>
 
-type LeaferComponent<T, K> = DefineComponent< K & T>
 
-declare const lfUi: LeaferComponent<ILeaferConfig, LeaferEvent>
 
-declare const lfFrame: LeaferComponent<IFrameInputData, LeaferEvent>
-declare const lfBox: LeaferComponent<IFrameInputData, LeaferEvent>
+type LeaferComponent<T, K> = DefineComponent<K & T>
 
-declare const lfCircle: LeaferComponent<IFrameInputData, LeaferEvent>
-declare const lfEllipse: LeaferComponent<IFrameInputData, LeaferEvent>
-declare const lfLine: LeaferComponent<IFrameInputData, LeaferEvent>
-declare const lfPolygon: LeaferComponent<IFrameInputData, LeaferEvent>
-declare const lfPolyline: LeaferComponent<IFrameInputData, LeaferEvent>
-declare const lfRect: LeaferComponent<IFrameInputData, LeaferEvent>
+declare const lfUi: LeaferComponent<ILeaferConfig, LeaferBaseEvent>
 
-declare const lfImage: LeaferComponent<IImageInputData, LeaferEvent>
+declare const lfFrame: LeaferComponent<IFrameInputData, LeaferBaseEvent>
+declare const lfBox: LeaferComponent<IBoxInputData, LeaferBaseEvent>
+
+declare const lfRect: LeaferComponent<IRectInputData, LeaferBaseEvent>
+declare const lfEllipse: LeaferComponent<IEllipseInputData, LeaferBaseEvent>
+declare const lfPolygon: LeaferComponent<IPolygonInputData, LeaferBaseEvent>
+declare const lfLine: LeaferComponent<ILineInputData, LeaferBaseEvent>
+declare const lfStar: LeaferComponent<IStarInputData, LeaferBaseEvent>
+
+type _LeaferImageEvent = Partial<{
+   onImageLoaded: (e: ImageEvent) => void
+   onImageError: (e: ImageEvent) => void
+}>
+
+type LeaferImageEvent = _LeaferImageEvent & LeaferBaseEvent
+
+declare const lfImage: DefineComponent<IImageInputData & LeaferImageEvent>
+declare const lfCanvas: DefineComponent<ICanvasInputData & LeaferBaseEvent>

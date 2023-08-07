@@ -19,8 +19,11 @@ const width = ref(100)
         height: 100,
         fill: '#0f0',
         draggable: true,
+
       }"
       :x="100"
+      @double_click="(e) => console.log(e)"
+      @click="console.log('Click')"
       @pointer-enter="console.log('Down')"
     >
       <lfRect

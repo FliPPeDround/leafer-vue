@@ -13,3 +13,6 @@ export const lfEllipse = lfGeometry('Ellipse')
 export const lfLine = lfGeometry('Line')
 export const lfPolygon = lfGeometry('Polygon')
 export const lfStar = lfGeometry('Star')
+
+// Images
+export const lfImage = lfGeometry('Image')

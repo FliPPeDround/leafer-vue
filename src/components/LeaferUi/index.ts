@@ -2,6 +2,7 @@ import { Suspense, defineComponent, h } from 'vue'
 import LeaferView from './_view'
 
 export const lfUi = defineComponent({
+  name: 'LfUi',
   setup(_, { attrs, slots }) {
     return () => {
       return h(

@@ -5,7 +5,7 @@ import { useCreateEvents, useEffectUpdate, useGetContainer, useGetPropsAndEventB
 
 export function lfGeometry(geometryName: Geometry) {
   return defineComponent({
-    name: `lg${geometryName}`,
+    name: `lf${geometryName}`,
     inheritAttrs: false,
     setup(_, { attrs }) {
       const { events, config } = useGetPropsAndEventByAttrs(attrs)

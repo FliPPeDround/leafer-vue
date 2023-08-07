@@ -5,7 +5,7 @@ import { useCreateEvents, useEffectUpdate, useGetContainer, useGetPropsAndEventB
 
 export function lfContainer(containerName: Container) {
   return defineComponent({
-    name: `lg${containerName}`,
+    name: `lf${containerName}`,
     inheritAttrs: false,
     setup(_, { slots, expose, attrs }) {
       const { events, config } = useGetPropsAndEventByAttrs(attrs)

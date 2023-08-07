@@ -3,6 +3,8 @@ import type {
   DragEvent,
   DropEvent,
   IFrameInputData,
+  IImageInputData,
+
   ILeaferConfig,
   MoveEvent,
   PointerEvent,
@@ -103,3 +105,5 @@ declare const lfLine: LeaferComponent<IFrameInputData, LeaferEvent>
 declare const lfPolygon: LeaferComponent<IFrameInputData, LeaferEvent>
 declare const lfPolyline: LeaferComponent<IFrameInputData, LeaferEvent>
 declare const lfRect: LeaferComponent<IFrameInputData, LeaferEvent>
+
+declare const lfImage: LeaferComponent<IImageInputData, LeaferEvent>

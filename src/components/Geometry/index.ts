@@ -7,19 +7,13 @@ export function lfGeometry(geometryName: Geometry) {
   return defineComponent({
     name: `lg${geometryName}`,
     inheritAttrs: false,
-    props: {
-      config: {
-        type: Object,
-        default: () => ({}),
-      },
-    },
-    setup(props, { attrs }) {
+    setup(_, { attrs }) {
       const { events, config } = useGetPropsAndEventByAttrs(attrs)
-      const instance = createGeometry(geometryName, { ...props.config, ...config })
+      const instance = createGeometry(geometryName, config)
       const container = useGetContainer()
       container.add(instance)
 
-      useEffectUpdate(props, attrs, instance)
+      useEffectUpdate(attrs, instance)
       useCreateEvents(events, instance)
 
       return () => null

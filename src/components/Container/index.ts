@@ -7,20 +7,14 @@ export function lfContainer(containerName: Container) {
   return defineComponent({
     name: `lg${containerName}`,
     inheritAttrs: false,
-    props: {
-      config: {
-        type: Object,
-        default: () => ({}),
-      },
-    },
-    setup(props, { slots, expose, attrs }) {
+    setup(_, { slots, expose, attrs }) {
       const { events, config } = useGetPropsAndEventByAttrs(attrs)
-      const instance = createContainer(containerName, { ...props.config, ...config })
+      const instance = createContainer(containerName, config)
       const container = useGetContainer()
       container.add(instance)
       expose({ container: instance })
 
-      useEffectUpdate(props, attrs, instance)
+      useEffectUpdate(attrs, instance)
       useCreateEvents(events, instance)
 
       return () => slots.default?.()

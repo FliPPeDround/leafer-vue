@@ -9,9 +9,7 @@ type LeaferEvent = Partial<{
     onPointerLeave: (e: PointerEvent) => void
 }>
 
-type LeaferComponent<T, K> = DefineComponent<{
-    readonly config?: T
-} & readonly K & readonly T>
+type LeaferComponent<T, K> = DefineComponent<readonly K & readonly T>
 
 declare const lfUi: LeaferComponent<ILeaferConfig, LeaferEvent>
 

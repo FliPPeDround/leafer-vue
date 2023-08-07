@@ -7,25 +7,25 @@ const width = ref(100)
 
 <template>
   <lfUi
-    :config="{
+    v-bind="{
       width: 500,
       height: 500,
       fill: '#000',
     }"
   >
     <lfFrame
-      :config="{
-        width: 100,
+      v-bind="{
+        width,
         height: 100,
         fill: '#0f0',
         draggable: true,
       }"
-      :width="width"
+      :x="100"
       @pointer-enter="console.log('Down')"
     >
       <lfRect
-        :config="{
-          width,
+        v-bind="{
+          width: 100,
           height: 100,
           fill: '#f00',
           draggable: true,

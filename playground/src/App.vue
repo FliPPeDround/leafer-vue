@@ -15,10 +15,11 @@ const showIt = ref(true)
 <template>
   <lfUi
     v-bind="{
-      width: 500,
+      width,
       height: 500,
       fill: '#000',
     }"
+    @tap="console.log('Tap')"
   >
     <lfFrame
       v-bind="{

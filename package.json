@@ -40,11 +40,14 @@
     "dev": "tsup --watch",
     "play": "nr -C playground dev",
     "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
     "prepublishOnly": "nr build",
     "release": "bumpp && npm publish",
-    "start": "esno src/index.ts",
     "test": "vitest",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress dev build",
+    "docs:preview": "vitepress dev preview"
   },
   "dependencies": {
     "leafer-ui": "1.0.0-beta.6",
@@ -58,7 +61,6 @@
     "@types/node": "^18.16.16",
     "bumpp": "^9.1.0",
     "eslint": "^8.41.0",
-    "esno": "^0.16.3",
     "kolorist": "^1.8.0",
     "lint-staged": "^13.2.2",
     "pathe": "^1.1.1",
@@ -67,6 +69,7 @@
     "simple-git-hooks": "^2.8.1",
     "tsup": "^7.1.0",
     "typescript": "^5.0.4",
+    "vitepress": "1.0.0-beta.7",
     "vitest": "^0.31.3",
     "vue": "^3.3.4"
   },

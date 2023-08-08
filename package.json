@@ -46,8 +46,8 @@
     "test": "vitest",
     "typecheck": "tsc --noEmit",
     "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress dev build",
-    "docs:preview": "vitepress dev preview"
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
   },
   "dependencies": {
     "leafer-ui": "1.0.0-beta.6",

@@ -1,9 +1,13 @@
 <script setup lang="ts">
-import { lfFrame, lfImage, lfRect, lfUi } from 'leafer-vue'
+import { lfFrame, lfImage, lfRect, lfText, lfUi } from 'leafer-vue'
 import { ref } from 'vue'
 import testImage from '/test.jpg'
 
-const width = ref(100)
+const width = ref(300)
+const color = ref('#000')
+function changeColor() {
+  color.value = '#fff'
+}
 </script>
 
 <template>
@@ -16,11 +20,10 @@ const width = ref(100)
   >
     <lfFrame
       v-bind="{
-        width: 200,
+        width,
         height: 100,
         fill: '#0f0',
         draggable: true,
-
       }"
       @double_click="(e) => console.log(e)"
       @click="console.log('Click')"
@@ -30,9 +33,13 @@ const width = ref(100)
         v-bind="{
           width: 100,
           height: 100,
-          fill: '#f00',
+          fill: {
+            type: 'linear',
+            stops: [{ offset: 0, color: '#FF4B4B' }, { offset: 1, color }],
+          },
           draggable: true,
         }"
+        @tap="changeColor"
       />
       <lfImage
         v-bind="{
@@ -42,6 +49,16 @@ const width = ref(100)
         :x="100"
         :draggable="true"
         :url="testImage"
+      />
+      <lfText
+        v-bind="{
+          width: 100,
+          height: 100,
+          fill: '#fff',
+          draggable: true,
+          text: `${width}`,
+        }"
+        :x="200"
       />
     </lfFrame>
   </lfUi>

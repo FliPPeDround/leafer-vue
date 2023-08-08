@@ -1,7 +1,9 @@
-export const GeometriesType = [
+export const NodesType = [
   'Rect', 'Ellipse', 'Polygon', 'Star', 'Line',
   'Image', 'Canvas',
+  'Text',
+  'Path', 'Pen',
 ] as const
 
 // 获取GeometriesType枚举类型
-export type Geometry = typeof GeometriesType[number]
+export type Node = typeof NodesType[number]

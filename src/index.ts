@@ -1,7 +1,7 @@
 import { lfContainer } from './components/Container'
-import { lfGeometry } from './components/Geometry'
+import { lfNode } from './components/Node'
 
-// import { GeometriesType } from '@/components/Geometry/constants'
+// import { GeometriesType } from '@/components/Node/constants'
 
 export * from './components/LeaferUi'
 // Containers
@@ -10,16 +10,19 @@ export const lfBox = lfContainer('Box')
 export const lfGroup = lfContainer('Group')
 
 // Geometries
-export const lfRect = lfGeometry('Rect')
-export const lfEllipse = lfGeometry('Ellipse')
-export const lfLine = lfGeometry('Line')
-export const lfPolygon = lfGeometry('Polygon')
-export const lfStar = lfGeometry('Star')
+export const lfRect = lfNode('Rect')
+export const lfEllipse = lfNode('Ellipse')
+export const lfLine = lfNode('Line')
+export const lfPolygon = lfNode('Polygon')
+export const lfStar = lfNode('Star')
 
 // Images
-export const lfImage = lfGeometry('Image')
-export const lfCanvas = lfGeometry('Canvas')
+export const lfImage = lfNode('Image')
+export const lfCanvas = lfNode('Canvas')
 
-// const GeometriesComponents = GeometriesType.map((geometry) => {
-//   return { [`lf${geometry}`]: lfGeometry(geometry) }
-// })
+// Text
+export const lfText = lfNode('Text')
+
+// Path
+export const lfPath = lfNode('Path')
+export const lfPen = lfNode('Pen')

@@ -1,15 +1,15 @@
 import { defineComponent } from 'vue'
-import type { Geometry } from './constants'
-import { createGeometry } from './createGeometry'
+import type { Node } from './constants'
+import { createNode } from './createNode'
 import { useCreateEvents, useEffectUpdate, useGetContainer, useGetPropsAndEventByAttrs } from '@/composables'
 
-export function lfGeometry(geometryName: Geometry) {
+export function lfNode(NodeName: Node) {
   return defineComponent({
-    name: `lf${geometryName}`,
+    name: `lf${NodeName}`,
     inheritAttrs: false,
     setup(_, { attrs, expose }) {
       const { events, config } = useGetPropsAndEventByAttrs(attrs)
-      const instance = createGeometry(geometryName, config)
+      const instance = createNode(NodeName, config)
       const container = useGetContainer()
       container.add(instance)
       expose(instance)

@@ -1,7 +1,7 @@
 import type { DefineComponent } from '@vue/runtime-core'
 import type {
-  DragEvent,
-  DropEvent,
+  ILeaferConfig,
+
   IFrameInputData,
   IBoxInputData,
   IImageInputData,
@@ -11,16 +11,28 @@ import type {
   IStarInputData,
   ILineInputData,
   IPolygonInputData,
+  ITextInputData,
 
-  ILeaferConfig,
+  DragEvent,
+  DropEvent,
   MoveEvent,
   PointerEvent,
   RotateEvent,
   SwipeEvent,
   ZoomEvent,
   ImageEvent,
+  LeaferEvent,
+  ResizeEvent,
+  RenderEvent,
+  LayoutEvent,
+  WatchEvent,
+  ChildEvent,
+  PropertyEvent,
 } from 'leafer-ui'
-import { type } from 'os'
+
+type LeaferComponent<T, K> = DefineComponent<K & T>
+type RequiredField<T, K extends keyof T> = T & { [P in K]-?: T[P] }
+
 
 type LeaferBaseEvent = Partial<{
   /**
@@ -99,13 +111,55 @@ type LeaferBaseEvent = Partial<{
   onRotateStart: (e: RotateEvent) => void
   onRotate: (e: RotateEvent) => void
   onRotateEnd: (e: RotateEvent) => void
+
+   /**
+    * @description ImageEvent
+    * @param e
+    */
+  onImageLoaded: (e: ImageEvent) => void
+  onImageError: (e: ImageEvent) => void
 }>
 
+type _LeaferEvent = Partial<{
+   onLeaferStart: (e: LeaferEvent) => void
+   onLeaferBefore_ready: (e: LeaferEvent) => void
+   onLeaferReady: (e: LeaferEvent) => void
+   onLeaferAfter_ready: (e: LeaferEvent) => void
+   onLeaferView_ready: (e: LeaferEvent) => void
+   onLeaferStop: (e: LeaferEvent) => void
+   onLeaferRestart: (e: LeaferEvent) => void
+   onLeaferEnd: (e: LeaferEvent) => void
+
+   onResize: (e: ResizeEvent) => void
+
+   onRenderRequest: (e: RenderEvent) => void
+   onRenderStart: (e: RenderEvent) => void
+   onRenderBefore: (e: RenderEvent) => void
+   onRender: (e: RenderEvent) => void
+   onRenderAgain: (e: RenderEvent) => void
+   onRenderEnd: (e: RenderEvent) => void
+
+   onLayoutRequest: (e: LayoutEvent) => void
+   onLayoutStart: (e: LayoutEvent) => void
+   onLayoutBefore: (e: LayoutEvent) => void
+   onLayout: (e: LayoutEvent) => void
+   onLayoutAfter: (e: LayoutEvent) => void
+   onLayoutAgain: (e: LayoutEvent) => void
+   onLayoutEnd: (e: LayoutEvent) => void
+
+   onWatchRequest: (e: WatchEvent) => void
+   onWatchData: (e: WatchEvent) => void
+
+   onChildAdd: (e: ChildEvent) => void
+   onChildRemove: (e: ChildEvent) => void
+
+   onPropertyChange: (e: PropertyEvent) => void
+}>
+
+type LfEvent = _LeaferEvent & LeaferBaseEvent
 
 
-type LeaferComponent<T, K> = DefineComponent<K & T>
-
-declare const lfUi: LeaferComponent<ILeaferConfig, LeaferBaseEvent>
+declare const lfUi: LeaferComponent<ILeaferConfig, LfEvent>
 
 declare const lfFrame: LeaferComponent<IFrameInputData, LeaferBaseEvent>
 declare const lfBox: LeaferComponent<IBoxInputData, LeaferBaseEvent>
@@ -116,12 +170,9 @@ declare const lfPolygon: LeaferComponent<IPolygonInputData, LeaferBaseEvent>
 declare const lfLine: LeaferComponent<ILineInputData, LeaferBaseEvent>
 declare const lfStar: LeaferComponent<IStarInputData, LeaferBaseEvent>
 
-type _LeaferImageEvent = Partial<{
-   onImageLoaded: (e: ImageEvent) => void
-   onImageError: (e: ImageEvent) => void
-}>
-
-type LeaferImageEvent = _LeaferImageEvent & LeaferBaseEvent
-
-declare const lfImage: DefineComponent<IImageInputData & LeaferImageEvent>
+declare const lfImage: DefineComponent<IImageInputData & LeaferBaseEvent>
 declare const lfCanvas: DefineComponent<ICanvasInputData & LeaferBaseEvent>
+
+
+type _TextInputData = RequiredField<ITextInputData, 'text'>
+declare const lfText: LeaferComponent<_TextInputData, LeaferBaseEvent>

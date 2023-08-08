@@ -1,4 +1,4 @@
-import { defineComponent } from 'vue'
+import { defineComponent, onUnmounted } from 'vue'
 import type { Container } from './types'
 import { createContainer } from './createContainer'
 import { useCreateEvents, useEffectUpdate, useGetContainer, useGetPropsAndEventByAttrs } from '@/composables'
@@ -16,6 +16,10 @@ export function lfContainer(containerName: Container) {
 
       useEffectUpdate(attrs, instance)
       useCreateEvents(events, instance)
+
+      onUnmounted(() => {
+        container.remove(instance)
+      })
 
       return () => slots.default?.()
     },

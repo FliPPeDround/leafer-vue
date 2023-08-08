@@ -8,6 +8,8 @@ const color = ref('#000')
 function changeColor() {
   color.value = '#fff'
 }
+
+const showIt = ref(true)
 </script>
 
 <template>
@@ -28,6 +30,7 @@ function changeColor() {
       @double_click="(e) => console.log(e)"
       @click="console.log('Click')"
       @pointer-enter="console.log('Down')"
+      @tap="showIt = !showIt"
     >
       <lfRect
         v-bind="{
@@ -42,6 +45,7 @@ function changeColor() {
         @tap="changeColor"
       />
       <lfImage
+        v-if="showIt"
         v-bind="{
           width: 100,
           height: 100,

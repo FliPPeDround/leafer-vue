@@ -1,4 +1,4 @@
-import { defineComponent } from 'vue'
+import { defineComponent, onUnmounted } from 'vue'
 import type { Node } from './constants'
 import { createNode } from './createNode'
 import { useCreateEvents, useEffectUpdate, useGetContainer, useGetPropsAndEventByAttrs } from '@/composables'
@@ -16,6 +16,10 @@ export function lfNode(NodeName: Node) {
 
       useEffectUpdate(attrs, instance)
       useCreateEvents(events, instance)
+
+      onUnmounted(() => {
+        container.remove(instance)
+      })
 
       return () => null
     },

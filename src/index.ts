@@ -3,7 +3,7 @@ import { lfNode } from './components/Node'
 
 // import { GeometriesType } from '@/components/Node/constants'
 
-export * from './components/LeaferUi'
+export * from './components/App'
 // Containers
 export const lfFrame = lfContainer('Frame')
 export const lfBox = lfContainer('Box')

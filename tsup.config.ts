@@ -1,9 +1,9 @@
-import { bold, gray, green, yellow } from 'kolorist'
+import { bold, gray } from 'kolorist'
 import { defineConfig } from 'tsup'
 import pkg from './package.json'
 
 export default defineConfig ((options) => {
-  const buildBanner = `\n ${yellow('⬘')} ${green('⬗')} ${yellow('⬙')} ${green('⬖')}  ${bold('leafer-vue')} ${gray(`v${pkg.version}`)} \n`
+  const buildBanner = `\n 🔰🔰🔰 ${bold('leafer-vue')} ${gray(`v${pkg.version}`)} \n`
 
   return {
     entry: ['./src/index.ts'],

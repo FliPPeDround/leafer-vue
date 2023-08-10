@@ -15,8 +15,37 @@ export default defineConfig({
       {
         text: '开始',
         items: [
-          { text: '安装', link: '/guide/start/install' },
-          { text: '体验', link: '/guide/start/install' },
+          { text: '快速安装', link: '/guide/start/install' },
+        ],
+      },
+      {
+        text: '应用组件',
+        items: [
+          {
+            text: 'App',
+            link: '/guide/components/app/app',
+          },
+          {
+            text: 'Leafer',
+            link: '/guide/components/app/leafer',
+          },
+        ],
+      },
+      {
+        text: '容器组件',
+        items: [
+          {
+            text: 'Frame',
+            link: '/guide/components/container/frame',
+          },
+          {
+            text: 'Box',
+            link: '/guide/components/container/box',
+          },
+          {
+            text: 'Group',
+            link: '/guide/components/container/group',
+          },
         ],
       },
     ],

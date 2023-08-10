@@ -16,7 +16,7 @@ export default defineConfig ((options) => {
       'vue',
       'leafer-ui',
     ],
-    minify: !options.watch,
+    // minify: !options.watch,
     publicDir: 'src/types',
     onSuccess: async () => {
       // eslint-disable-next-line no-console

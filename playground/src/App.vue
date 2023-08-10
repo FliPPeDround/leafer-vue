@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import { lfFrame, lfImage, lfLeafer, lfRect, lfText } from 'leafer-vue'
+import { lfApp, lfLeafer } from 'leafer-vue'
 import { ref } from 'vue'
-import testImage from '/test.jpg'
 
 const width = ref(300)
 const color = ref('#000')
@@ -10,11 +9,16 @@ function changeColor() {
 }
 
 const showIt = ref(true)
+
+const fill = ref('#32cd79')
+function changeFill() {
+  fill.value = `#${Math.floor(Math.random() * 0xFFFFFF).toString(16)}`
+}
 </script>
 
 <template>
   <span>aaaaa</span>
-  <lfLeafer
+  <!-- <lfLeafer
     v-if="showIt"
     v-bind="{
       width,
@@ -68,7 +72,18 @@ const showIt = ref(true)
         :x="200"
       />
     </lfFrame>
-  </lfLeafer>
+  </lfLeafer> -->
+  <!-- <lfLeafer :width="500" :height="500">
+    <lfRect
+      :x="100" :y="100"
+      :width="200" :height="200"
+      :fill="fill" :draggable="true"
+      @tap="changeFill"
+    />
+  </lfLeafer> -->
+  <lfApp :width="500" :height="500" fill="#000">
+    <lfLeafer fill="#fff" :width="100" :height="100" :draggable="true" />
+  </lfApp>
   <button @click="width = width + 100">
     Click
   </button>

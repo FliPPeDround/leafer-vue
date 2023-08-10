@@ -23,6 +23,8 @@
   },
   "main": "./dist/index.js",
   "module": "./dist/index.js",
+  "unpkg": "dist/index.global.js",
+  "jsdelivr": "dist/index.global.js",
   "types": "./dist/index.d.ts",
   "typesVersions": {
     "*": {

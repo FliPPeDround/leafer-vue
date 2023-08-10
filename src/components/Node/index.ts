@@ -5,7 +5,7 @@ import { useCreateEvents, useEffectUpdate, useGetContainer, useGetPropsAndEventB
 
 export function lfNode(NodeName: Node) {
   return defineComponent({
-    name: `lf${NodeName}`,
+    name: `Lf${NodeName}`,
     inheritAttrs: false,
     setup(_, { attrs, expose }) {
       const { events, config } = useGetPropsAndEventByAttrs(attrs)

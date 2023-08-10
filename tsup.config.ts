@@ -15,7 +15,6 @@ export default defineConfig ((options) => {
     external: [
       'vue',
       'leafer-ui',
-      'lodash-es',
     ],
     minify: !options.watch,
     publicDir: 'src/types',

@@ -1,14 +1,16 @@
 import { defineComponent, getCurrentInstance, onMounted, renderSlot } from 'vue'
-import { Leafer } from 'leafer-ui'
-import { useCreateEvents, useEffectUpdate, useGetPropsAndEventByAttrs } from '@/composables'
+import { App } from 'leafer-ui'
+import { useEffectUpdate, useGetPropsByAttrs, useSomeNode } from '@/composables'
 
-export const lfUi = defineComponent({
+export const lfApp = defineComponent({
+  name: 'LfApp',
   inheritAttrs: false,
   setup(_, { slots, expose, attrs }) {
-    const { events, config } = useGetPropsAndEventByAttrs(attrs)
+    useSomeNode(slots, 'LfLeafer', 'LfApp')
+    const config = useGetPropsByAttrs(attrs)
     const canvas = document.createElement('canvas')
     document.body.appendChild(canvas)
-    const container = new Leafer({
+    const container = new App({
       ...config,
       view: canvas,
       start: false,
@@ -20,7 +22,6 @@ export const lfUi = defineComponent({
     })
 
     useEffectUpdate(attrs, container)
-    useCreateEvents(events, container)
 
     expose(container)
 

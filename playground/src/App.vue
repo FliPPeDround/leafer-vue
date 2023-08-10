@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { lfFrame, lfImage, lfRect, lfText, lfUi } from 'leafer-vue'
+import { lfFrame, lfImage, lfLeafer, lfRect, lfText } from 'leafer-vue'
 import { ref } from 'vue'
 import testImage from '/test.jpg'
 
@@ -13,11 +13,12 @@ const showIt = ref(true)
 </script>
 
 <template>
-  <lfUi
+  <lfLeafer
+    v-if="showIt"
     v-bind="{
       width,
-      height: 500,
-      fill: '#000',
+      height: 100,
+      fill: '#fff',
     }"
     @tap="console.log('Tap')"
   >
@@ -66,9 +67,8 @@ const showIt = ref(true)
         :x="200"
       />
     </lfFrame>
-  </lfUi>
-
-  <!-- <button @click="width = width + 100">
+  </lfLeafer>
+  <button @click="width = width + 100">
     Click
-  </button> -->
+  </button>
 </template>

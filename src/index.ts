@@ -1,9 +1,10 @@
 import { lfContainer } from './components/Container'
 import { lfNode } from './components/Node'
 
-// import { GeometriesType } from '@/components/Node/constants'
+// Root
+export * from './components/Root/app'
+export * from './components/Root/leafer'
 
-export * from './components/App'
 // Containers
 export const lfFrame = lfContainer('Frame')
 export const lfBox = lfContainer('Box')

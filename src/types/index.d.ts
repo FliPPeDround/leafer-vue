@@ -158,8 +158,8 @@ type _LeaferEvent = Partial<{
 
 type LfEvent = _LeaferEvent & LeaferBaseEvent
 
-
-declare const lfUi: LeaferComponent<ILeaferConfig, LfEvent>
+declare const lfApp: DefineComponent<ILeaferConfig>
+declare const lfLeafer: LeaferComponent<ILeaferConfig, LfEvent>
 
 declare const lfFrame: LeaferComponent<IFrameInputData, LeaferBaseEvent>
 declare const lfBox: LeaferComponent<IBoxInputData, LeaferBaseEvent>

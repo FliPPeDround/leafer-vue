@@ -28,11 +28,11 @@ npm install leafer-vue leafer-ui
 
 ```html
 <script setup lang="ts">
-import { lfFrame, lfRect, lfUi } from 'leafer-vue'
+import { lfFrame, lfRect, lfLeafer } from 'leafer-vue'
 </script>
 
 <template>
-  <lfUi :width="500" :height="500" fill="#000">
+  <lfLeafer :width="500" :height="500" fill="#000">
     <lfFrame :width="300" :height="300" fill="#0f0">
       <lfRect
         :width="100" :height="100" fill="#f00"
@@ -40,6 +40,6 @@ import { lfFrame, lfRect, lfUi } from 'leafer-vue'
         @tap="console.log('tag')"
       />
     </lfFrame>
-  </lfUi>
+  </lfLeafer>
 </template>
 ```

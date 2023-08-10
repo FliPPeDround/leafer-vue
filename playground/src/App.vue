@@ -13,6 +13,7 @@ const showIt = ref(true)
 </script>
 
 <template>
+  <span>aaaaa</span>
   <lfLeafer
     v-if="showIt"
     v-bind="{

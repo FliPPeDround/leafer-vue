@@ -1,6 +1,13 @@
-import { defineComponent, getCurrentInstance, onMounted, onUnmounted, renderSlot } from 'vue'
+import { defineComponent, onMounted, onUnmounted, renderSlot } from 'vue'
 import { Leafer } from 'leafer-ui'
-import { useCreateEvents, useEffectUpdate, useGetContainer, useGetParentNodeName, useGetPropsAndEventByAttrs } from '@/composables'
+import {
+  useCreateEvents,
+  useEffectUpdate,
+  useGetContainer,
+  useGetParentNodeName,
+  useGetPropsAndEventByAttrs,
+  useInsertBefore,
+} from '@/composables'
 
 export const lfLeafer = defineComponent({
   name: 'LfLeafer',
@@ -19,7 +26,7 @@ export const lfLeafer = defineComponent({
       })
 
       onMounted(() => {
-        getCurrentInstance()?.vnode.el!.parentNode.prepend(canvas)
+        useInsertBefore(canvas)
         container.start()
       })
 

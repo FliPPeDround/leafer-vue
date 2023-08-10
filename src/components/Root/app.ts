@@ -1,6 +1,6 @@
-import { defineComponent, getCurrentInstance, onMounted, renderSlot } from 'vue'
+import { defineComponent, onMounted, renderSlot } from 'vue'
 import { App } from 'leafer-ui'
-import { useEffectUpdate, useGetPropsByAttrs, useSomeNode } from '@/composables'
+import { useEffectUpdate, useGetPropsByAttrs, useInsertBefore, useSomeNode } from '@/composables'
 
 export const lfApp = defineComponent({
   name: 'LfApp',
@@ -17,7 +17,7 @@ export const lfApp = defineComponent({
     })
 
     onMounted(() => {
-      getCurrentInstance()?.vnode.el!.parentNode.prepend(canvas)
+      useInsertBefore(canvas)
       container.start()
     })
 

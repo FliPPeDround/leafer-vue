@@ -1,7 +1,8 @@
 {
-  "name": "leafer-vue",
+  "name": "@leafer-vue/monorepo",
   "type": "module",
   "version": "0.0.3",
+  "private": true,
   "packageManager": "pnpm@8.6.2",
   "description": "",
   "author": "FliPPeDround <FliPPeDround@qq.com>",
@@ -14,46 +15,18 @@
   "bugs": "https://github.com/FliPPeDround/leafer-vue/issues",
   "keywords": [],
   "sideEffects": false,
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "require": "./dist/index.cjs",
-      "import": "./dist/index.js"
-    }
-  },
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
-  "unpkg": "dist/index.global.js",
-  "jsdelivr": "dist/index.global.js",
-  "types": "./dist/index.d.ts",
-  "typesVersions": {
-    "*": {
-      "*": [
-        "./dist/*",
-        "./dist/index.d.ts"
-      ]
-    }
-  },
-  "files": [
-    "dist"
-  ],
   "scripts": {
-    "build": "tsup",
-    "dev": "tsup --watch",
+    "build": "nr -C packages/core build",
+    "dev": "nr -C packages/core dev",
     "play": "nr -C playground dev",
+    "docs:dev": "nr -C docs docs:dev",
+    "docs:build": "nr -C docs docs:build",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "prepublishOnly": "nr build",
     "release": "bumpp && npm publish",
     "test": "vitest",
-    "typecheck": "tsc --noEmit",
-    "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs"
-  },
-  "dependencies": {
-    "leafer-ui": "1.0.0-beta.6",
-    "lodash-es": "^4.17.21"
+    "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.39.4",
@@ -71,9 +44,7 @@
     "simple-git-hooks": "^2.8.1",
     "tsup": "^7.1.0",
     "typescript": "^5.0.4",
-    "vitepress": "1.0.0-beta.7",
-    "vitest": "^0.31.3",
-    "vue": "^3.3.4"
+    "vitest": "^0.31.3"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"

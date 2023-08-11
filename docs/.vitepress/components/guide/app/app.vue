@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { lfApp, lfLeafer } from './../../../dist/index.js'
+import { lfApp, lfLeafer } from 'leafer-vue'
 </script>
 
 <template>

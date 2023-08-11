@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { lfApp, lfLeafer } from 'leafer-vue'
+import { lfFrame, lfImage, lfLeafer, lfRect, lfText } from 'leafer-vue'
 import { ref } from 'vue'
+import testImage from '/test.jpg'
 
 const width = ref(300)
 const color = ref('#000')
@@ -18,7 +19,7 @@ function changeFill() {
 
 <template>
   <span>aaaaa</span>
-  <!-- <lfLeafer
+  <lfLeafer
     v-if="showIt"
     v-bind="{
       width,
@@ -72,18 +73,7 @@ function changeFill() {
         :x="200"
       />
     </lfFrame>
-  </lfLeafer> -->
-  <!-- <lfLeafer :width="500" :height="500">
-    <lfRect
-      :x="100" :y="100"
-      :width="200" :height="200"
-      :fill="fill" :draggable="true"
-      @tap="changeFill"
-    />
-  </lfLeafer> -->
-  <lfApp :width="500" :height="500" fill="#000">
-    <lfLeafer fill="#fff" :width="100" :height="100" :draggable="true" />
-  </lfApp>
+  </lfLeafer>
   <button @click="width = width + 100">
     Click
   </button>

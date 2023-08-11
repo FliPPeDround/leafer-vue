@@ -1,0 +1,54 @@
+{
+  "name": "leafer-vue",
+  "type": "module",
+  "version": "0.0.3",
+  "description": "",
+  "author": "FliPPeDround <FliPPeDround@qq.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/FliPPeDround/leafer-vue#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FliPPeDround/leafer-vue.git"
+  },
+  "bugs": "https://github.com/FliPPeDround/leafer-vue/issues",
+  "keywords": [],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "unpkg": "dist/index.global.js",
+  "types": "./dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./dist/index.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "prepublishOnly": "nr build",
+    "release": "bumpp && npm publish",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "leafer-ui": "1.0.0-beta.9"
+  },
+  "devDependencies": {
+    "vue": "^3.3.4"
+  }
+}

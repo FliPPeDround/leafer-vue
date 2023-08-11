@@ -4,7 +4,7 @@ import DefaultTheme from 'vitepress/theme'
 
 export default {
   ...DefaultTheme,
-  enhanceApp: async ({ app }) => {
-    // app.component('AppGuide', AppGuide)
-  },
+  // enhanceApp: async ({ app }) => {
+  //   app.component('AppGuide', AppGuide)
+  // },
 }

@@ -6,7 +6,7 @@ export default defineConfig ((options) => {
   const buildBanner = `\n ☘️ ☘️ ☘️  ${bold('leafer-vue')} ${gray(`v${pkg.version}`)} \n`
 
   return {
-    entry: ['index.ts'],
+    entry: ['index.ts', 'resolver.ts'],
     format: options.watch ? 'esm' : ['cjs', 'esm', 'iife'],
     target: 'node14',
     tsconfig: './tsconfig.json',
@@ -15,7 +15,7 @@ export default defineConfig ((options) => {
       'vue',
       'leafer-ui',
     ],
-    // minify: !options.watch,
+    minify: !options.watch,
     publicDir: 'types',
     onSuccess: async () => {
       // eslint-disable-next-line no-console

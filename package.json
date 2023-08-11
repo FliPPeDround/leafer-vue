@@ -44,6 +44,7 @@
     "simple-git-hooks": "^2.8.1",
     "tsup": "^7.1.0",
     "typescript": "^5.0.4",
+    "unplugin-vue-components": "^0.25.1",
     "vitest": "^0.31.3"
   },
   "simple-git-hooks": {

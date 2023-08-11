@@ -43,3 +43,7 @@ import { lfFrame, lfRect, lfLeafer } from 'leafer-vue'
   </lfLeafer>
 </template>
 ```
+
+## Documentation
+
+### [leafer-vue](https://leafer-vue.netlify.app/guide/start/install.html)

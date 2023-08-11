@@ -5,10 +5,8 @@ export default defineConfig({
   title: 'leafer-vue',
   description: 'leafer-vue document',
   themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' },
     ],
 
     sidebar: [
@@ -48,10 +46,70 @@ export default defineConfig({
           },
         ],
       },
+      {
+        text: '图形组件',
+        items: [
+          {
+            text: 'Rect',
+            link: '/guide/components/shape/rect',
+          },
+          {
+            text: 'Ellipse',
+            link: '/guide/components/shape/ellipse',
+          },
+          {
+            text: 'Polygon',
+            link: '/guide/components/shape/polygon',
+          },
+          {
+            text: 'Star',
+            link: '/guide/components/shape/star',
+          },
+          {
+            text: 'Line',
+            link: '/guide/components/shape/line',
+          },
+        ],
+      },
+      {
+        text: '路径组件',
+        items: [
+          {
+            text: 'Path',
+            link: '/guide/components/path/path',
+          },
+          {
+            text: 'Pen',
+            link: '/guide/components/path/pen',
+          },
+        ],
+      },
+      {
+        text: '图像组件',
+        items: [
+          {
+            text: 'Image',
+            link: '/guide/components/image/image',
+          },
+          {
+            text: 'Canvas',
+            link: '/guide/components/image/canvas',
+          },
+        ],
+      },
+      {
+        text: '文字组件',
+        items: [
+          {
+            text: 'Text',
+            link: '/guide/components/text/text',
+          },
+        ],
+      },
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' },
+      { icon: 'github', link: 'https://github.com/FliPPeDround/leafer-vue' },
     ],
   },
 })

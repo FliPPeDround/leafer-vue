@@ -1,25 +1,24 @@
 ---
-# https://vitepress.dev/reference/default-theme-home-page
 layout: home
+sidebar: false
 
 hero:
   name: "leafer-vue"
   text: "leafer-vue document"
-  tagline: My great project tagline
+  tagline: 
   actions:
     - theme: brand
       text: 快速开始
       link: /guide/start/install
-    - theme: alt
-      text: API Examples
-      link: /api-examples
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: Type Strong
+    details: Written in TypeScript, with full TS docs
+    icon: 🦾
+  - title: Fully tree shakeable
+    details: Only take what you want
+    icon: ⚡
+  - title: Mini Size
+    details: Only 3kb
+    icon: 🎪
 ---
-

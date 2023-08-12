@@ -1,4 +1,4 @@
-# lfLine 框架
+# lfLine 线条
 >
 > 绘制横线、斜线、竖线， 通过 width 与 rotation 定义直线。
 >

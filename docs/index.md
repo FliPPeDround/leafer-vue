@@ -1,6 +1,5 @@
 ---
 layout: home
-sidebar: false
 
 hero:
   name: "leafer-vue"

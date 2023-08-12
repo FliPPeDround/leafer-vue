@@ -1,4 +1,4 @@
-# lfBox 框架
+# lfBox 盒子
 >
 > 创建 Box。支持 Group 的功能和 Rect 的外观样式， 类似于 HTML5 中的 DIV，可以不断嵌套。
 >

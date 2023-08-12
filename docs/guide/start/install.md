@@ -5,15 +5,15 @@
 ::: code-group
 
 ```bash [npm]
-npm i leafer-vue leafer-ui
+npm i leafer-vue
 ```
 
 ```bash [pnpm]
-pnpm i leafer-vue leafer-ui
+pnpm i leafer-vue
 ```
 
 ```bash [yarn]
-yarn add leafer-vue leafer-ui
+yarn add leafer-vue
 ```
 
 :::

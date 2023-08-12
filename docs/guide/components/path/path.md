@@ -1,4 +1,4 @@
-# lfPath 框架
+# lfPath 路径
 >
 > 创建路径。可以画出任意形状的图形，了解[绘图命令](https://www.leaferjs.com/ui/guide/interface/ui/PathData.html)。
 >
@@ -16,7 +16,7 @@ import { lfLeafer, lfPath } from 'leafer-vue'
     <lfPath
       path="M 0 50 L 100 100 L 0 100 X 0 0 200 200 30"
       fill="#4dcb71"
-      windingRule="evenodd"
+      winding-rule="evenodd"
     />
   </lfLeafer>
 </template>

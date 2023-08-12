@@ -19,6 +19,7 @@
     "build": "nr -C packages/core build",
     "dev": "nr -C packages/core dev",
     "play": "nr -C playground dev",
+    "example": "nr -C examples dev",
     "docs:dev": "nr -C docs docs:dev",
     "docs:build": "nr -C docs docs:build",
     "lint": "eslint .",

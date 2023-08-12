@@ -1,80 +1,38 @@
-<script setup lang="ts">
-import { lfFrame, lfImage, lfLeafer, lfRect, lfText } from 'leafer-vue'
-import { ref } from 'vue'
-import testImage from '/test.jpg'
+<script setup>
+import { watchEffect } from 'vue'
+import { Repl, ReplStore } from '@vue/repl'
+import Monaco from '@vue/repl/monaco-editor'
 
-const width = ref(300)
-const color = ref('#000')
-function changeColor() {
-  color.value = '#fff'
-}
+// retrieve some configuration options from the URL
+const query = new URLSearchParams(location.search)
 
-const showIt = ref(true)
+const store = new ReplStore({
+  // initialize repl with previously serialized state
+  serializedState: location.hash.slice(1),
 
-const fill = ref('#32cd79')
-function changeFill() {
-  fill.value = `#${Math.floor(Math.random() * 0xFFFFFF).toString(16)}`
-}
+  // starts on the output pane (mobile only) if the URL has a showOutput query
+  showOutput: query.has('showOutput'),
+  // starts on a different tab on the output pane if the URL has a outputMode query
+  // and default to the "preview" tab
+  outputMode: query.get('outputMode') || 'preview',
+
+  // specify the default URL to import Vue runtime from in the sandbox
+  // default is the CDN link from jsdelivr.com with version matching Vue's version
+  // from peerDependency
+  defaultVueRuntimeURL: 'cdn link to vue.runtime.esm-browser.js',
+})
+
+// persist state to URL hash
+watchEffect(() => history.replaceState({}, '', store.serialize()))
+
+// pre-set import map
+store.setImportMap({
+  imports: {
+    myLib: 'cdn link to esm build of myLib',
+  },
+})
 </script>
 
 <template>
-  <span>aaaaa</span>
-  <lfLeafer
-    v-if="showIt"
-    v-bind="{
-      width,
-      height: 100,
-      fill: '#fff',
-    }"
-    @tap="console.log('Tap')"
-  >
-    <lfFrame
-      v-bind="{
-        width,
-        height: 100,
-        fill: '#0f0',
-        draggable: true,
-      }"
-      @double_click="(e) => console.log(e)"
-      @click="console.log('Click')"
-      @pointer-enter="console.log('Down')"
-      @tap="showIt = !showIt"
-    >
-      <lfRect
-        v-bind="{
-          width: 100,
-          height: 100,
-          fill: {
-            type: 'linear',
-            stops: [{ offset: 0, color: '#FF4B4B' }, { offset: 1, color }],
-          },
-          draggable: true,
-        }"
-        @tap="changeColor"
-      />
-      <lfImage
-        v-if="showIt"
-        v-bind="{
-          width: 100,
-          height: 100,
-        }"
-        :x="100"
-        :draggable="true"
-        :url="testImage"
-      />
-      <lfText
-        v-bind="{
-          width: 100,
-          height: 100,
-          fill: '#fff',
-          draggable: true,
-          text: `${width}`,
-        }"
-        :x="200"
-      />
-    </lfFrame>
-  </lfLeafer>
-  <button @click="width = width + 100">
-    Click
-  </button>
+  <Repl :store="store" :editor="Monaco" :show-compile-output="true" />
 </template>

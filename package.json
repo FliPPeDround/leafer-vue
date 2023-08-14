@@ -1,7 +1,6 @@
 {
   "name": "@leafer-vue/monorepo",
   "type": "module",
-  "version": "0.0.3",
   "private": true,
   "packageManager": "pnpm@8.6.2",
   "description": "",
@@ -30,7 +29,6 @@
     "docs:build": "nr -C docs docs:build",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
-    "prepublishOnly": "nr build",
     "release": "bumpp && npm publish",
     "test": "vitest",
     "typecheck": "tsc --noEmit"

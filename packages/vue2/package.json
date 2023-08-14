@@ -1,7 +1,7 @@
 {
   "name": "leafer-vue",
   "type": "module",
-  "version": "2.0.0",
+  "version": "2.0.0-beta.0",
   "description": "",
   "author": "FliPPeDround <FliPPeDround@qq.com>",
   "license": "MIT",
@@ -34,7 +34,7 @@
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "prepublishOnly": "nr build",
-    "release": "bumpp && npm publish",
+    "release": "bumpp",
     "test": "vitest",
     "typecheck": "tsc --noEmit"
   },

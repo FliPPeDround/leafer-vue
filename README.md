@@ -13,15 +13,18 @@
 
 ## Features
 
-- ⚡️ Vue 3
-<!-- - 📦 [Components auto importing](./src/components) -->
-
+- 🚀 Support Vue 2 & 3
 - 🦾 TypeScript
 
 ## Install
 
 ```bash
-npm install leafer-vue leafer-ui
+npm install leafer-vue
+```
+
+```bash
+# for vue2
+npm install leafer-vue@2
 ```
 
 ## Usage

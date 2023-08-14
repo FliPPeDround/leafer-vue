@@ -4,16 +4,12 @@
 
 ::: code-group
 
-```bash [npm]
+```bash [vue3]
 npm i leafer-vue
 ```
 
-```bash [pnpm]
-pnpm i leafer-vue
-```
-
-```bash [yarn]
-yarn add leafer-vue
+```bash [vue2]
+npm i leafer-vue@2
 ```
 
 :::

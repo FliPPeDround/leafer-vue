@@ -17,6 +17,9 @@ features:
   - title: Fully tree shakeable
     details: Only take what you want
     icon: ⚡
+  - title: Vue 3 & 2
+    details: Support Vue 3 & 2
+    icon: 🚀
   - title: Mini Size
     details: Only 3kb
     icon: 🎪

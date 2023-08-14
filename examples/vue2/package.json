@@ -1,15 +1,16 @@
 {
   "name": "vue2-example",
   "version": "0.0.0",
+  "private": true,
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check build-only",
-    "preview": "vite preview --port 4173",
+    "preview": "vite preview",
     "build-only": "vite build",
     "type-check": "vue-tsc --noEmit"
   },
   "dependencies": {
-    "leafer-vue": "2.0.0",
+    "leafer-vue": "workspace:^2.0.0",
     "vue": "^2.7.7"
   },
   "devDependencies": {

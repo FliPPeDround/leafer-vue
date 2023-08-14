@@ -69,7 +69,7 @@ importers:
   examples/vue2:
     dependencies:
       leafer-vue:
-        specifier: 2.0.0
+        specifier: workspace:^2.0.0
         version: link:../../packages/vue2
       vue:
         specifier: ^2.7.7
@@ -106,7 +106,7 @@ importers:
   examples/vue3:
     dependencies:
       leafer-vue:
-        specifier: 3.0.0
+        specifier: workspace:^3.0.0
         version: link:../../packages/vue3
       vue:
         specifier: ^3.3.4

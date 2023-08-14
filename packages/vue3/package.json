@@ -34,7 +34,7 @@
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "prepublishOnly": "nr build",
-    "release": "bumpp && npm publish",
+    "release": "bumpp",
     "test": "vitest",
     "typecheck": "tsc --noEmit"
   },

@@ -29,7 +29,9 @@
     "docs:build": "nr -C docs docs:build",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
-    "release": "bumpp && npm publish",
+    "release": "nr release:3",
+    "release:2": "nr -C packages/vue2 release",
+    "release:3": "nr -C packages/vue3 release",
     "test": "vitest",
     "typecheck": "tsc --noEmit"
   },

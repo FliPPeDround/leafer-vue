@@ -10,7 +10,7 @@
     "type-check": "vue-tsc --noEmit -p tsconfig.app.json --composite false"
   },
   "dependencies": {
-    "leafer-vue": "workspace:*",
+    "leafer-vue": "3.0.0",
     "vue": "^3.3.4"
   },
   "devDependencies": {

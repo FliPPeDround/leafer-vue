@@ -1,7 +1,7 @@
 {
   "name": "leafer-vue",
   "type": "module",
-  "version": "3.0.0",
+  "version": "2.0.0",
   "description": "",
   "author": "FliPPeDround <FliPPeDround@qq.com>",
   "license": "MIT",
@@ -39,9 +39,18 @@
     "typecheck": "tsc --noEmit"
   },
   "peerDependencies": {
+    "@vue/composition-api": "^1.7.1",
     "leafer-ui": "1.0.0-beta.9"
   },
+  "peerDependenciesMeta": {
+    "@vue/composition-api": {
+      "optional": true
+    }
+  },
+  "dependencies": {
+    "vue-demi": "^0.14.5"
+  },
   "devDependencies": {
-    "vue": "^3.3.4"
+    "vue": "^2.7.7"
   }
 }

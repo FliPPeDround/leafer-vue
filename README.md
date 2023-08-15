@@ -9,7 +9,7 @@
   </a>
 </span>
 
-## leafer-vue is a vue component library based on leafer-ui and vue3
+## leafer-vue is a vue component library based on leafer-ui and vue
 
 ## Features
 

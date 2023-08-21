@@ -4,6 +4,7 @@ import type {
 
   IFrameInputData,
   IBoxInputData,
+  IGroupInputData,
   IImageInputData,
   ICanvasInputData,
   IEllipseInputData,
@@ -30,7 +31,9 @@ import type {
   PropertyEvent,
 } from 'leafer-ui'
 
-type LeaferComponent<T, K> = DefineComponent<K & T>
+export {usePlugin} from 'leafer-ui'
+
+type LeaferComponent<T, K> = DefineComponent<T & K>
 type RequiredField<T, K extends keyof T> = T & { [P in K]-?: T[P] }
 
 
@@ -158,21 +161,23 @@ type _LeaferEvent = Partial<{
 
 type LfEvent = _LeaferEvent & LeaferBaseEvent
 
-declare const lfApp: DefineComponent<ILeaferConfig>
-declare const lfLeafer: LeaferComponent<ILeaferConfig, LfEvent>
+export const lfApp: DefineComponent<ILeaferConfig>
+export const lfLeafer: LeaferComponent<ILeaferConfig, LfEvent>
 
-declare const lfFrame: LeaferComponent<IFrameInputData, LeaferBaseEvent>
-declare const lfBox: LeaferComponent<IBoxInputData, LeaferBaseEvent>
+export const lfFrame: LeaferComponent<IFrameInputData, LeaferBaseEvent>
+export const lfBox: LeaferComponent<IBoxInputData, LeaferBaseEvent>
+export const lfGroup: LeaferComponent<IGroupInputData, LeaferBaseEvent>
 
-declare const lfRect: LeaferComponent<IRectInputData, LeaferBaseEvent>
-declare const lfEllipse: LeaferComponent<IEllipseInputData, LeaferBaseEvent>
-declare const lfPolygon: LeaferComponent<IPolygonInputData, LeaferBaseEvent>
-declare const lfLine: LeaferComponent<ILineInputData, LeaferBaseEvent>
-declare const lfStar: LeaferComponent<IStarInputData, LeaferBaseEvent>
+export const lfRect: LeaferComponent<IRectInputData, LeaferBaseEvent>
+export const lfEllipse: LeaferComponent<IEllipseInputData, LeaferBaseEvent>
+export const lfPolygon: LeaferComponent<IPolygonInputData, LeaferBaseEvent>
+export const lfLine: LeaferComponent<ILineInputData, LeaferBaseEvent>
+export const lfStar: LeaferComponent<IStarInputData, LeaferBaseEvent>
 
-declare const lfImage: DefineComponent<IImageInputData & LeaferBaseEvent>
-declare const lfCanvas: DefineComponent<ICanvasInputData & LeaferBaseEvent>
+export const lfImage: DefineComponent<IImageInputData & LeaferBaseEvent>
+export const lfCanvas: DefineComponent<ICanvasInputData & LeaferBaseEvent>
 
 
 type _TextInputData = RequiredField<ITextInputData, 'text'>
-declare const lfText: LeaferComponent<_TextInputData, LeaferBaseEvent>
+export const lfText: LeaferComponent<_TextInputData, LeaferBaseEvent>
+

@@ -1,6 +1,8 @@
 import { lfContainer } from './components/Container'
 import { lfNode } from './components/Node'
 
+export { usePlugin } from 'leafer-ui'
+
 // Root
 export * from './components/Root/app'
 export * from './components/Root/leafer'

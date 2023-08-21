@@ -1,44 +1,39 @@
 <script setup lang="ts">
-import { lfFrame, lfImage, lfLeafer, lfRect, lfText } from 'leafer-vue'
+import { lfFrame, lfImage, lfLeafer, lfRect, lfText, usePlugin } from 'leafer-vue'
 import { ref } from 'vue'
 import testImage from '/test.jpg'
+import plugin from 'leafer-flex-plugin'
 
+usePlugin(plugin)
 const width = ref(300)
 const color = ref('#000')
 function changeColor() {
   color.value = '#fff'
-}
-
-const showIt = ref(true)
-
-const fill = ref('#32cd79')
-function changeFill() {
-  fill.value = `#${Math.floor(Math.random() * 0xFFFFFF).toString(16)}`
 }
 </script>
 
 <template>
   <span>aaaaa</span>
   <lfLeafer
-    v-if="showIt"
     v-bind="{
-      width,
-      height: 100,
+      width: 500,
+      height: 500,
       fill: '#fff',
     }"
     @tap="console.log('Tap')"
   >
     <lfFrame
       v-bind="{
-        width,
-        height: 100,
+        width: 500,
+        height: 500,
         fill: '#0f0',
         draggable: true,
+        flexDirection: 'row',
+        justifyContent: 'space-around',
       }"
       @double_click="(e) => console.log(e)"
       @click="console.log('Click')"
       @pointer-enter="console.log('Down')"
-      @tap="showIt = !showIt"
     >
       <lfRect
         v-bind="{
@@ -53,12 +48,10 @@ function changeFill() {
         @tap="changeColor"
       />
       <lfImage
-        v-if="showIt"
         v-bind="{
           width: 100,
           height: 100,
         }"
-        :x="100"
         :draggable="true"
         :url="testImage"
       />
@@ -70,7 +63,6 @@ function changeFill() {
           draggable: true,
           text: `${width}`,
         }"
-        :x="200"
       />
     </lfFrame>
   </lfLeafer>

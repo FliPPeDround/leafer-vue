@@ -5,35 +5,41 @@ import Monaco from '@vue/repl/monaco-editor'
 const hash = location.hash.slice(1)
 const store = new ReplStore({
   serializedState: hash,
-  showOutput: true,
-  outputMode: 'preview',
 })
 
 if (!hash) {
   store.setFiles({
-    'App.vue': `<script setup>
-const Leafer = LeaferUI.Leafer
-const Rect = LeaferUI.Rect
+    'App.vue': `<script setup lang="ts">
+import { lfLeafer, lfRect } from 'leafer-vue'
+import { ref } from 'vue'
 
-const leafer = new Leafer({ view: window })
+const fill = ref('#32cd79')
+function changeColor() {
+  fill.value = \`#${Math.floor(Math.random() * 0xFFFFFF).toString(16)}\`
+}
+<\/script>
 
-const rect = new Rect({
-  x: 100,
-  y: 100,
-  width: 200,
-  height: 200,
-  fill: '#32cd79',
-  draggable: true,
-})
-
-leafer.add(rect)
-<\/script>`,
+<template>
+  <div>
+    <lfLeafer :width="500" :height="500">
+      <lfRect
+        :x="100" :y="100"
+        :width="200" :height="200" :fill="fill"
+        :draggable="true"
+        @tap="changeColor"
+      />
+    </lfLeafer>
+  </div>
+</template>`,
+    'import-map.json': `{
+  "imports": {
+    "leafer-ui": "https://cdn.jsdelivr.net/npm/leafer-ui/dist/index.js",
+    "leafer-vue": "https://cdn.jsdelivr.net/npm/leafer-vue/dist/index.js"
+  }
+}`,
   })
 }
 
-const previewOptions = {
-  headHTML: '<script src="https://unpkg.com/leafer-ui"><\/script>',
-}
 function share() {
   const hash = store.serialize()
   const shareUrl = location.origin + hash
@@ -50,9 +56,8 @@ function share() {
   <Repl
     :store="store"
     :editor="Monaco"
-    :preview-options="previewOptions"
     :show-compile-output="false"
-    :show-import-map="false"
+    :show-import-map="true"
     :show-ts-config="false"
     :clear-console="false"
   />

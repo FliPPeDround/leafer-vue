@@ -4,8 +4,6 @@
 
 ## 用法
 
-<!-- <AppGuide /> -->
-
 ```vue
 <script setup lang="ts">
 import { lfApp, lfLeafer } from 'leafer-vue'

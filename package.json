@@ -27,6 +27,7 @@
     "example:2": "nr -C examples/vue2 dev",
     "docs:dev": "nr -C docs docs:dev",
     "docs:build": "nr -C docs docs:build",
+    "docs:preview": "nr -C docs docs:preview",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "release": "nr release:3",

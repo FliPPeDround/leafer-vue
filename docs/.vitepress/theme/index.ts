@@ -1,10 +1,10 @@
 import DefaultTheme from 'vitepress/theme'
 
-// import AppGuide from '../components/guide/app/app.vue'
+import Repl from '../components/repl/index.vue'
 
 export default {
   ...DefaultTheme,
-  // enhanceApp: async ({ app }) => {
-  //   app.component('AppGuide', AppGuide)
-  // },
+  enhanceApp: async ({ app }) => {
+    app.component('Repl', Repl)
+  },
 }

@@ -1,10 +1,14 @@
-import DefaultTheme from 'vitepress/theme'
+/// <reference types="vite/client" />
 
-import Repl from '../components/repl/index.vue'
+import DefaultTheme from 'vitepress/theme'
 
 export default {
   ...DefaultTheme,
   enhanceApp: async ({ app }) => {
-    app.component('Repl', Repl)
+    if (!import.meta.env.SSR) {
+      const Repl = (await import('../components/repl/index.vue')).default
+      app.component('Repl', Repl)
+    }
   },
+
 }

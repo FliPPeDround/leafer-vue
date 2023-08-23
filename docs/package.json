@@ -16,6 +16,13 @@
     "vue": "^3.3.4"
   },
   "devDependencies": {
-    "vitepress": "1.0.0-rc.4"
+    "@tsconfig/node18": "^2.0.1",
+    "@types/node": "^18.16.17",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "@vue/tsconfig": "^0.4.0",
+    "typescript": "~5.0.4",
+    "vite": "^4.3.9",
+    "vitepress": "1.0.0-rc.4",
+    "vue-tsc": "^1.6.5"
   }
 }

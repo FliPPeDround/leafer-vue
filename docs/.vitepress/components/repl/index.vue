@@ -1,10 +1,11 @@
 <script setup lang="ts">
-import { Repl, ReplStore } from '@vue/repl'
-import Editor from '@vue/repl/codemirror-editor'
 import '@vue/repl/style.css'
 import { useDark } from '@vueuse/core'
+import { Repl, ReplStore } from '@vue/repl'
+import Editor from '@vue/repl/codemirror-editor'
 
 const { code } = defineProps<{ code: string }>()
+
 const isDark = useDark()
 const store = new ReplStore()
 

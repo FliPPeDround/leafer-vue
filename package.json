@@ -33,8 +33,7 @@
     "release": "nr release:3",
     "release:2": "nr -C packages/vue2 release",
     "release:3": "nr -C packages/vue3 release",
-    "test": "vitest",
-    "typecheck": "tsc --noEmit"
+    "test": "vitest"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.39.4",

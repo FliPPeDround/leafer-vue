@@ -29,7 +29,7 @@ jobs:
       - run: npx changelogithub
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-      
+
       - run: corepack enable
       - run: pnpm install
       - run: cd packages/vue2 && pnpm publish --access public --no-git-checks

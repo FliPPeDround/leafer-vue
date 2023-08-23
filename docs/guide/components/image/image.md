@@ -15,8 +15,8 @@ import DemoImg from './demo.png'
 <template>
   <lfLeafer :width="100" :height="100" fill="#fff">
     <lfImage
-      :url="DemoImg" :draggable="true"
-      @imageLoaded="() => console.log('图片加载完成')"
+      :url="DemoImg"
+      :draggable="true" @image-loaded="console.log('图片加载完成')"
     />
   </lfLeafer>
 </template>

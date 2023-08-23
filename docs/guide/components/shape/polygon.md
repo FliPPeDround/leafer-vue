@@ -15,7 +15,7 @@ import { lfLeafer, lfPolygon } from 'leafer-vue'
   <lfLeafer :width="100" :height="100" fill="#fff">
     <lfPolygon
       :width="100" :height="100"
-      :sides="3",
+      :sides="3"
       fill="#ff4b4b"
     />
   </lfLeafer>

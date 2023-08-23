@@ -5,16 +5,10 @@ import { ref } from 'vue'
 const width = ref(300)
 const color = ref('#000')
 function changeColor() {
-  console.log('changeColor')
   color.value = '#fff'
 }
 
 const showIt = ref(true)
-
-const fill = ref('#32cd79')
-function changeFill() {
-  fill.value = `#${Math.floor(Math.random() * 0xFFFFFF).toString(16)}`
-}
 </script>
 
 <template>
@@ -35,7 +29,6 @@ function changeFill() {
           fill: '#0f0',
           draggable: true,
         }"
-        @double_click="(e) => console.log(e)"
         @click="console.log('Click')"
         @pointer-enter="console.log('Down')"
         @tap="showIt = !showIt"

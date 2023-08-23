@@ -45,7 +45,6 @@ function share() {
   const shareUrl = location.origin + hash
 
   navigator.clipboard.writeText(shareUrl)
-  alert('已复制分享链接')
 }
 </script>
 

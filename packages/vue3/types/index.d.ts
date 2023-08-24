@@ -161,8 +161,12 @@ type _LeaferEvent = Partial<{
 
 type LfEvent = _LeaferEvent & LeaferBaseEvent
 
-export const lfApp: DefineComponent<ILeaferConfig>
-export const lfLeafer: LeaferComponent<ILeaferConfig, LfEvent>
+interface IAppInputData extends ILeaferConfig {
+   fullScreen?: boolean
+}
+
+export const lfApp: DefineComponent<IAppInputData>
+export const lfLeafer: LeaferComponent<IAppInputData, LfEvent>
 
 export const lfFrame: LeaferComponent<IFrameInputData, LeaferBaseEvent>
 export const lfBox: LeaferComponent<IBoxInputData, LeaferBaseEvent>

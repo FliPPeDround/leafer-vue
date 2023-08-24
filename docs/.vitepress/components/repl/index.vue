@@ -41,7 +41,11 @@ function handleKeydown(evt: KeyboardEvent) {
 
 <style>
 .vue-repl {
-  height: 40vh !important;
+  height: 600px !important;
+}
+
+.left {
+  border: none !important;
 }
 
 .split-pane:not(.show-output) .left {

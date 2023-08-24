@@ -1,6 +1,6 @@
 import { defineComponent, onUnmounted } from 'vue'
+import { UI } from 'leafer-ui'
 import type { Node } from './constants'
-import { createNode } from './createNode'
 import { useCreateEvents, useEffectUpdate, useGetContainer, useGetPropsAndEventByAttrs } from '@/composables'
 
 export function lfNode(NodeName: Node) {
@@ -9,7 +9,8 @@ export function lfNode(NodeName: Node) {
     inheritAttrs: false,
     setup(_, { attrs, expose }) {
       const { events, config } = useGetPropsAndEventByAttrs(attrs)
-      const instance = createNode(NodeName, config)
+      config.tag = NodeName
+      const instance = UI.one(config)
       const container = useGetContainer()
       container.add(instance)
       expose(instance)

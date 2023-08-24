@@ -2,19 +2,33 @@
 import { lfLeafer, lfRect } from 'leafer-vue'
 import { ref } from 'vue'
 
-const fill = ref('#32cd79')
 function changeColor() {
-  fill.value = `#${Math.floor(Math.random() * 0xFFFFFF).toString(16)}`
+  return `#${Math.floor(Math.random() * 0xFFFFFF).toString(16)}`
 }
+
+const rotation = ref(0)
+function animate() {
+  rotation.value += 1
+  requestAnimationFrame(animate)
+}
+animate()
 </script>
 
 <template>
-  <lfLeafer :width="200" :height="200" fill="black">
-    <lfRect
-      :x="100" :y="100"
-      :width="200" :height="200" :fill="fill"
-      :draggable="true"
-      @tap="changeColor"
-    />
+  <lfLeafer fill="black" :full-screen="true">
+    <template
+      v-for="row in 1000"
+      :key="row"
+    >
+      <lfRect
+        v-for="col in 1000"
+        :key="col"
+        :rotation="rotation"
+        :x="(row - 1) * 20" :y="(col - 1) * 20"
+        :width="15" :height="15" fill="#fff"
+        :draggable="true"
+        @tap="changeColor"
+      />
+    </template>
   </lfLeafer>
 </template>

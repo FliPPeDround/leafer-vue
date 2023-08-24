@@ -1,10 +1,7 @@
 <script setup lang="ts">
-import { lfFrame, lfImage, lfLeafer, lfRect, lfText, usePlugin } from 'leafer-vue'
+import { lfLeafer, lfRect } from 'leafer-vue'
 import { ref } from 'vue'
-import testImage from '/test.jpg'
-import plugin from 'leafer-flex-plugin'
 
-usePlugin(plugin)
 const width = ref(300)
 const color = ref('#000')
 function changeColor() {
@@ -13,11 +10,9 @@ function changeColor() {
 </script>
 
 <template>
-  <span>aaaaa</span>
+  <!-- <span>aaaaa</span>
   <lfLeafer
     v-bind="{
-      width: 500,
-      height: 500,
       fill: '#fff',
     }"
     @tap="console.log('Tap')"
@@ -68,5 +63,20 @@ function changeColor() {
   </lfLeafer>
   <button @click="width = width + 100">
     Click
-  </button>
+  </button> -->
+  <lfLeafer fill="black" :full-screen="true">
+    <template
+      v-for="row in 1000"
+      :key="row"
+    >
+      <lfRect
+        v-for="col in 100"
+        :key="col"
+        :x="(row - 1) * 20" :y="(col - 1) * 20"
+        :width="15" :height="15" fill="#fff"
+        :draggable="true"
+        @tap="changeColor"
+      />
+    </template>
+  </lfLeafer>
 </template>

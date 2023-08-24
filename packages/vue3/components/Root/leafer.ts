@@ -17,18 +17,20 @@ export const lfLeafer = defineComponent({
     const { events, config } = useGetPropsAndEventByAttrs(attrs)
     let container: Leafer
     if (parentNodeName !== 'LfApp') {
-      const canvas = document.createElement('canvas')
-      document.body.appendChild(canvas)
-      container = new Leafer({
-        ...config,
-        view: canvas,
-        start: false,
-      })
-
-      onMounted(() => {
-        useInsertBefore(canvas)
-        container.start()
-      })
+      if (!(config?.fullScreen || config?.['full-screen'])) {
+        const canvas = document.createElement('canvas')
+        document.body.appendChild(canvas)
+        config.view = canvas
+        config.start = false
+        onMounted(() => {
+          useInsertBefore(canvas)
+          container.start()
+        })
+      }
+      else {
+        config.view = window
+      }
+      container = new Leafer(config)
 
       onUnmounted(() => {
         container.destroy()

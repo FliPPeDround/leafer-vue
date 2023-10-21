@@ -64,7 +64,7 @@ function changeColor() {
   <button @click="width = width + 100">
     Click
   </button> -->
-  <lfLeafer fill="black" :full-screen="true">
+  <lfLeafer fill="black">
     <template
       v-for="row in 1000"
       :key="row"

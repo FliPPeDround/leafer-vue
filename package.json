@@ -52,7 +52,7 @@
     "tsup": "^7.1.0",
     "typescript": "^5.0.4",
     "unplugin-vue-components": "^0.25.1",
-    "vitest": "^0.31.3"
+    "vitest": "^0.34.0"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"

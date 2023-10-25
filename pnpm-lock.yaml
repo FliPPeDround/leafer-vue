@@ -73,8 +73,8 @@ importers:
         version: 3.3.4
     devDependencies:
       '@tsconfig/node18':
-        specifier: ^2.0.1
-        version: 2.0.1
+        specifier: ^18.0.0
+        version: 18.2.0
       '@types/node':
         specifier: ^18.16.17
         version: 18.17.0

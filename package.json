@@ -2,7 +2,7 @@
   "name": "@leafer-vue/monorepo",
   "type": "module",
   "private": true,
-  "packageManager": "pnpm@8.6.2",
+  "packageManager": "pnpm@8.10.2",
   "description": "",
   "author": "FliPPeDround <FliPPeDround@qq.com>",
   "license": "MIT",

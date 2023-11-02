@@ -17,7 +17,7 @@
   },
   "devDependencies": {
     "@tsconfig/node18": "^2.0.1",
-    "@types/node": "^18.16.17",
+    "@types/node": "^20.0.0",
     "@vitejs/plugin-vue": "^4.2.3",
     "@vue/tsconfig": "^0.4.0",
     "leafer-vue": "workspace:^3.0.0",

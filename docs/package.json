@@ -23,7 +23,7 @@
     "leafer-vue": "workspace:^3.0.0",
     "typescript": "~5.0.4",
     "vite": "^4.3.9",
-    "vitepress": "1.0.0-rc.4",
+    "vitepress": "1.0.0-rc.25",
     "vue-tsc": "^1.6.5"
   }
 }

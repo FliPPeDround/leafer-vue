@@ -6,7 +6,7 @@ export default defineConfig ((options) => {
   const buildBanner = `\n ☘️ ☘️ ☘️  ${bold('leafer-vue@3')} ${gray(`v${pkg.version}`)} \n`
 
   return {
-    entry: ['index.ts', 'resolver.ts'],
+    entry: ['index.ts'],
     format: options.watch ? 'esm' : ['cjs', 'esm', 'iife'],
     target: 'node14',
     tsconfig: './tsconfig.json',

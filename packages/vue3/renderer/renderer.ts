@@ -1,45 +1,16 @@
-import { Rect, Text } from 'leafer-ui'
+import { UI } from 'leafer-ui'
 import { createRenderer } from 'vue'
 
 // export function createRenderer() {
 
 // }
 
-export const renderer = createRenderer<Rect, Rect>({
+export const renderer = createRenderer<UI, UI>({
   createElement(type) {
-    let element
-    switch (type) {
-      case 'Rect':
-        element = new Rect({
-          width: 15,
-          height: 15,
-          fill: 'rgb(50,205,121)',
-        })
-        break
-
-      default:
-        throw new Error(`无${type}`)
-        break
-    }
-    return element
+    return UI.one({ tag: type })
   },
   patchProp(el, key, prevValue, nextValue) {
-    switch (key) {
-      case 'fill' :
-        el.fill = nextValue
-        break
-
-      case 'x':
-        el.x = nextValue
-        break
-
-      case 'y':
-        el.y = nextValue
-        break
-
-      default:
-        break
-    }
+    el[key] = nextValue
   },
   insert(el, parent, anchor) {
     if (el && parent)
@@ -50,10 +21,10 @@ export const renderer = createRenderer<Rect, Rect>({
       el.parent.remove(el)
   },
   createText(text) {
-    return new Text({ text })
+    return new Error('a') as unknown as UI
   },
   createComment(text) {
-    return new Text({ text })
+    return new Error('a') as unknown as UI
   },
   setText(node, text) {
 
@@ -62,9 +33,24 @@ export const renderer = createRenderer<Rect, Rect>({
 
   },
   parentNode(node) {
-    return node.parent as unknown as Rect
+    return node.parent
   },
   nextSibling(node) {
     return null
   },
 })
+
+// export function createRenderer(options: { prefix?: string } = {}) {
+//   const { createElement, setText, ...nodeOps } = _nodeOps
+//   const { prefix = 'pixi' } = options
+//   const rendererOptions = rendererWithCapture({
+//     createElement: (...args) => createElement(prefix, ...args),
+//     setElementText: (...args) => setText(prefix, ...args),
+//     setText: (...args) => setText(prefix, ...args),
+//     patchProp,
+//     ...nodeOps,
+//   })
+//   return _createRenderer<Container, Container>(rendererOptions)
+// }
+
+// export const createApp = renderer.createApp

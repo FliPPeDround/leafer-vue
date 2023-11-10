@@ -7,7 +7,7 @@ export default defineComponent({
     const canvas = ref<HTMLCanvasElement>()
 
     function mount() {
-      const context = new Leafer({ view: window })
+      const context = new Leafer({ view: canvas.value })
 
       const app = createApp({
         render: () => renderSlot(slots, 'default'),

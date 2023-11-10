@@ -1,11 +1,8 @@
-import { UI } from 'leafer-ui'
+import { Text, UI } from 'leafer-ui'
 import { createRenderer } from 'vue'
+import type { IUI } from '@leafer-ui/interface'
 
-// export function createRenderer() {
-
-// }
-
-export const renderer = createRenderer<UI, UI>({
+export const renderer = createRenderer<IUI, IUI>({
   createElement(type) {
     return UI.one({ tag: type })
   },
@@ -21,10 +18,10 @@ export const renderer = createRenderer<UI, UI>({
       el.parent.remove(el)
   },
   createText(text) {
-    return new Error('a') as unknown as UI
+    return new Text({ text })
   },
   createComment(text) {
-    return new Error('a') as unknown as UI
+    return new Text({ text })
   },
   setText(node, text) {
 
@@ -33,24 +30,9 @@ export const renderer = createRenderer<UI, UI>({
 
   },
   parentNode(node) {
-    return node.parent
+    return node.parent as IUI
   },
   nextSibling(node) {
     return null
   },
 })
-
-// export function createRenderer(options: { prefix?: string } = {}) {
-//   const { createElement, setText, ...nodeOps } = _nodeOps
-//   const { prefix = 'pixi' } = options
-//   const rendererOptions = rendererWithCapture({
-//     createElement: (...args) => createElement(prefix, ...args),
-//     setElementText: (...args) => setText(prefix, ...args),
-//     setText: (...args) => setText(prefix, ...args),
-//     patchProp,
-//     ...nodeOps,
-//   })
-//   return _createRenderer<Container, Container>(rendererOptions)
-// }
-
-// export const createApp = renderer.createApp

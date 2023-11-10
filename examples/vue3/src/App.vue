@@ -9,36 +9,14 @@ function rightMove() {
 </script>
 
 <template>
-  <div style="display: flex;">
-    <LeaferApp>
-      <!-- <template
-      v-for="row in 1000"
-      :key="row"
-      >
+  <div>
+    <LeaferApp :width="200" :height="200">
       <Rect
-        v-for="col in 1000"
-        :key="col"
-        :x="(row - 1) * 20" :y="(col - 1) * 20"
+        :x="20"
+        :width="20"
+        :height="20"
+        fill="red"
       />
-    </template> -->
-
-      <Box>
-        <Rect
-          :x="x"
-          :width="20"
-          :height="20"
-          fill="red"
-        />
-        <Rect
-          :x="x + 20"
-          :width="20"
-          :height="20"
-          fill="red"
-        />
-        <Text :x="x + 40" fill="red" text="aa">
-          aaaa
-        </Text>
-      </Box>
     </LeaferApp>
     <button @click="rightMove">
       rightMove

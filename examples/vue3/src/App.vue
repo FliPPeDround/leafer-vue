@@ -12,10 +12,11 @@ function rightMove() {
   <div>
     <LeaferApp :width="200" :height="200">
       <Rect
-        :x="20"
+        :x="x"
         :width="20"
         :height="20"
         fill="red"
+        @tap="rightMove"
       />
     </LeaferApp>
     <button @click="rightMove">

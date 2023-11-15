@@ -1,5 +1,3 @@
-const logPrefix = '[TresJS ▲ ■ ●] '
-
 interface colorInfo {
   color?: string
   content?: any

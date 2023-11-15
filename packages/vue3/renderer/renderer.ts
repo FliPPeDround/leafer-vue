@@ -50,16 +50,16 @@ export const renderer = createRenderer<IUI, IUI>({
   createComment() {
     return null as unknown as IUI
   },
-  setText(node, text) {
+  setText() {
 
   },
-  setElementText(node, text) {
+  setElementText() {
 
   },
   parentNode(node) {
     return node?.parent as IUI
   },
-  nextSibling(node) {
+  nextSibling() {
     return null
   },
 })

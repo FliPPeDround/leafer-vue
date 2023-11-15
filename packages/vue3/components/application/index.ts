@@ -3,7 +3,7 @@ import { App } from 'leafer-ui'
 import { createApp } from './../../renderer'
 
 export default defineComponent({
-  setup(props, { slots, expose }) {
+  setup(_props, { slots }) {
     const canvas = ref<HTMLCanvasElement>()
 
     function mount() {

@@ -1,5 +1,5 @@
 import { defineComponent, h, onMounted, ref, renderSlot } from 'vue'
-import { Leafer } from 'leafer-ui'
+import { App } from 'leafer-ui'
 import { createApp } from './../../renderer'
 
 export default defineComponent({
@@ -7,7 +7,7 @@ export default defineComponent({
     const canvas = ref<HTMLCanvasElement>()
 
     function mount() {
-      const context = new Leafer({
+      const context = new App({
         view: canvas.value,
         width: 200,
         height: 200,

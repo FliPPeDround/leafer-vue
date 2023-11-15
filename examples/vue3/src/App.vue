@@ -10,14 +10,22 @@ function rightMove() {
 
 <template>
   <div>
-    <LeaferApp :width="200" :height="200">
-      <Rect
-        :x="x"
-        :width="20"
-        :height="20"
-        fill="red"
-        @tap="rightMove"
-      />
+    <LeaferApp>
+      <Leafer type="draw" fill="red">
+        <Rect
+          v-bind="{ width: 800, height: 600, fill: 'gray' }"
+        />
+      </Leafer>
+      <Leafer fill="red">
+        <Rect
+          v-bind="{ x: 100, y: 100, fill: '#32cd79', draggable: true }"
+        />
+      </Leafer>
+      <Leafer type="draw" fill="red" @tap="rightMove">
+        <Rect
+          v-bind="{ x: 200, y: 200, stroke: 'blue', draggable: true }"
+        />
+      </Leafer>
     </LeaferApp>
     <button @click="rightMove">
       rightMove

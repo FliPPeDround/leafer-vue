@@ -16,6 +16,7 @@ export default defineConfig ((options) => {
       'leafer-ui',
     ],
     minify: !options.watch,
+    dts: true,
     onSuccess: async () => {
       // eslint-disable-next-line no-console
       console.log(buildBanner)

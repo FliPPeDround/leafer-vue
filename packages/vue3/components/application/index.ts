@@ -1,25 +1,32 @@
-import { defineComponent, h, onMounted, ref, renderSlot } from 'vue'
+import { defineComponent, h, onMounted, onUnmounted, ref, renderSlot } from 'vue'
 import { App } from 'leafer-ui'
 import { createApp } from './../../renderer'
 
-export default defineComponent({
+export const LeaferApp = defineComponent({
   setup(_props, { slots }) {
     const canvas = ref<HTMLCanvasElement>()
-
+    let context: App
     function mount() {
-      const context = new App({
+      context = new App({
+        width: 500,
+        height: 500,
         view: canvas.value,
-        width: 200,
-        height: 200,
+        start: false,
       })
 
       const app = createApp({
         render: () => renderSlot(slots, 'default'),
       })
       app.mount(context)
+      context.start()
+    }
+
+    function unMount() {
+      context.destroy()
     }
 
     onMounted(mount)
+    onUnmounted(unMount)
 
     return () => h('canvas', { ref: canvas })
   },

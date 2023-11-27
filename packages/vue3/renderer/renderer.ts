@@ -38,6 +38,7 @@ export const renderer = createRenderer<IUI, IUI>({
         {
           color: '#6eacf8',
           backgroundColor: '#222222',
+          // lightBackgroundColor: '#f3f9ff',
           content: `<Text text="${text.trim()}" />`,
         },
         {

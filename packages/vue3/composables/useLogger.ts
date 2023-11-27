@@ -15,8 +15,6 @@ export function useLogger() {
       css: [],
     }
     colorInfo.unshift({
-      color: '#fdf38c',
-      backgroundColor: '#413c26',
       content: '☘️Leafer-vue warn:',
     })
     colorInfo.forEach((item, index) => {
@@ -24,13 +22,13 @@ export function useLogger() {
       logData.css.push(
         `${item?.color ? `color:${item.color}` : ''}`
         + `${item?.backgroundColor ? `;background:${item.backgroundColor}` : ''}`
-        + ';padding: 1.5px'
-        + `${index === 0 ? ';border-top-left-radius: 3px; border-bottom-left-radius: 3px' : ''}`
-        + `${index === colorInfo.length - 1 ? ';border-top-right-radius: 3px; border-bottom-right-radius: 3px' : ''}`,
+        + ';padding: 0px'
+        + `${index === 0 ? ';border-top-left-radius: 25px; border-bottom-left-radius: 8px' : ''}`
+        + `${index === colorInfo.length - 1 ? ';border-top-right-radius: 8px; border-bottom-right-radius: 8px' : ''}`,
       )
     })
-    // eslint-disable-next-line no-console
-    console.log(
+
+    console.warn(
       `${logData.content}`,
       ...logData.css,
     )

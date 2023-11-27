@@ -15,7 +15,7 @@
   "sideEffects": false,
   "exports": {
     ".": {
-      "types": "./types/index.d.ts",
+      "types": "./dist/index.d.ts",
       "require": "./dist/index.cjs",
       "import": "./dist/index.js"
     },
@@ -24,7 +24,7 @@
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "unpkg": "dist/index.global.js",
-  "types": "./types/index.d.ts",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist",
     "types"

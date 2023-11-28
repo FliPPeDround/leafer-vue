@@ -49,7 +49,7 @@ export const renderer = createRenderer<IUI, IUI>({
     return null as unknown as IUI
   },
   createComment() {
-    return null as unknown as IUI
+    return UI.one({ tag: 'Group' })
   },
   setText() {
 

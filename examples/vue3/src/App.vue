@@ -2,9 +2,9 @@
 import { LeaferApp } from 'leafer-vue'
 import { ref } from 'vue'
 
-const x = ref(1)
+const show = ref(true)
 function rightMove() {
-  x.value += 10
+  show.value = !show.value
 }
 </script>
 
@@ -18,6 +18,7 @@ function rightMove() {
       </Leafer>
       <Leafer fill="red">
         <Rect
+          v-if="show"
           v-bind="{ x: 100, y: 100, fill: '#32cd79', draggable: true }"
         />
       </Leafer>

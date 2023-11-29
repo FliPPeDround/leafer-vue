@@ -1,5 +1,5 @@
-import { ComponentResolver } from 'unplugin-vue-components';
+import type { ComponentResolver } from 'unplugin-vue-components'
 
-declare function LeaferVueResolver(): ComponentResolver;
+declare function LeaferVueResolver(): ComponentResolver
 
-export { LeaferVueResolver };
+export { LeaferVueResolver }

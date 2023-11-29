@@ -8,7 +8,7 @@ export default defineConfig ((options) => {
   return {
     entry: ['index.ts'],
     format: options.watch ? 'esm' : ['cjs', 'esm', 'iife'],
-    target: 'node14',
+    target: 'node16',
     tsconfig: './tsconfig.json',
     clean: true,
     external: [
@@ -16,7 +16,7 @@ export default defineConfig ((options) => {
       'leafer-ui',
     ],
     minify: !options.watch,
-    dts: true,
+    // dts: true,
     onSuccess: async () => {
       // eslint-disable-next-line no-console
       console.log(buildBanner)

@@ -1,8 +1,14 @@
 export const NodesType = [
-  'Rect', 'Ellipse', 'Polygon', 'Star', 'Line',
-  'Image', 'Canvas',
+  'Rect',
+  'Ellipse',
+  'Polygon',
+  'Star',
+  'Line',
+  'Image',
+  'Canvas',
   'Text',
-  'Path', 'Pen',
+  'Path',
+  'Pen',
 ] as const
 
 // 获取GeometriesType枚举类型

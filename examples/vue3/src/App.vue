@@ -21,6 +21,9 @@ function rightMove() {
           v-if="show"
           v-bind="{ x: 100, y: 100, fill: '#32cd79', draggable: true }"
         />
+        <Text
+          v-bind="{ x: 210, y: 100, fill: '#32cd79', draggable: true, text: 'text' }"
+        />
       </Leafer>
       <Leafer type="draw" fill="red" @tap="rightMove">
         <Rect

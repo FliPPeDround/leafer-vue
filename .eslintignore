@@ -1,5 +1,0 @@
-*.global.js
-build
-node_modules
-!.vitepress
-docs/.vitepress/cache/deps/*.*

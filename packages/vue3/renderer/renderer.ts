@@ -1,6 +1,7 @@
+import type { IUI } from '@leafer-ui/interface'
 import { UI } from 'leafer-ui'
 import { createRenderer } from 'vue'
-import type { IUI } from '@leafer-ui/interface'
+import { Comment } from './commentTag'
 import { useLogger } from '@/composables/useLogger'
 
 function getEventNameByAttrName(attrName: string) {
@@ -26,8 +27,7 @@ export const renderer = createRenderer<IUI, IUI>({
       parent.add(el)
   },
   remove(el) {
-    if (el && el.parent)
-      el.parent.remove(el)
+    el?.destroy()
   },
   createText(text) {
     if (text.trim()) {
@@ -49,18 +49,25 @@ export const renderer = createRenderer<IUI, IUI>({
     return null as unknown as IUI
   },
   createComment() {
-    return UI.one({ tag: 'Group' })
+    return new Comment()
   },
-  setText() {
-
-  },
-  setElementText() {
-
-  },
+  setText() { },
+  setElementText() { },
   parentNode(node) {
     return node?.parent as IUI
   },
-  nextSibling() {
-    return null
+  nextSibling(node) {
+    if (!node)
+      return null
+
+    const children = node?.parent?.children || [node]
+    if (children?.length === 1)
+      return null
+
+    const index = children.findIndex(_node => _node.innerId === node.innerId)
+    if (children.length <= index + 1)
+      return null
+
+    return children[index + 1] ?? null
   },
 })

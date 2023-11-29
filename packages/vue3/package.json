@@ -26,8 +26,7 @@
   "unpkg": "dist/index.global.js",
   "types": "./dist/index.d.ts",
   "files": [
-    "dist",
-    "types"
+    "dist"
   ],
   "scripts": {
     "build": "tsup",
@@ -43,6 +42,7 @@
     "leafer-ui": "1.0.0-rc.6"
   },
   "devDependencies": {
-    "vue": "^3.3.4"
+    "@vue/runtime-core": "^3",
+    "vue": "^3"
   }
 }

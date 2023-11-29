@@ -206,8 +206,11 @@ importers:
         specifier: 1.0.0-rc.6
         version: 1.0.0-rc.6
     devDependencies:
+      '@vue/runtime-core':
+        specifier: ^3
+        version: 3.3.4
       vue:
-        specifier: ^3.3.4
+        specifier: ^3
         version: 3.3.4
 
   playground:

@@ -11,15 +11,14 @@ function rightMove() {
 <template>
   <div>
     <LeaferApp>
-      <Leafer type="draw" fill="red">
+      <Leafer>
         <Rect
           v-bind="{ width: 800, height: 600, fill: 'gray' }"
         />
       </Leafer>
       <Leafer fill="red">
         <Rect
-          v-if="show"
-          v-bind="{ x: 100, y: 100, fill: '#32cd79', draggable: true }"
+          v-bind="{ x: 100, y: 100, fill: '#32cd79', draggable: true, visible: show }"
         />
         <Text
           v-bind="{ x: 210, y: 100, fill: '#32cd79', draggable: true, text: 'text' }"

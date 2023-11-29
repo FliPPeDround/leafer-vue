@@ -13,8 +13,8 @@ function getEventNameByAttrName(attrName: string) {
 const { log } = useLogger()
 
 export const renderer = createRenderer<IUI, IUI>({
-  createElement(type) {
-    return UI.one({ tag: type })
+  createElement(type, _?, _1?, props?) {
+    return UI.one({ tag: type, ...props })
   },
   patchProp(el, key, _prevValue, nextValue) {
     if (key.startsWith('on'))

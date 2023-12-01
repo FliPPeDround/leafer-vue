@@ -23,3 +23,7 @@ const elementNames = [
 export function isCustomElement(name: string) {
   return elementNames.includes(name)
 }
+
+export const compilerOptions = {
+  isCustomElement,
+}

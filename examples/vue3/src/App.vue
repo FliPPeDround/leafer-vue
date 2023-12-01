@@ -6,11 +6,16 @@ const show = ref(true)
 function rightMove() {
   show.value = !show.value
 }
+
+const width = ref(500)
+function changeWidth() {
+  width.value += 50
+}
 </script>
 
 <template>
   <div>
-    <LeaferApp>
+    <LeaferApp :width="width" :height="500">
       <Leafer>
         <Rect
           v-bind="{ width: 800, height: 600, fill: 'gray' }"
@@ -30,7 +35,7 @@ function rightMove() {
         />
       </Leafer>
     </LeaferApp>
-    <button @click="rightMove">
+    <button @click="changeWidth">
       rightMove
     </button>
   </div>

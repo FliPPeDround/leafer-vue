@@ -1,15 +1,18 @@
 import { defineComponent, h, onMounted, onUnmounted, ref, renderSlot } from 'vue'
 import { App } from 'leafer-ui'
 import { createApp } from './../../renderer'
+import { useEffectUpdate, useGetPropsByAttrs } from '@/composables'
 
 export const LeaferApp = defineComponent({
-  setup(_props, { slots }) {
+  inheritAttrs: false,
+  setup(_props, { slots, expose, attrs }) {
     const canvas = ref<HTMLCanvasElement>()
-    let context: App
+    const config = useGetPropsByAttrs(attrs)
+
+    let container: App
     function mount() {
-      context = new App({
-        width: 500,
-        height: 500,
+      container = new App({
+        ...config,
         view: canvas.value,
         start: false,
       })
@@ -17,15 +20,20 @@ export const LeaferApp = defineComponent({
       const app = createApp({
         render: () => renderSlot(slots, 'default'),
       })
-      app.mount(context)
-      context.start()
+      app.mount(container)
+      container.start()
     }
 
     function unMount() {
-      context.destroy()
+      container.destroy()
     }
 
-    onMounted(mount)
+    onMounted(() => {
+      mount()
+      useEffectUpdate(attrs, container)
+      expose({ container })
+    })
+
     onUnmounted(unMount)
 
     return () => h('canvas', { ref: canvas })

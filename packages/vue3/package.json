@@ -26,10 +26,18 @@
     },
     "./*": "./*"
   },
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.js",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
   "unpkg": "dist/index.global.js",
-  "types": "./dist/index.d.ts",
+  "types": "dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./*"
+      ]
+    }
+  },
   "files": [
     "dist"
   ],
@@ -44,10 +52,14 @@
     "typecheck": "tsc --noEmit"
   },
   "peerDependencies": {
-    "leafer-ui": "1.0.0-rc.6"
+    "leafer-ui": ">=1.0.1"
+  },
+  "dependencies": {
+    "@vue/runtime-core": "^3",
+    "leafer-ui": "1.0.1",
+    "vue": "^3"
   },
   "devDependencies": {
-    "@vue/runtime-core": "^3",
-    "vue": "^3"
+    "@leafer-ui/interface": "^1.0.1"
   }
 }

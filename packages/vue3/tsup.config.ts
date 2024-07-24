@@ -11,13 +11,8 @@ export default defineConfig ((options) => {
     target: 'node16',
     tsconfig: './tsconfig.json',
     clean: true,
-    external: [
-      'vue',
-      'leafer-ui',
-      '@vue/runtime-core',
-    ],
     minify: !options.watch,
-    dts: !options.watch,
+    dts: true,
     onSuccess: async () => {
       // eslint-disable-next-line no-console
       console.log(buildBanner)

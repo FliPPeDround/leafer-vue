@@ -33,26 +33,26 @@ export const renderer = createRenderer<IUI, IUI>({
     if (text.trim()) {
       log([
         {
-          content: ' 不支持直接写入文本，请使用',
+          content: ' 不支持直接写入文本，请使用 ',
         },
         {
           color: '#6eacf8',
           backgroundColor: '#222222',
-          // lightBackgroundColor: '#f3f9ff',
           content: `<Text text="${text.trim()}" />`,
         },
         {
-          content: '代替',
+          content: ' 代替',
         },
       ])
     }
     return null as unknown as IUI
   },
+  // @ts-expect-error 类型不太重要
   createComment() {
     return new Comment()
   },
-  setText() { },
-  setElementText() { },
+  setText() {},
+  setElementText() {},
   parentNode(node) {
     return node?.parent as IUI
   },

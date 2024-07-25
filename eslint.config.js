@@ -7,5 +7,6 @@ export default await antfu({
     'node_modules',
     '.vitepress',
     'docs/.vitepress/cache/deps/*.*',
+    '**/public/*.js',
   ],
 })

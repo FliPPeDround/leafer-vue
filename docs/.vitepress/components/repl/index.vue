@@ -14,7 +14,7 @@ store.setFiles({
   'import-map.json': `{
   "imports": {
     "leafer-ui": "https://cdn.jsdelivr.net/npm/leafer-ui/dist/index.js",
-    "leafer-vue": "https://cdn.jsdelivr.net/npm/leafer-vue/dist/index.js"
+    "leafer-vue": "${location.origin}/leafer-vue.proxy.js"
   }
 }`,
 })
@@ -32,7 +32,7 @@ function handleKeydown(evt: KeyboardEvent) {
     :editor="Editor"
     :auto-resize="false"
     :show-compile-output="false"
-    :show-import-map="false"
+    :show-import-map="true"
     :show-ts-config="false"
     :clear-console="false"
     @keydown="handleKeydown"

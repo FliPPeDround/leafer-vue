@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import code from './leaferApp.vue?raw'
+</script>
+
 # lfApp 应用
 >
 > 用于创建应用的根组件，子组件只能为[lfLeafer](leafer.md)，详情查看[APP](https://www.leaferjs.com/ui/guide/display/App.html)。
@@ -15,3 +19,4 @@ import { lfApp, lfLeafer } from 'leafer-vue'
   </lfApp>
 </template>
 ```
+<Repl :code="code"  />

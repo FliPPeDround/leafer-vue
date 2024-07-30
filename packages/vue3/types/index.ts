@@ -1,7 +1,8 @@
-import type { IRectInputData } from '@leafer-ui/interface'
+import type { ILeaferConfig, IRectInputData } from '@leafer-ui/interface'
 import type { LeaferVueComponent } from './LeaferVueComponent'
 
 interface LeaferVueComponents {
+  LeaferApp: LeaferVueComponent<ILeaferConfig>
   Rect: LeaferVueComponent<IRectInputData>
 }
 

@@ -20,7 +20,7 @@ export default defineConfig({
         text: '应用组件',
         items: [
           {
-            text: 'App',
+            text: 'LeaferApp',
             link: '/guide/components/app/app',
           },
           {

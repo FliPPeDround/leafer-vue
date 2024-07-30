@@ -1,8 +1,0 @@
-{
-  "extends": "@vue/tsconfig/tsconfig.dom.json",
-  "compilerOptions": {
-    "composite": true
-  },
-  "include": ["env.d.ts", ".vitepress/components/**/*.vue", "guide/**/*.vue"],
-  "exclude": ["src/**/__tests__/*"]
-}

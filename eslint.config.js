@@ -9,4 +9,7 @@ export default await antfu({
     'docs/.vitepress/cache/deps/*.*',
     '**/public/*.js',
   ],
+  // rules: {
+  //    "@typescript-eslint/ban-ts-comment": "error"
+  // }
 })

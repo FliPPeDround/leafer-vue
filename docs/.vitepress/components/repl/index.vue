@@ -1,22 +1,24 @@
 <script setup lang="ts">
-import '@vue/repl/style.css'
 import { useDark } from '@vueuse/core'
-import { Repl, ReplStore } from '@vue/repl'
-import Editor from '@vue/repl/codemirror-editor'
+import { Repl, useStore } from '@vue/repl'
+import CodeMirror from '@vue/repl/codemirror-editor'
+import { ref } from 'vue'
 
 const { code } = defineProps<{ code: string }>()
 
 const isDark = useDark()
-const store = new ReplStore()
 
-store.setFiles({
-  'App.vue': code,
-  'import-map.json': `{
-  "imports": {
-    "leafer-ui": "https://cdn.jsdelivr.net/npm/leafer-ui/dist/index.js",
-    "leafer-vue": "${location.origin}/leafer-vue.proxy.js"
-  }
-}`,
+const store = useStore({
+  template: ref({
+    welcomeSFC: code,
+  }),
+  builtinImportMap: ref({
+    imports: {
+      'vue': 'https://unpkg.com/vue/dist/vue.esm-browser.prod.js',
+      'leafer-ui': 'https://cdn.jsdelivr.net/npm/leafer-ui/dist/index.js',
+      'leafer-vue': `${location.origin}/leafer-vue.proxy.js`,
+    },
+  }),
 })
 
 function handleKeydown(evt: KeyboardEvent) {
@@ -29,44 +31,25 @@ function handleKeydown(evt: KeyboardEvent) {
   <Repl
     :theme="isDark ? 'dark' : 'light'"
     :store="store"
-    :editor="Editor"
+    :editor="CodeMirror"
     :auto-resize="false"
     :show-compile-output="false"
     :show-import-map="true"
     :show-ts-config="false"
-    :clear-console="false"
+    layout="vertical"
+    layout-reverse
     @keydown="handleKeydown"
   />
 </template>
 
 <style>
 .vue-repl {
-  height: 600px !important;
+  height: 720px !important;
 }
-
-.left {
-  border: none !important;
+.tab-buttons {
+  display: none;
 }
-
-.split-pane:not(.show-output) .left {
-  width: 100% !important;
-}
-.split-pane.show-output .left {
-  display: none !important;
-}
-
-.split-pane:not(.show-output) .right {
-  display: none !important;
-}
-.split-pane.show-output .right {
-  width: 100% !important;
-}
-
-.dragger {
-  display: none !important;
-}
-
-.toggler {
-  display: block !important;
+.output-container {
+  height: 100% !important;
 }
 </style>

@@ -16,14 +16,14 @@ function changeColor() {
 </script>
 
 <template>
-  <LeaferApp :width="650" :height="600">
+  <LeaferApp :width="650" :height="340">
     <Leafer @tap="changeColor">
       <template
-        v-for="row in 100"
+        v-for="row in 33"
         :key="row"
       >
         <Rect
-          v-for="col in 25"
+          v-for="col in 17"
           :key="col"
           :rotation="rotation"
           :x="(row - 1) * 20" :y="(col - 1) * 20"

@@ -20,7 +20,8 @@ export const LeaferApp = defineComponent({
       const app = createApp({
         render: () => renderSlot(slots, 'default'),
       })
-      // @ts-expect-error leafer APP是一个dom节点
+      // eslint-disable-next-line ts/ban-ts-comment
+      // @ts-nocheck
       app.mount(container)
       container.start()
     }
@@ -31,7 +32,8 @@ export const LeaferApp = defineComponent({
 
     onMounted(() => {
       mount()
-      // @ts-expect-error leafer APP是一个dom节点
+      // eslint-disable-next-line ts/ban-ts-comment
+      // @ts-nocheck
       useEffectUpdate(attrs, container)
       expose({ container })
     })

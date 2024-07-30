@@ -1,7 +1,165 @@
-import { ref as $, watch as A, onUnmounted as E, createRenderer as I, onMounted as U, defineComponent as v, renderSlot as w, h as y } from 'vue'; import { App as C, UI as d, UI as x } from 'leafer-ui'
+// components/application/index.ts
+import { defineComponent, h, onMounted, onUnmounted, ref, renderSlot } from "vue";
+import { App } from "leafer-ui";
 
-const c = class extends d {constructor() { super(...arguments); this.visible = !1 }}; function p() { function r(t) { const n = { content: '', css: [] }; t.unshift({ content: '\u2618\uFE0FLeafer-vue warn:' }), t.forEach((o, e) => { n.content += `%c${(o == null ? void 0 : o.content) ?? ' '}`, n.css.push(`${o != null && o.color ? `color:${o.color}` : ''}${o != null && o.backgroundColor ? `;background:${o.backgroundColor}` : ''};padding: 0px${e === 0 ? ';border-top-left-radius: 25px; border-bottom-left-radius: 8px' : ''}${e === t.length - 1 ? ';border-top-right-radius: 8px; border-bottom-right-radius: 8px' : ''}`) }), console.warn(`${n.content}`, ...n.css) } return { log: r } } function h(r) { return r.slice(2).replace(/([A-Z])/g, (t, n, o) => o === 0 ? n.toLowerCase() : `.${n.toLowerCase()}`) } const { log: b } = p(); const f = I({ createElement(r, t, n, o) { return x.one({ tag: r, ...o }) }, patchProp(r, t, n, o) { t.startsWith('on') && r.on(h(t), o), r[t] = o }, insert(r, t) { r && t && t.add(r) }, remove(r) { r == null || r.destroy() }, createText(r) { return r.trim() && b([{ content: ' \u4E0D\u652F\u6301\u76F4\u63A5\u5199\u5165\u6587\u672C\uFF0C\u8BF7\u4F7F\u7528 ' }, { color: '#6eacf8', backgroundColor: '#222222', content: `<Text text="${r.trim()}" />` }, { content: ' \u4EE3\u66FF' }]), null }, createComment() { return new c() }, setText() {}, setElementText() {}, parentNode(r) { return r == null ? void 0 : r.parent }, nextSibling(r) {
-  let o; if (!r)
-    return null; const t = ((o = r == null ? void 0 : r.parent) == null ? void 0 : o.children) || [r]; if ((t == null ? void 0 : t.length) === 1)
-    return null; const n = t.findIndex(e => e.innerId === r.innerId); return t.length <= n + 1 ? null : t[n + 1] ?? null
-} }); const i = f.createApp; function a(r) { const t = {}; return Object.keys(r).forEach((n) => { n.startsWith('on') || (t[n] = r[n]) }), t } function u(r, t) { A(() => a(r), (n) => { t.set(n) }) } const F = v({ inheritAttrs: !1, setup(r, { slots: t, expose: n, attrs: o }) { const e = $(); const g = a(o); let s; function l() { s = new C({ ...g, view: e.value, start: !1 }), i({ render: () => w(t, 'default') }).mount(s), s.start() } function m() { s.destroy() } return U(() => { l(), u(o, s), n({ container: s }) }), E(m), () => y('canvas', { ref: e }) } }); export { F as LeaferApp }
+// renderer/renderer.ts
+import { UI as UI2 } from "leafer-ui";
+import { createRenderer } from "vue";
+
+// renderer/commentTag.ts
+import { UI } from "leafer-ui";
+var Comment = class extends UI {
+  constructor() {
+    super(...arguments);
+    this.visible = false;
+  }
+};
+
+// composables/useLogger.ts
+function useLogger() {
+  function log2(colorInfo) {
+    const logData = {
+      content: "",
+      css: []
+    };
+    colorInfo.unshift({
+      content: "\u2618\uFE0FLeafer-vue warn:"
+    });
+    colorInfo.forEach((item, index) => {
+      logData.content += `%c${(item == null ? void 0 : item.content) ?? " "}`;
+      logData.css.push(
+        `${(item == null ? void 0 : item.color) ? `color:${item.color}` : ""}${(item == null ? void 0 : item.backgroundColor) ? `;background:${item.backgroundColor}` : ""};padding: 0px${index === 0 ? ";border-top-left-radius: 25px; border-bottom-left-radius: 8px" : ""}${index === colorInfo.length - 1 ? ";border-top-right-radius: 8px; border-bottom-right-radius: 8px" : ""}`
+      );
+    });
+    console.warn(
+      `${logData.content}`,
+      ...logData.css
+    );
+  }
+  return {
+    log: log2
+  };
+}
+
+// renderer/renderer.ts
+function getEventNameByAttrName(attrName) {
+  return attrName.slice(2).replace(/([A-Z])/g, (_, letter, index) => index === 0 ? letter.toLowerCase() : `.${letter.toLowerCase()}`);
+}
+var { log } = useLogger();
+var renderer = createRenderer({
+  createElement(type, _, _1, props) {
+    return UI2.one({ tag: type, ...props });
+  },
+  patchProp(el, key, _prevValue, nextValue) {
+    if (key.startsWith("on"))
+      el.on(getEventNameByAttrName(key), nextValue);
+    el[key] = nextValue;
+  },
+  insert(el, parent) {
+    if (el && parent)
+      parent.add(el);
+  },
+  remove(el) {
+    el == null ? void 0 : el.destroy();
+  },
+  createText(text) {
+    if (text.trim()) {
+      log([
+        {
+          content: " \u4E0D\u652F\u6301\u76F4\u63A5\u5199\u5165\u6587\u672C\uFF0C\u8BF7\u4F7F\u7528 "
+        },
+        {
+          color: "#6eacf8",
+          backgroundColor: "#222222",
+          content: `<Text text="${text.trim()}" />`
+        },
+        {
+          content: " \u4EE3\u66FF"
+        }
+      ]);
+    }
+    return null;
+  },
+  // @ts-expect-error 类型不太重要
+  createComment() {
+    return new Comment();
+  },
+  setText() {
+  },
+  setElementText() {
+  },
+  parentNode(node) {
+    return node == null ? void 0 : node.parent;
+  },
+  nextSibling(node) {
+    var _a;
+    if (!node)
+      return null;
+    const children = ((_a = node == null ? void 0 : node.parent) == null ? void 0 : _a.children) || [node];
+    if ((children == null ? void 0 : children.length) === 1)
+      return null;
+    const index = children.findIndex((_node) => _node.innerId === node.innerId);
+    if (children.length <= index + 1)
+      return null;
+    return children[index + 1] ?? null;
+  }
+});
+
+// renderer/index.ts
+var createApp = renderer.createApp;
+
+// composables/useGetPropsAndEventByAttrs/index.ts
+function useGetPropsByAttrs(attrs) {
+  const config = {};
+  Object.keys(attrs).forEach((key) => {
+    if (!key.startsWith("on"))
+      config[key] = attrs[key];
+  });
+  return config;
+}
+
+// composables/useEffectUpdate.ts
+import { watch } from "vue";
+function useEffectUpdate(attrs, instance) {
+  watch(
+    () => useGetPropsByAttrs(attrs),
+    (newConfig) => {
+      instance.set(newConfig);
+    }
+  );
+}
+
+// components/application/index.ts
+var LeaferApp = defineComponent({
+  inheritAttrs: false,
+  setup(_props, { slots, expose, attrs }) {
+    const canvas = ref();
+    const config = useGetPropsByAttrs(attrs);
+    let container;
+    function mount() {
+      container = new App({
+        ...config,
+        view: canvas.value,
+        start: false
+      });
+      const app = createApp({
+        render: () => renderSlot(slots, "default")
+      });
+      app.mount(container);
+      container.start();
+    }
+    function unMount() {
+      container.destroy();
+    }
+    onMounted(() => {
+      mount();
+      useEffectUpdate(attrs, container);
+      expose({ container });
+    });
+    onUnmounted(unMount);
+    return () => h("canvas", { ref: canvas });
+  }
+});
+export {
+  LeaferApp
+};

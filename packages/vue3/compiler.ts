@@ -14,7 +14,6 @@ const elementNames = [
   'Pen',
 
   'Image',
-  'SVG',
   'Canvas',
 
   'Text',

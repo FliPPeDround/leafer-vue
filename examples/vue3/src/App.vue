@@ -22,17 +22,27 @@ function changeWidth() {
         />
       </Leafer>
       <Leafer fill="red">
-        <Rect
-          v-bind="{ x: 100, y: 100, fill: '#32cd79', draggable: true, visible: show }"
-        />
-        <Text
-          v-bind="{ x: 210, y: 100, fill: '#32cd79', draggable: true, text: 'text' }"
-        />
+        <Group :draggable="true">
+          <Rect
+            v-bind="{ x: 100, y: 200, stroke: 'blue' }"
+          />
+          <Star
+            v-bind="{
+              x: 100,
+              y: 200,
+              width: 100,
+              fill: '#32cd79',
+            }"
+          />
+        </Group>
       </Leafer>
       <Leafer type="draw" fill="red" @tap="rightMove">
-        <Rect
-          v-bind="{ x: 200, y: 200, stroke: 'blue', draggable: true }"
-        />
+        <Box>
+          <Rect
+            v-bind="{ x: 0, y: 200, stroke: 'blue', draggable: true }"
+          />
+          <Star />
+        </Box>
       </Leafer>
     </LeaferApp>
     <button @click="changeWidth">

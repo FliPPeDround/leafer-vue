@@ -44,6 +44,7 @@ function handleKeydown(evt: KeyboardEvent) {
 
 <style>
 .vue-repl {
+  --color-branding: #a8b1ff !important;
   height: 720px !important;
 }
 .tab-buttons {

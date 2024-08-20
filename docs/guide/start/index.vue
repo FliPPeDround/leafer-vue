@@ -9,20 +9,20 @@ function animate() {
 }
 animate()
 
-const fill = ref('#32cd79')
+const fill = ref('#a8b1ff')
 function changeColor() {
   fill.value = `#${Math.floor(Math.random() * 0xFFFFFF).toString(16)}`
 }
 </script>
 
 <template>
-  <LeaferApp :width="650" :height="340">
+  <LeaferApp :width="650" :height="340" fill="#1b1b1f" @tap="changeColor">
     <Leafer @tap="changeColor">
       <template
         v-for="row in 33"
         :key="row"
       >
-        <Rect
+        <Star
           v-for="col in 17"
           :key="col"
           :rotation="rotation"
@@ -30,7 +30,6 @@ function changeColor() {
           :width="15" :height="15"
           :fill="fill"
           :draggable="true"
-          @tap="changeColor"
         />
       </template>
     </Leafer>

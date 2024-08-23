@@ -7,7 +7,6 @@
       "@/*": ["./src/*"]
     },
     "types": [
-      "leafer-vue"
     ]
   },
   "include": ["env.d.ts", "src/**/*", "src/**/*.vue"],

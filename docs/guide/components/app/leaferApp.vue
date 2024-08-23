@@ -8,31 +8,20 @@ function animate() {
   requestAnimationFrame(animate)
 }
 animate()
-
-const fill = ref('#32cd79')
-function changeColor() {
-  fill.value = `#${Math.floor(Math.random() * 0xFFFFFF).toString(16)}`
-}
 </script>
 
 <template>
   <LeaferApp :width="650" :height="340">
-    <Leafer @tap="changeColor">
-      <template
-        v-for="row in 33"
-        :key="row"
-      >
-        <Rect
-          v-for="col in 17"
-          :key="col"
-          :rotation="rotation"
-          :x="(row - 1) * 20" :y="(col - 1) * 20"
-          :width="15" :height="15"
-          :fill="fill"
-          :draggable="true"
-          @tap="changeColor"
-        />
-      </template>
+    <Leafer>
+      <Text
+        text="Hello Leafer Vue"
+        fill="#00a98e"
+        font-weight="black"
+        :italic="true"
+        :x="100"
+        :y="100"
+        :font-size="60"
+      />
     </Leafer>
   </LeaferApp>
 </template>

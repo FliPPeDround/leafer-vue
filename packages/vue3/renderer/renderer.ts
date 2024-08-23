@@ -1,6 +1,6 @@
 import type { IUI } from '@leafer-ui/interface'
 import { UI } from 'leafer-ui'
-import { createRenderer } from 'vue'
+import { camelize, createRenderer } from 'vue'
 import { Comment } from './commentTag'
 import { useLogger } from '@/composables/useLogger'
 
@@ -17,6 +17,7 @@ export const renderer = createRenderer<IUI, IUI>({
     return UI.one({ tag: type, ...props })
   },
   patchProp(el, key, _prevValue, nextValue) {
+    key = camelize(key)
     if (key.startsWith('on'))
       el.on(getEventNameByAttrName(key), nextValue)
 

@@ -3,6 +3,7 @@ import { useDark } from '@vueuse/core'
 import { Repl, useStore } from '@vue/repl'
 import CodeMirror from '@vue/repl/codemirror-editor'
 import { ref } from 'vue'
+import { isCustomElement } from 'leafer-vue/compiler'
 
 const { code } = defineProps<{ code: string }>()
 
@@ -11,6 +12,13 @@ const isDark = useDark()
 const store = useStore({
   template: ref({
     welcomeSFC: code,
+  }),
+  sfcOptions: ref({
+    template: {
+      compilerOptions: {
+        isCustomElement,
+      },
+    },
   }),
   builtinImportMap: ref({
     imports: {
@@ -38,17 +46,17 @@ function handleKeydown(evt: KeyboardEvent) {
     :show-ts-config="false"
     layout="vertical"
     layout-reverse
+    :preview-options="{
+      bodyHTML: `<style>html{background-color: ${isDark ? '#1b1b1f' : '#ffffff'};}</style>`,
+    }"
     @keydown="handleKeydown"
   />
 </template>
 
 <style>
 .vue-repl {
-  --color-branding: #a8b1ff !important;
+  --color-branding: var(--vp-c-brand-1) !important;
   height: 720px !important;
-}
-.tab-buttons {
-  display: none;
 }
 .output-container {
   height: 100% !important;

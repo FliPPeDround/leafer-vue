@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import { mdPlugin } from './plugin'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -13,7 +14,8 @@ export default defineConfig({
       {
         text: '开始',
         items: [
-          { text: '快速安装', link: '/guide/start/install' },
+          { text: '介绍', link: '/guide/start/introduction' },
+          { text: '使用', link: '/guide/start/usage' },
         ],
       },
       {
@@ -21,7 +23,7 @@ export default defineConfig({
         items: [
           {
             text: 'LeaferApp',
-            link: '/guide/components/app/app',
+            link: '/guide/components/app/leaferApp',
           },
           {
             text: 'Leafer',
@@ -111,5 +113,8 @@ export default defineConfig({
     socialLinks: [
       { icon: 'github', link: 'https://github.com/FliPPeDround/leafer-vue' },
     ],
+  },
+  markdown: {
+    config: md => md.use(mdPlugin),
   },
 })

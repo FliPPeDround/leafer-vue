@@ -4,7 +4,7 @@ import { App } from "leafer-ui";
 
 // renderer/renderer.ts
 import { UI as UI2 } from "leafer-ui";
-import { createRenderer } from "vue";
+import { camelize, createRenderer } from "vue";
 
 // renderer/commentTag.ts
 import { UI } from "leafer-ui";
@@ -51,6 +51,7 @@ var renderer = createRenderer({
     return UI2.one({ tag: type, ...props });
   },
   patchProp(el, key, _prevValue, nextValue) {
+    key = camelize(key);
     if (key.startsWith("on"))
       el.on(getEventNameByAttrName(key), nextValue);
     el[key] = nextValue;
@@ -140,7 +141,9 @@ var LeaferApp = defineComponent({
       container = new App({
         ...config,
         view: canvas.value,
-        start: false
+        start: false,
+        width: config.width || 800,
+        height: config.height || 600
       });
       const app = createApp({
         render: () => renderSlot(slots, "default")

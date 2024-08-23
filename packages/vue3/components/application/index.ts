@@ -15,6 +15,8 @@ export const LeaferApp = defineComponent({
         ...config,
         view: canvas.value,
         start: false,
+        width: config.width || 800,
+        height: config.height || 600,
       })
 
       const app = createApp({

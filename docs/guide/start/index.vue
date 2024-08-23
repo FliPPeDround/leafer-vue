@@ -16,7 +16,7 @@ function changeColor() {
 </script>
 
 <template>
-  <LeaferApp :width="650" :height="340" fill="#1b1b1f" @tap="changeColor">
+  <LeaferApp :width="650" :height="340" @tap="changeColor">
     <Leafer @tap="changeColor">
       <template
         v-for="row in 33"

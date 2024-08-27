@@ -18,3 +18,5 @@ import code from './leaferApp.vue?raw'
 | --- | --- | --- | --- |
 | width | ^[number] | `800` | canvas画布的宽度 |
 | height | ^[number] | `600` | canvas画布的高度 |
+
+> 更多属性请查看[App |🌿 Leafer UI](https://www.leaferjs.com/ui/reference/display/App.html)

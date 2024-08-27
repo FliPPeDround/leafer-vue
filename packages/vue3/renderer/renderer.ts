@@ -6,7 +6,7 @@ import { useLogger } from '@/composables/useLogger'
 
 function getEventNameByAttrName(attrName: string) {
   return attrName
-    .slice(2)
+    .slice(attrName.startsWith('on:') ? 3 : 2)
     .replace(/([A-Z])/g, (_, letter, index) => index === 0 ? letter.toLowerCase() : `.${letter.toLowerCase()}`)
 }
 
@@ -18,10 +18,14 @@ export const renderer = createRenderer<IUI, IUI>({
   },
   patchProp(el, key, _prevValue, nextValue) {
     key = camelize(key)
-    if (key.startsWith('on'))
-      el.on(getEventNameByAttrName(key), nextValue)
+    if (key.startsWith('on')) {
+      el.on(
+        getEventNameByAttrName(key),
+        nextValue,
+      )
+    }
 
-    el[key] = nextValue
+    (el as any)[key] = nextValue === '' ? true : nextValue
   },
   insert(el, parent) {
     if (el && parent)
@@ -48,7 +52,6 @@ export const renderer = createRenderer<IUI, IUI>({
     }
     return null as unknown as IUI
   },
-  // @ts-expect-error 类型不太重要
   createComment() {
     return new Comment()
   },

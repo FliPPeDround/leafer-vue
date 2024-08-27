@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { LeaferApp } from 'leafer-vue'
+import { Rect } from 'leafer-ui'
 import { ref } from 'vue'
 
 const show = ref(true)
@@ -16,15 +17,15 @@ function changeWidth() {
 <template>
   <div>
     <LeaferApp :width="width" :height="500">
-      <Leafer>
+      <Leafer @leafer-ready="() => console.log('ready')">
         <Rect
           v-bind="{ width: 800, height: 600, fill: 'gray' }"
         />
       </Leafer>
-      <Leafer fill="red">
+      <Leafer fill="red" type="draw">
         <Group :draggable="true">
           <Rect
-            v-bind="{ x: 100, y: 200, stroke: 'blue' }"
+            v-bind="{ x: 100, y: 200, stroke: 'blue', hoverStyle: { fill: 'red' } }"
           />
           <Star
             v-bind="{
@@ -34,6 +35,15 @@ function changeWidth() {
               fill: '#32cd79',
             }"
           />
+          <Text
+            text="Welcome to Leafer Vue"
+            fill="#000"
+            :padding="140"
+          />
+          <Polygon
+            :points="[10, 90, 10, 10, 50, 70, 90, 10, 90, 90]"
+            fill="#ffe04b"
+          />
         </Group>
       </Leafer>
       <Leafer type="draw" fill="red" @tap="rightMove">
@@ -41,7 +51,6 @@ function changeWidth() {
           <Rect
             v-bind="{ x: 0, y: 200, stroke: 'blue', draggable: true }"
           />
-          <Star />
         </Box>
       </Leafer>
     </LeaferApp>

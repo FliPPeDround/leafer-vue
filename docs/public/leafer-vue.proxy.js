@@ -43,7 +43,7 @@ function useLogger() {
 
 // renderer/renderer.ts
 function getEventNameByAttrName(attrName) {
-  return attrName.slice(2).replace(/([A-Z])/g, (_, letter, index) => index === 0 ? letter.toLowerCase() : `.${letter.toLowerCase()}`);
+  return attrName.slice(attrName.startsWith("on:") ? 3 : 2).replace(/([A-Z])/g, (_, letter, index) => index === 0 ? letter.toLowerCase() : `.${letter.toLowerCase()}`);
 }
 var { log } = useLogger();
 var renderer = createRenderer({
@@ -52,9 +52,13 @@ var renderer = createRenderer({
   },
   patchProp(el, key, _prevValue, nextValue) {
     key = camelize(key);
-    if (key.startsWith("on"))
-      el.on(getEventNameByAttrName(key), nextValue);
-    el[key] = nextValue;
+    if (key.startsWith("on")) {
+      el.on(
+        getEventNameByAttrName(key),
+        nextValue
+      );
+    }
+    el[key] = nextValue === "" ? true : nextValue;
   },
   insert(el, parent) {
     if (el && parent)
@@ -81,7 +85,6 @@ var renderer = createRenderer({
     }
     return null;
   },
-  // @ts-expect-error 类型不太重要
   createComment() {
     return new Comment();
   },
@@ -157,7 +160,7 @@ var LeaferApp = defineComponent({
     onMounted(() => {
       mount();
       useEffectUpdate(attrs, container);
-      expose({ container });
+      expose(container);
     });
     onUnmounted(unMount);
     return () => h("canvas", { ref: canvas });

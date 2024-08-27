@@ -9,6 +9,7 @@ import type {
   ISwipeEvent,
   IZoomEvent,
 } from '@leafer-ui/interface'
+import type { ChildEvent, LayoutEvent, LeaferEvent, PropertyEvent, RenderEvent, ResizeEvent, WatchEvent } from 'leafer-ui'
 
 export interface LeaferBaseEvent {
   /**
@@ -94,4 +95,40 @@ export interface LeaferBaseEvent {
    */
   onImageLoaded: (e: IImageEvent) => void
   onImageError: (e: IImageEvent) => void
+}
+
+export interface _LeaferEvent {
+  onLeaferStart: (e: LeaferEvent) => void
+  onLeaferBefore_ready: (e: LeaferEvent) => void
+  onLeaferReady: (e: LeaferEvent) => void
+  onLeaferAfter_ready: (e: LeaferEvent) => void
+  onLeaferView_ready: (e: LeaferEvent) => void
+  onLeaferStop: (e: LeaferEvent) => void
+  onLeaferRestart: (e: LeaferEvent) => void
+  onLeaferEnd: (e: LeaferEvent) => void
+
+  onResize: (e: ResizeEvent) => void
+
+  onRenderRequest: (e: RenderEvent) => void
+  onRenderStart: (e: RenderEvent) => void
+  onRenderBefore: (e: RenderEvent) => void
+  onRender: (e: RenderEvent) => void
+  onRenderAgain: (e: RenderEvent) => void
+  onRenderEnd: (e: RenderEvent) => void
+
+  onLayoutRequest: (e: LayoutEvent) => void
+  onLayoutStart: (e: LayoutEvent) => void
+  onLayoutBefore: (e: LayoutEvent) => void
+  onLayout: (e: LayoutEvent) => void
+  onLayoutAfter: (e: LayoutEvent) => void
+  onLayoutAgain: (e: LayoutEvent) => void
+  onLayoutEnd: (e: LayoutEvent) => void
+
+  onWatchRequest: (e: WatchEvent) => void
+  onWatchData: (e: WatchEvent) => void
+
+  onChildAdd: (e: ChildEvent) => void
+  onChildRemove: (e: ChildEvent) => void
+
+  onPropertyChange: (e: PropertyEvent) => void
 }

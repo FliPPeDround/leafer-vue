@@ -23,6 +23,28 @@ bun add leafer-vue
 ```
 :::
 
+
+## 初始化vue插件
+
+添加Vue插件配置，支持自定义元素。
+
+```ts
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
+import { isCustomElement } from 'leafer-vue/compiler'
+
+export default defineConfig({
+  plugins: [
+    vue({
+      template: {
+        compilerOptions: {
+          isCustomElement,
+        },
+      },
+    }),
+  ],
+})
+```
 ## 基本用法
 
 `<LeaferApp />` 组件用于将Leafer应用嵌入现有的vue应用。

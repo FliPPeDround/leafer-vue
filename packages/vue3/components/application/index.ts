@@ -37,7 +37,7 @@ export const LeaferApp = defineComponent({
       // eslint-disable-next-line ts/ban-ts-comment
       // @ts-nocheck
       useEffectUpdate(attrs, container)
-      expose({ container })
+      expose(container)
     })
 
     onUnmounted(unMount)

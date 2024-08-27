@@ -23,7 +23,7 @@ const store = useStore({
   builtinImportMap: ref({
     imports: {
       'vue': 'https://unpkg.com/vue/dist/vue.esm-browser.prod.js',
-      'leafer-ui': 'https://cdn.jsdelivr.net/npm/leafer-ui/dist/index.js',
+      'leafer-ui': 'https://unpkg.com/leafer-ui/dist/web.module.min.js',
       'leafer-vue': `${location.origin}/leafer-vue.proxy.js`,
     },
   }),
@@ -36,21 +36,23 @@ function handleKeydown(evt: KeyboardEvent) {
 </script>
 
 <template>
-  <Repl
-    :theme="isDark ? 'dark' : 'light'"
-    :store="store"
-    :editor="CodeMirror"
-    :auto-resize="false"
-    :show-compile-output="false"
-    :show-import-map="true"
-    :show-ts-config="false"
-    layout="vertical"
-    layout-reverse
-    :preview-options="{
-      bodyHTML: `<style>html{background-color: ${isDark ? '#1b1b1f' : '#ffffff'};}</style>`,
-    }"
-    @keydown="handleKeydown"
-  />
+  <ClientOnly>
+    <Repl
+      :theme="isDark ? 'dark' : 'light'"
+      :store="store"
+      :editor="CodeMirror"
+      :auto-resize="false"
+      :show-compile-output="false"
+      :show-import-map="true"
+      :show-ts-config="false"
+      layout="vertical"
+      layout-reverse
+      :preview-options="{
+        bodyHTML: `<style>html{background-color: ${isDark ? '#1b1b1f' : '#ffffff'};}</style>`,
+      }"
+      @keydown="handleKeydown"
+    />
+  </ClientOnly>
 </template>
 
 <style>

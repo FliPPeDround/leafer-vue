@@ -14,7 +14,7 @@ export const LeaferApp = defineComponent({
       container = new App({
         ...config,
         view: canvas.value,
-        start: false,
+        // start: false,
         width: config.width || 800,
         height: config.height || 600,
       })
@@ -25,7 +25,7 @@ export const LeaferApp = defineComponent({
       // eslint-disable-next-line ts/ban-ts-comment
       // @ts-nocheck
       app.mount(container)
-      container.start()
+      // container.start()
     }
 
     function unMount() {

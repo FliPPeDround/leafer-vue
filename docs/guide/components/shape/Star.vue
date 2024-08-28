@@ -34,7 +34,7 @@ const starData = [
 </script>
 
 <template>
-  <LeaferApp :width="650" :height="340">
+  <LeaferApp :width="650" :height="340" type="draw">
     <Leafer>
       <Star
         v-for="(item, index) in starData"

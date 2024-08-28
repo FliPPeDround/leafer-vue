@@ -41,7 +41,7 @@ const ellipseData = [
 </script>
 
 <template>
-  <LeaferApp :width="650" :height="340">
+  <LeaferApp :width="650" :height="340" type="draw">
     <Leafer>
       <Ellipse
         v-for="(item, index) in ellipseData"

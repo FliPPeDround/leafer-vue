@@ -1,6 +1,6 @@
 import type { IUI } from '@leafer-ui/interface'
 import { UI } from 'leafer-ui'
-import { camelize, createRenderer } from 'vue'
+import { camelize, createRenderer, markRaw } from 'vue'
 import { Comment } from './commentTag'
 import { useLogger } from '@/composables/useLogger'
 
@@ -13,8 +13,10 @@ function getEventNameByAttrName(attrName: string) {
 const { log } = useLogger()
 
 export const renderer = createRenderer<IUI, IUI>({
-  createElement(type, _?, _1?, props?) {
-    return UI.one({ tag: type, ...props })
+  createElement(tag) {
+    const element = UI.one({ tag })
+    markRaw(element)
+    return element
   },
   patchProp(el, key, _prevValue, nextValue) {
     key = camelize(key)

@@ -4,7 +4,7 @@ import { App } from "leafer-ui";
 
 // renderer/renderer.ts
 import { UI as UI2 } from "leafer-ui";
-import { camelize, createRenderer } from "vue";
+import { camelize, createRenderer, markRaw } from "vue";
 
 // renderer/commentTag.ts
 import { UI } from "leafer-ui";
@@ -47,8 +47,10 @@ function getEventNameByAttrName(attrName) {
 }
 var { log } = useLogger();
 var renderer = createRenderer({
-  createElement(type, _, _1, props) {
-    return UI2.one({ tag: type, ...props });
+  createElement(tag) {
+    const element = UI2.one({ tag });
+    markRaw(element);
+    return element;
   },
   patchProp(el, key, _prevValue, nextValue) {
     key = camelize(key);
@@ -144,7 +146,7 @@ var LeaferApp = defineComponent({
       container = new App({
         ...config,
         view: canvas.value,
-        start: false,
+        // start: false,
         width: config.width || 800,
         height: config.height || 600
       });
@@ -152,13 +154,13 @@ var LeaferApp = defineComponent({
         render: () => renderSlot(slots, "default")
       });
       app.mount(container);
-      container.start();
     }
     function unMount() {
       container.destroy();
     }
     onMounted(() => {
       mount();
+      console.log(container.children[0].children[0]);
       useEffectUpdate(attrs, container);
       expose(container);
     });

@@ -8,7 +8,7 @@ const size = {
 </script>
 
 <template>
-  <LeaferApp :width="650" :height="340">
+  <LeaferApp :width="650" :height="340" type="draw">
     <Leafer>
       <Group>
         <Polygon

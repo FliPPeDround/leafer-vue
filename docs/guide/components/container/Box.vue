@@ -3,7 +3,7 @@ import { LeaferApp } from 'leafer-vue'
 </script>
 
 <template>
-  <LeaferApp :width="650" :height="340">
+  <LeaferApp :width="650" :height="340" type="draw">
     <Leafer>
       <Box
         :width="210" :height="40"
@@ -19,8 +19,7 @@ import { LeaferApp } from 'leafer-vue'
         />
         <Text
           text="Welcome to Leafer Vue"
-          :x="40" :y="10"
-          :padding="40"
+          :padding="[10, 40]"
           fill="#000"
         />
         <Star

@@ -2,7 +2,11 @@
   <!-- <img class="h-150px" src="/logo.svg" /> -->
 </p>
 
-<h1 align="center">Leafer Vue</h1>
+<h1
+  align="center"
+>
+  Leafer Vue
+</h1>
 
 <p align="center">
   <strong>Vue createRenderer for Leafer</strong>

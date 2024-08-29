@@ -6,8 +6,9 @@ import { useLogger } from '@/composables/useLogger'
 
 function getEventNameByAttrName(attrName: string) {
   return attrName
-    .slice(attrName.startsWith('on:') ? 3 : 2)
-    .replace(/([A-Z])/g, (_, letter, index) => index === 0 ? letter.toLowerCase() : `.${letter.toLowerCase()}`)
+    .replace(/^(on:?)?|Once$/g, '')
+    .replace(/([A-Z])/g, (_match, letter, index) =>
+      index === 0 ? letter.toLowerCase() : `.${letter.toLowerCase()}`)
 }
 
 const { log } = useLogger()
@@ -21,10 +22,18 @@ export const renderer = createRenderer<IUI, IUI>({
   patchProp(el, key, _prevValue, nextValue) {
     key = camelize(key)
     if (key.startsWith('on')) {
-      el.on(
-        getEventNameByAttrName(key),
-        nextValue,
-      )
+      if (key.endsWith('Once')) {
+        el.once(
+          getEventNameByAttrName(key),
+          nextValue,
+        )
+      }
+      else {
+        el.on(
+          getEventNameByAttrName(key),
+          nextValue,
+        )
+      }
     }
 
     (el as any)[key] = nextValue === '' ? true : nextValue

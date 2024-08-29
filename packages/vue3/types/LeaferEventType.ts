@@ -93,6 +93,7 @@ export interface LeaferBaseEvent {
    * @description IImageEvent
    * @param e
    */
+  onImageload: (e: IImageEvent) => void
   onImageLoaded: (e: IImageEvent) => void
   onImageError: (e: IImageEvent) => void
 }

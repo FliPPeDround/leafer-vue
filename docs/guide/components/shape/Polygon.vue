@@ -44,7 +44,7 @@ const polygonData = [
 </script>
 
 <template>
-  <LeaferApp :width="650" :height="340" type="draw">
+  <LeaferApp :width="672" :height="340" type="draw">
     <Leafer>
       <Polygon
         v-for="(item, index) in polygonData"

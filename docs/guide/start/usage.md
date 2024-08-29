@@ -55,7 +55,7 @@ import { LeaferApp } from 'leafer-vue'
 </script>
 
 <template>
-  <LeaferApp :width="650" :height="340">
+  <LeaferApp :width="672" :height="340">
     <Leafer>
       <Star
         :width="15" :height="15"

@@ -36,7 +36,7 @@ function handleDraw() {
     </button>
   </div>
   <br>
-  <LeaferApp :width="650" :height="340" type="draw">
+  <LeaferApp :width="672" :height="340" type="draw">
     <Leafer>
       <Pen ref="penRef" />
     </Leafer>

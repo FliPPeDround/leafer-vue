@@ -3,7 +3,7 @@ import { LeaferApp } from 'leafer-vue'
 </script>
 
 <template>
-  <LeaferApp :width="650" :height="340" type="draw">
+  <LeaferApp :width="672" :height="340" type="draw">
     <Leafer>
       <Frame
         :width="200"

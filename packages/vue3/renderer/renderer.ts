@@ -3,25 +3,20 @@ import { UI } from 'leafer-ui'
 import { camelize, createRenderer, markRaw } from 'vue'
 import { Comment } from './commentTag'
 import { useLogger } from '@/composables/useLogger'
-
-function getEventNameByAttrName(attrName: string) {
-  return attrName
-    .replace(/^(on:?)?|Once$/g, '')
-    .replace(/([A-Z])/g, (_match, letter, index) =>
-      index === 0 ? letter.toLowerCase() : `.${letter.toLowerCase()}`)
-}
+import { getEventNameByAttrName, isOn } from '@/utils'
 
 const { log } = useLogger()
 
 export const renderer = createRenderer<IUI, IUI>({
   createElement(tag) {
     const element = UI.one({ tag })
+
     markRaw(element)
     return element
   },
   patchProp(el, key, _prevValue, nextValue) {
     key = camelize(key)
-    if (key.startsWith('on')) {
+    if (isOn(key)) {
       if (key.endsWith('Once')) {
         el.once(
           getEventNameByAttrName(key),
@@ -49,7 +44,7 @@ export const renderer = createRenderer<IUI, IUI>({
     if (text.trim()) {
       log([
         {
-          content: ' 不支持直接写入文本，请使用 ',
+          content: ' Direct text writing is not supported, please use ',
         },
         {
           color: '#6eacf8',
@@ -57,7 +52,7 @@ export const renderer = createRenderer<IUI, IUI>({
           content: `<Text text="${text.trim()}" />`,
         },
         {
-          content: ' 代替',
+          content: ' instead',
         },
       ])
     }

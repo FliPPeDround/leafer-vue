@@ -6,29 +6,31 @@ import code from './index.vue?raw'
 
 ::: code-group
 
-```bash [pnpm]
+```bash [<div flex items-center><div i-vscode-icons:file-type-pnpm mr2 /> pnpm</div>]
 pnpm i leafer-vue
 ```
 
-```bash [yarn]
+```bash [<div flex items-center><div i-vscode-icons:file-type-yarn mr2 /> yarn</div>]
 yarn add leafer-vue
 ```
 
-```bash [npm]
+```bash [<div flex items-center><div i-vscode-icons:file-type-npm mr2 /> npm</div>]
 npm i leafer-vue
 ```
 
-```bash [bun]
+```bash [<div flex items-center><div i-vscode-icons:file-type-bun mr2 /> bun</div>]
 bun add leafer-vue
 ```
+
 :::
 
 
 ## 初始化vue插件
 
 添加Vue插件配置，支持自定义元素。
+::: code-group
 
-```ts
+```ts [<div flex items-center><div i-vscode-icons:file-type-vite mr2 /> vite.config.ts</div>]
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { isCustomElement } from 'leafer-vue/compiler'
@@ -45,11 +47,8 @@ export default defineConfig({
   ],
 })
 ```
-## 基本用法
 
-`<LeaferApp />` 组件用于将Leafer应用嵌入现有的vue应用。
-
-```vue
+```vue [<div flex items-center><div i-vscode-icons:file-type-vue mr2 /> App.vue</div>]
 <script setup lang="ts">
 import { LeaferApp } from 'leafer-vue'
 </script>
@@ -65,3 +64,5 @@ import { LeaferApp } from 'leafer-vue'
   </LeaferApp>
 </template>
 ```
+:::
+

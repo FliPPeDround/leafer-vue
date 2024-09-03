@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { LeaferApp } from 'leafer-vue'
-import { Rect } from 'leafer-ui'
 import { ref } from 'vue'
 
 const show = ref(true)

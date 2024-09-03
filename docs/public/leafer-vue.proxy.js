@@ -41,10 +41,15 @@ function useLogger() {
   };
 }
 
-// renderer/renderer.ts
+// utils/index.ts
+function isOn(key) {
+  return key.charCodeAt(0) === 111 && key.charCodeAt(1) === 110 && (key.charCodeAt(2) > 122 || key.charCodeAt(2) < 97);
+}
 function getEventNameByAttrName(attrName) {
   return attrName.replace(/^(on:?)?|Once$/g, "").replace(/([A-Z])/g, (_match, letter, index) => index === 0 ? letter.toLowerCase() : `.${letter.toLowerCase()}`);
 }
+
+// renderer/renderer.ts
 var { log } = useLogger();
 var renderer = createRenderer({
   createElement(tag) {
@@ -54,8 +59,7 @@ var renderer = createRenderer({
   },
   patchProp(el, key, _prevValue, nextValue) {
     key = camelize(key);
-    if (key.startsWith("on")) {
-      console.log(key);
+    if (isOn(key)) {
       if (key.endsWith("Once")) {
         el.once(
           getEventNameByAttrName(key),
@@ -81,7 +85,7 @@ var renderer = createRenderer({
     if (text.trim()) {
       log([
         {
-          content: " \u4E0D\u652F\u6301\u76F4\u63A5\u5199\u5165\u6587\u672C\uFF0C\u8BF7\u4F7F\u7528 "
+          content: " Direct text writing is not supported, please use "
         },
         {
           color: "#6eacf8",
@@ -89,7 +93,7 @@ var renderer = createRenderer({
           content: `<Text text="${text.trim()}" />`
         },
         {
-          content: " \u4EE3\u66FF"
+          content: " instead"
         }
       ]);
     }

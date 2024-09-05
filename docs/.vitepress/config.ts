@@ -117,6 +117,15 @@ export default defineConfig({
           },
         ],
       },
+      {
+        text: '事件',
+        items: [
+          {
+            text: '事件处理',
+            link: '/guide/events/index',
+          },
+        ],
+      },
     ],
 
     socialLinks: [

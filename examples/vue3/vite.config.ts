@@ -10,7 +10,7 @@ export default defineConfig({
     vue({
       template: {
         compilerOptions: {
-          isCustomElement,
+          isCustomElement: tag => isCustomElement(tag, ['CustomRect']),
         },
       },
     }),

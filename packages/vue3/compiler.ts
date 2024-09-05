@@ -19,8 +19,8 @@ const elementNames = [
   'Text',
 ]
 
-export function isCustomElement(name: string) {
-  return elementNames.includes(name)
+export function isCustomElement(name: string, customElements: string[] = []) {
+  return [...customElements, ...elementNames].includes(name)
 }
 
 export const compilerOptions = {

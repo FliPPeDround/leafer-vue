@@ -108,6 +108,15 @@ export default defineConfig({
           },
         ],
       },
+      {
+        text: '自定义元素',
+        items: [
+          {
+            text: '自定义元素',
+            link: '/guide/components/custom/index',
+          },
+        ],
+      },
     ],
 
     socialLinks: [

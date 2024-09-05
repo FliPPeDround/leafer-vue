@@ -10,7 +10,6 @@ const { log } = useLogger()
 export const renderer = createRenderer<IUI, IUI>({
   createElement(tag) {
     const element = UI.one({ tag })
-
     markRaw(element)
     return element
   },

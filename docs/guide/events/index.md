@@ -1,7 +1,7 @@
 # 事件处理
 
 ## 监听事件
-我们可以使用 `v-on` 指令 (简写为 `@`) 来监听 Leafer 事件，并在事件触发时执行对应的 JavaScript。用法：`v-on:click="handler"` 或 `@click="handler"`。
+我们可以使用 `v-on` 指令 (简写为 `@`) 来监听 Leafer 事件，并在事件触发时执行对应的 JavaScript。用法：`v-on:tap="handler"` 或 `@tap="handler"`。
 ```vue
 <Rect @tap="() => console.log('Tap')" />
 ```
@@ -47,3 +47,29 @@ function handelTap() {
 ```
 :::
 > 详情请查看 [off |🌿 Leafer UI ](https://www.leaferjs.com/ui/reference/property/off.html)
+
+## 派发事件
+
+我们可以使用`emit`手动派发事件。
+
+::: code-group
+
+```vue [<div flex items-center><div i-vscode-icons:file-type-vue mr2 /> App.vue</div>]
+<script setup lang="ts">
+import { LeaferApp } from 'leafer-vue'
+import { Leafer as LeaferUI } from 'leafer-ui'
+import { ref } from 'vue'
+
+const LeaferRef = ref<LeaferUI>(null)
+LeaferRef.value!.emit('tap')
+</script>
+
+<template>
+  <LeaferApp :width="672" :height="340">
+    <Leafer ref="LeaferRef" @tap="() => console.log('emit Tap')" />
+  </LeaferApp>
+</template>
+```
+> 详情请查看 [emit |🌿 Leafer UI ](https://www.leaferjs.com/ui/reference/property/emit.html)
+
+更复杂的[模拟交互](https://www.leaferjs.com/ui/reference/event/simulation.html)

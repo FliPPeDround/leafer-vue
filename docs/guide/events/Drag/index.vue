@@ -1,19 +1,20 @@
 <script setup lang="ts">
 import { LeaferApp } from 'leafer-vue'
 import { ref } from 'vue'
-import type { Rect as LeaferRect } from 'leafer-ui'
 
-const rectRef = ref<LeaferRect>()
+const fill = ref('#00a98e')
 </script>
 
 <template>
   <LeaferApp :width="672" :height="340" type="draw">
     <Leafer>
       <Rect
-        ref="rectRef"
-        :x="100" :y="100"
-        :width="200" :height="100"
-        fill="red"
+        :width="100"
+        :height="100"
+        :fill="fill"
+        draggable
+        @dragStart="() => fill = '#a8b1ff'"
+        @dragEnd="() => fill = '#00a98e'"
       />
     </Leafer>
   </LeaferApp>

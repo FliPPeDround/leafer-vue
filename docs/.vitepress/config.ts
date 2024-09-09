@@ -124,6 +124,18 @@ export default defineConfig({
             text: '事件处理',
             link: '/guide/events/index',
           },
+          {
+            text: '交互事件',
+            items: [
+              { text: 'Pointer', link: '/guide/events/Pointer/pointer' },
+              { text: 'Drag', link: '/guide/events/Drag/drag' },
+              { text: 'Drop', link: '/guide/events/Drop/drop' },
+              { text: 'Swipe', link: '/guide/events/Swipe/swipe' },
+              { text: 'Move', link: '/guide/events/Move/move' },
+              { text: 'Zoom', link: '/guide/events/Zoom/zoom' },
+              { text: 'Rotate', link: '/guide/events/Rotate/rotate' },
+            ],
+          },
         ],
       },
     ],

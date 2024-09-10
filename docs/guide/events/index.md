@@ -58,10 +58,12 @@ function handelTap() {
 <script setup lang="ts">
 import { LeaferApp } from 'leafer-vue'
 import { Leafer as LeaferUI } from 'leafer-ui'
-import { ref } from 'vue'
+import { nextTick, ref } from 'vue'
 
 const LeaferRef = ref<LeaferUI>(null)
-LeaferRef.value!.emit('tap')
+nextTick(() => {
+  LeaferRef.value!.emit('tap')
+})
 </script>
 
 <template>

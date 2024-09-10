@@ -15,10 +15,13 @@ import code from './index.vue?raw'
 
 ## 事件名称
 
-| 事件名  | 说明 |
-| --- | --- |
-| `zoomStart` | 开始缩放事件 |
-| `zoom` | 缩放事件 |
-| `zoomEnd` | 结束缩放事件 |
+[IZoomEvent-url]: https://www.leaferjs.com/ui/api/interfaces/IZoomEvent.html
+
+
+| 事件名  | 说明 | 参数 |
+| --- | --- | --- |
+| `zoomStart` | 开始缩放事件 | [`IZoomEvent`][IZoomEvent-url] |
+| `zoom` | 缩放事件 | [`IZoomEvent`][IZoomEvent-url] |
+| `zoomEnd` | 结束缩放事件 | [`IZoomEvent`][IZoomEvent-url] |
 
 

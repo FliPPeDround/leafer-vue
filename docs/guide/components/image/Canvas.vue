@@ -1,12 +1,15 @@
 <script setup lang="ts">
 import { LeaferApp } from 'leafer-vue'
-import { ref } from 'vue'
+import { nextTick, ref } from 'vue'
 import { Canvas } from 'leafer-ui'
 
 const canvasRef = ref<Canvas>()
 
-function handleDraw() {
+nextTick(() => {
   const { context } = canvasRef.value!
+  if (!context)
+    return
+
   context.fillStyle = '#FF4B4B'
   context.beginPath()
   context.roundRect(0, 0, 100, 100, 30)
@@ -19,16 +22,10 @@ function handleDraw() {
   context.fill()
 
   canvasRef.value!.paint() // 更新渲染
-}
+})
 </script>
 
 <template>
-  <div>
-    <button @click="handleDraw">
-      点击生成图形
-    </button>
-  </div>
-  <br>
   <LeaferApp :width="672" :height="340" type="draw">
     <Leafer>
       <Canvas

@@ -126,6 +126,7 @@ export default defineConfig({
           },
           {
             text: '交互事件',
+            collapsed: true,
             items: [
               { text: 'Pointer', link: '/guide/events/Pointer/pointer' },
               { text: 'Drag', link: '/guide/events/Drag/drag' },
@@ -134,6 +135,16 @@ export default defineConfig({
               { text: 'Move', link: '/guide/events/Move/move' },
               { text: 'Zoom', link: '/guide/events/Zoom/zoom' },
               { text: 'Rotate', link: '/guide/events/Rotate/rotate' },
+              { text: 'Key', link: '/guide/events/Key/key' },
+            ],
+          },
+          {
+            text: '元素事件',
+            collapsed: true,
+            items: [
+              { text: 'ImageEvent', link: '/guide/events/Image/image' },
+              { text: 'ChildEvent', link: '/guide/events/Child/child' },
+              { text: 'PropertyEvent', link: '/guide/events/Property/property' },
             ],
           },
         ],

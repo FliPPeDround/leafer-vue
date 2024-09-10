@@ -14,10 +14,12 @@ import code from './index.vue?raw'
 
 ## 事件名称
 
-| 事件名  | 说明 |
-| --- | --- |
-| `rotateStart` | 开始旋转事件 |
-| `rotate` | 旋转事件 |
-| `rotateEnd` | 结束旋转事件 |
+[IRotateEvent-url]: https://www.leaferjs.com/ui/api/interfaces/IRotateEvent.html
+
+| 事件名  | 说明 | 参数 |
+| --- | --- | --- |
+| `rotateStart` | 开始旋转事件 | [`IRotateEvent`][IRotateEvent-url] |
+| `rotate` | 旋转事件 | [`IRotateEvent`][IRotateEvent-url] |
+| `rotateEnd` | 结束旋转事件 | [`IRotateEvent`][IRotateEvent-url] |
 
 

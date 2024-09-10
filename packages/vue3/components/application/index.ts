@@ -22,10 +22,7 @@ export const LeaferApp = defineComponent({
       const app = createApp({
         render: () => renderSlot(slots, 'default'),
       })
-      // eslint-disable-next-line ts/ban-ts-comment
-      // @ts-nocheck
       app.mount(container)
-      // container.start()
     }
 
     function unMount() {
@@ -34,8 +31,6 @@ export const LeaferApp = defineComponent({
 
     onMounted(() => {
       mount()
-      // eslint-disable-next-line ts/ban-ts-comment
-      // @ts-nocheck
       useEffectUpdate(attrs, container)
       expose(container)
     })

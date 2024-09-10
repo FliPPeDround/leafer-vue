@@ -16,10 +16,13 @@ import code from './index.vue?raw'
 
 ## 事件名称
 
-| 事件名  | 说明 |
-| --- | --- |
-| `moveStart` | 开始移动事件 |
-| `move` | 移动事件 |
-| `moveEnd` | 结束移动事件 |
+[IMoveEvent-url]: https://www.leaferjs.com/ui/api/interfaces/IMoveEvent.html
+
+
+| 事件名  | 说明 | 参数 |
+| --- | --- | --- |
+| `moveStart` | 开始移动事件 | [`IMoveEvent`][IMoveEvent-url] |
+| `move` | 移动事件 | [`IMoveEvent`][IMoveEvent-url] |
+| `moveEnd` | 结束移动事件 | [`IMoveEvent`][IMoveEvent-url] |
 
 

@@ -4,6 +4,8 @@
 
 ## 示例
 
+> 使用鼠标按住进行滑动
+
 <script setup lang="ts">
 import code from './index.vue?raw'
 </script>
@@ -12,11 +14,13 @@ import code from './index.vue?raw'
 
 ## 事件名称
 
-| 事件名  | 说明 |
-| --- | --- |
-| `swipeLeft` | 向左滑动事件 |
-| `swipeRight` | 向右滑动事件 |
-| `swipeUp` | 向上滑动事件 |
-| `swipeDown` | 向下滑动事件 |
+[ISwipeEvent-url]: https://www.leaferjs.com/ui/api/interfaces/ISwipe.html
+
+| 事件名  | 说明 | 参数 |
+| --- | --- | --- |
+| `swipeLeft` | 向左滑动事件 | [`ISwipeEvent`][ISwipeEvent-url] |
+| `swipeRight` | 向右滑动事件 | [`ISwipeEvent`][ISwipeEvent-url] |
+| `swipeUp` | 向上滑动事件 | [`ISwipeEvent`][ISwipeEvent-url] |
+| `swipeDown` | 向下滑动事件 | [`ISwipeEvent`][ISwipeEvent-url] |
 
 

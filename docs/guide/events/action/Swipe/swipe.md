@@ -22,5 +22,3 @@ import code from './index.vue?raw'
 | `swipeRight` | 向右滑动事件 | [`ISwipeEvent`][ISwipeEvent-url] |
 | `swipeUp` | 向上滑动事件 | [`ISwipeEvent`][ISwipeEvent-url] |
 | `swipeDown` | 向下滑动事件 | [`ISwipeEvent`][ISwipeEvent-url] |
-
-

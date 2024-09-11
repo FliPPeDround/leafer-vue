@@ -23,5 +23,3 @@ import code from './index.vue?raw'
 | `keyDown` | 按下按键事件， 长按会不断触发 | [`IKeyEvent`][IKeyEvent-url] |
 | `keyHold` | 按住按键事件， 长按只会触发一次 | [`IKeyEvent`][IKeyEvent-url] |
 | `keyUp` | 抬起按键事件 | [`IKeyEvent`][IKeyEvent-url] |
-
-

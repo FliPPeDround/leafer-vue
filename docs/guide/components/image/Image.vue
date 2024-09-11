@@ -30,7 +30,7 @@ animate()
       />
       <Image
         url="https://picsum.photos/672/340"
-        @imageLoaded.once="() => loading = false"
+        @image-loaded.once="() => loading = false"
       />
     </Leafer>
   </LeaferApp>

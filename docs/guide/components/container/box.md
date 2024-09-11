@@ -19,5 +19,3 @@ import code from './Box.vue?raw'
 | height | ^[number] | —— | 高度 |
 | overflow | ^['show']\| ^['hide'] | ^['hide'] | 超出部分是否裁剪 |
 > 详情查看[Box |🌿 Leafer UI](https://www.leaferjs.com/ui/guide/display/Box.html)。
-
-

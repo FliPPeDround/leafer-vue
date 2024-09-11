@@ -2,21 +2,19 @@
 import { LeaferApp } from 'leafer-vue'
 import { ref } from 'vue'
 
-const point = ref({ x: 250, y: 100 })
+const fill = ref('#00a98e')
 </script>
 
 <template>
   <LeaferApp :width="672" :height="340" type="draw">
     <Leafer>
       <Rect
-        v-bind="point"
         :width="100"
         :height="100"
-        fill="#00a98e"
-        @swipeLeft="() => point.x -= 20"
-        @swipeRight="() => point.x += 20"
-        @swipeUp="() => point.y -= 20"
-        @swipeDown="() => point.y += 20"
+        :fill="fill"
+        draggable
+        @drag-start="() => fill = '#a8b1ff'"
+        @drag-end="() => fill = '#00a98e'"
       />
     </Leafer>
   </LeaferApp>

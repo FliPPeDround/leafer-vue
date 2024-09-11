@@ -19,5 +19,3 @@ import code from './index.vue?raw'
 | 事件名  | 说明 | 参数 |
 | --- | --- | --- |
 | `drop` | 放置对象事件 | [`IDropEvent`][IDropEvent-url] |
-
-

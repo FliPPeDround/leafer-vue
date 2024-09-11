@@ -21,5 +21,3 @@ import code from './index.vue?raw'
 | `rotateStart` | 开始旋转事件 | [`IRotateEvent`][IRotateEvent-url] |
 | `rotate` | 旋转事件 | [`IRotateEvent`][IRotateEvent-url] |
 | `rotateEnd` | 结束旋转事件 | [`IRotateEvent`][IRotateEvent-url] |
-
-

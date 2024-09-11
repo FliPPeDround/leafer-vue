@@ -38,5 +38,3 @@ import code from './index.vue?raw'
 | --- | --- | --- |
 | `pointerMenu` | 右键菜单事件，同 HTML 的 contextmenu 事件，按下时触发 | [`IPointerEvent`][IPointerEvent-url] |
 | `pointerMenu_tap` | 右键 tap 事件, 抬起后触发 | [`IPointerEvent`][IPointerEvent-url] |
-
-

@@ -24,7 +24,6 @@ bun add leafer-vue
 
 :::
 
-
 ## 初始化vue插件
 
 添加Vue插件配置，支持自定义元素。
@@ -65,4 +64,3 @@ import { LeaferApp } from 'leafer-vue'
 </template>
 ```
 :::
-

@@ -8,7 +8,6 @@ import { isCustomElement } from 'leafer-vue/compiler'
 const { code } = defineProps<{ code: string }>()
 
 const isDark = useDark()
-
 const store = useStore({
   template: ref({
     welcomeSFC: code,
@@ -48,7 +47,14 @@ function handleKeydown(evt: KeyboardEvent) {
       layout="vertical"
       layout-reverse
       :preview-options="{
-        bodyHTML: `<style>html{background-color: ${isDark ? '#1b1b1f' : '#ffffff'};}</style>`,
+        bodyHTML: /* html */ `
+          <style>
+            html{
+              background-color: ${isDark ? '#1b1b1f' : '#ffffff'};
+              color: ${isDark ? '#fffff5DB' : '#3c3c43'};
+            }
+          </style>
+          `,
       }"
       @keydown="handleKeydown"
     />

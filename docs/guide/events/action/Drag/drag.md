@@ -22,4 +22,3 @@ import code from './index.vue?raw'
 | `dragOut` | 拖动元素 out | [`IDragEvent`][IDragEvent-url] |
 | `dragEnter` | 拖动元素进入 | [`IDragEvent`][IDragEvent-url] |
 | `dragLeave` | 拖动元素离开 | [`IDragEvent`][IDragEvent-url] |
-

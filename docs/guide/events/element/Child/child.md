@@ -25,5 +25,3 @@ import code from './index.vue?raw'
 | `childAdd` | 添加元素 | [`IChildEvent`][IChildEvent-url] |
 | `childRemove` | 删除元素 | [`IChildEvent`][IChildEvent-url] |
 | `childDestroy` | 销毁元素 （仅派发给元素自身） | [`IChildEvent`][IChildEvent-url] |
-
-

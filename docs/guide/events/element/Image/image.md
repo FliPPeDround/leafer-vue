@@ -19,5 +19,3 @@ import code from './../../components/image/Image.vue?raw'
 | `imageLoad` | 图片开始加载 | [`ILeaferImage`][ILeaferImage-url] |
 | `imageLoaded` | 图片加载完成 | [`ILeaferImage`][ILeaferImage-url] |
 | `imageError` | 图片加载失败 | [`ILeaferImage`][ILeaferImage-url] |
-
-

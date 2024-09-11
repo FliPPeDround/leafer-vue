@@ -19,7 +19,6 @@ import code from './Path.vue?raw'
 
 > 详情查看[Path |🌿 Leafer UI](https://www.leaferjs.com/ui/guide/display/Path.html)。
 
-
 <!-- ## 事件
 
 | 名称 | 说明 |

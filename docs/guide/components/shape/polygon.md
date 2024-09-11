@@ -10,7 +10,6 @@ import code from './Polygon.vue?raw'
 
 <Repl :code />
 
-
 ## 核心属性
 
 | 名称 | 类型 | 默认值 | 说明 |
@@ -20,7 +19,6 @@ import code from './Polygon.vue?raw'
 | sides | ^[number] | ^[3] | 多边形的边数，取值范围 ≥ 3 |
 
 > 详情查看[Polygon |🌿 Leafer UI](https://www.leaferjs.com/ui/guide/display/Polygon.html)。
-
 
 <!-- ## 事件
 

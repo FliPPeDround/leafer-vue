@@ -19,4 +19,3 @@ import code from './Star.vue?raw'
 | innerRadius | ^[number] | 0.382 | 内半径比例，取值范围为 0.0 ～ 1.0 |
 
 > 详情查看[Star |🌿 Leafer UI](https://www.leaferjs.com/ui/guide/display/Star.html)。
-

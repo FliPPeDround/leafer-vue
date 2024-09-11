@@ -7,8 +7,6 @@
 ```
 > 详情请查看 <i inline-block i-vscode-icons:file-type-vue /> [Vue事件处理](https://cn.vuejs.org/guide/essentials/event-handling.html)
 
-
-
 ## 事件修饰符
 
 - `.once`：只触发一次

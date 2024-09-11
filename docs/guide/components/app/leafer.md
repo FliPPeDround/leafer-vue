@@ -2,7 +2,6 @@
 import code from './leaferApp.vue?raw'
 </script>
 
-
 # Leafer
 >
 > 用于创建Leafer组件。

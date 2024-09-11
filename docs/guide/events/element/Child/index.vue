@@ -17,7 +17,7 @@ function handleReady() {
   {{ count }}
   <input v-model="count" type="number" min="1" max="5">
   <LeaferApp :width="672" :height="340" type="draw">
-    <Leafer @leaferReady="handleReady">
+    <Leafer @leafer-ready="handleReady">
       <Group>
         <Rect
           v-for="item in count"

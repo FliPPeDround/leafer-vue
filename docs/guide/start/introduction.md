@@ -23,7 +23,6 @@
   <img src="https://img.shields.io/badge/Leafer-v1-ff69b4.svg?style=flat-square" alt="pixi version" />
 </div> -->
 
-
 ## 在线使用
 创建一个交互应用，可以缩放平移视图、拖拽、点击改变颜色的矩形。
 <script setup lang="ts">

@@ -19,7 +19,7 @@ function handleReady() {
     del
   </button>
   <LeaferApp :width="672" :height="340" type="draw">
-    <Leafer @leaferReady="handleReady">
+    <Leafer @leafer-ready="handleReady">
       <template
         v-for="(item, index) in count"
         :key="index"

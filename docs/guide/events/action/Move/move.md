@@ -18,11 +18,8 @@ import code from './index.vue?raw'
 
 [IMoveEvent-url]: https://www.leaferjs.com/ui/api/interfaces/IMoveEvent.html
 
-
 | 事件名  | 说明 | 参数 |
 | --- | --- | --- |
 | `moveStart` | 开始移动事件 | [`IMoveEvent`][IMoveEvent-url] |
 | `move` | 移动事件 | [`IMoveEvent`][IMoveEvent-url] |
 | `moveEnd` | 结束移动事件 | [`IMoveEvent`][IMoveEvent-url] |
-
-

@@ -21,4 +21,3 @@ import code from './Frame.vue?raw'
 | overflow | ^['show']\| ^['hide'] | ^['hide'] | 超出部分是否裁剪 |
 
 > 详情查看[Frame |🌿 Leafer UI](https://www.leaferjs.com/ui/guide/display/Frame.html)。
-

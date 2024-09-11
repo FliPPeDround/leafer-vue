@@ -17,11 +17,8 @@ import code from './index.vue?raw'
 
 [IZoomEvent-url]: https://www.leaferjs.com/ui/api/interfaces/IZoomEvent.html
 
-
 | 事件名  | 说明 | 参数 |
 | --- | --- | --- |
 | `zoomStart` | 开始缩放事件 | [`IZoomEvent`][IZoomEvent-url] |
 | `zoom` | 缩放事件 | [`IZoomEvent`][IZoomEvent-url] |
 | `zoomEnd` | 结束缩放事件 | [`IZoomEvent`][IZoomEvent-url] |
-
-

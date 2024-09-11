@@ -19,7 +19,7 @@ function handeleZoom(e: IKeyEvent) {
 
 <template>
   <LeaferApp :width="672" :height="340" type="draw">
-    <Leafer :pointer="{ preventDefault: true }" @keyDown="handeleZoom">
+    <Leafer :pointer="{ preventDefault: true }" @key-down="handeleZoom">
       <Rect
         v-bind="position"
         :width="100"

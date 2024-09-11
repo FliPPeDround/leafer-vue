@@ -7,7 +7,11 @@ import { getEventNameByAttrName, isOn } from '@/utils'
 
 const { log } = useLogger()
 
-export const renderer = createRenderer<IUI, IUI>({
+export interface ElementWithProps extends IUI {
+  [key: string]: any
+}
+
+export const renderer = createRenderer<IUI, ElementWithProps>({
   createElement(tag) {
     const element = UI.one({ tag })
     markRaw(element)
@@ -16,21 +20,16 @@ export const renderer = createRenderer<IUI, IUI>({
   patchProp(el, key, _prevValue, nextValue) {
     key = camelize(key)
     if (isOn(key)) {
-      if (key.endsWith('Once')) {
-        el.once(
-          getEventNameByAttrName(key),
-          nextValue,
-        )
-      }
-      else {
-        el.on(
-          getEventNameByAttrName(key),
-          nextValue,
-        )
-      }
-    }
+      const eventName = getEventNameByAttrName(key)
+      if (key.endsWith('Once'))
+        el.once(eventName, nextValue)
 
-    (el as any)[key] = nextValue === '' ? true : nextValue
+      else
+        el.on(eventName, nextValue)
+    }
+    else {
+      el[key] = nextValue === '' ? true : nextValue
+    }
   },
   insert(el, parent) {
     if (el && parent)
@@ -40,15 +39,20 @@ export const renderer = createRenderer<IUI, IUI>({
     el?.destroy()
   },
   createText(text) {
-    if (text.trim()) {
+    const trimmedText = text.trim()
+    if (trimmedText) {
       log([
         {
-          content: ' Direct text writing is not supported, please use ',
+          content: '[leafer-vue warn:]',
+          color: '#feb027',
+        },
+        {
+          content: 'Direct text writing is not supported, please use ',
         },
         {
           color: '#6eacf8',
           backgroundColor: '#222222',
-          content: `<Text text="${text.trim()}" />`,
+          content: `<Text text="${trimmedText}" />`,
         },
         {
           content: ' instead',
@@ -58,7 +62,7 @@ export const renderer = createRenderer<IUI, IUI>({
     return null as unknown as IUI
   },
   createComment() {
-    return new Comment()
+    return new Comment() as unknown as IUI
   },
   setText() {},
   setElementText() {},
@@ -66,17 +70,11 @@ export const renderer = createRenderer<IUI, IUI>({
     return node?.parent as IUI
   },
   nextSibling(node) {
-    if (!node)
+    if (!node || !node.parent)
       return null
 
-    const children = node?.parent?.children || [node]
-    if (children?.length === 1)
-      return null
-
+    const children = node.parent.children
     const index = children.findIndex(_node => _node.innerId === node.innerId)
-    if (children.length <= index + 1)
-      return null
-
-    return children[index + 1] ?? null
+    return index + 1 < children.length ? children[index + 1] : null
   },
 })

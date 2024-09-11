@@ -1,3 +1,8 @@
+import {
+  compilerOptions,
+  isCustomElement
+} from "./chunk-ZS7A3PSR.js";
+
 // components/application/index.ts
 import { defineComponent, h, onMounted, onUnmounted, ref, renderSlot } from "vue";
 import { App } from "leafer-ui";
@@ -26,9 +31,9 @@ function useLogger() {
       content: "\u2618\uFE0FLeafer-vue warn:"
     });
     colorInfo.forEach((item, index) => {
-      logData.content += `%c${(item == null ? void 0 : item.content) ?? " "}`;
+      logData.content += `%c${item?.content ?? " "}`;
       logData.css.push(
-        `${(item == null ? void 0 : item.color) ? `color:${item.color}` : ""}${(item == null ? void 0 : item.backgroundColor) ? `;background:${item.backgroundColor}` : ""};padding: 0px${index === 0 ? ";border-top-left-radius: 25px; border-bottom-left-radius: 8px" : ""}${index === colorInfo.length - 1 ? ";border-top-right-radius: 8px; border-bottom-right-radius: 8px" : ""}`
+        `${item?.color ? `color:${item.color}` : ""}${item?.backgroundColor ? `;background:${item.backgroundColor}` : ""};padding: 0px${index === 0 ? ";border-top-left-radius: 25px; border-bottom-left-radius: 8px" : ""}${index === colorInfo.length - 1 ? ";border-top-right-radius: 8px; border-bottom-right-radius: 8px" : ""}`
       );
     });
     console.warn(
@@ -60,37 +65,37 @@ var renderer = createRenderer({
   patchProp(el, key, _prevValue, nextValue) {
     key = camelize(key);
     if (isOn(key)) {
-      if (key.endsWith("Once")) {
-        el.once(
-          getEventNameByAttrName(key),
-          nextValue
-        );
-      } else {
-        el.on(
-          getEventNameByAttrName(key),
-          nextValue
-        );
-      }
+      const eventName = getEventNameByAttrName(key);
+      if (key.endsWith("Once"))
+        el.once(eventName, nextValue);
+      else
+        el.on(eventName, nextValue);
+    } else {
+      el[key] = nextValue === "" ? true : nextValue;
     }
-    el[key] = nextValue === "" ? true : nextValue;
   },
   insert(el, parent) {
     if (el && parent)
       parent.add(el);
   },
   remove(el) {
-    el == null ? void 0 : el.destroy();
+    el?.destroy();
   },
   createText(text) {
-    if (text.trim()) {
+    const trimmedText = text.trim();
+    if (trimmedText) {
       log([
         {
-          content: " Direct text writing is not supported, please use "
+          content: "[leafer-vue warn:]",
+          color: "#feb027"
+        },
+        {
+          content: "Direct text writing is not supported, please use "
         },
         {
           color: "#6eacf8",
           backgroundColor: "#222222",
-          content: `<Text text="${text.trim()}" />`
+          content: `<Text text="${trimmedText}" />`
         },
         {
           content: " instead"
@@ -107,19 +112,14 @@ var renderer = createRenderer({
   setElementText() {
   },
   parentNode(node) {
-    return node == null ? void 0 : node.parent;
+    return node?.parent;
   },
   nextSibling(node) {
-    var _a;
-    if (!node)
+    if (!node || !node.parent)
       return null;
-    const children = ((_a = node == null ? void 0 : node.parent) == null ? void 0 : _a.children) || [node];
-    if ((children == null ? void 0 : children.length) === 1)
-      return null;
+    const children = node.parent.children;
     const index = children.findIndex((_node) => _node.innerId === node.innerId);
-    if (children.length <= index + 1)
-      return null;
-    return children[index + 1] ?? null;
+    return index + 1 < children.length ? children[index + 1] : null;
   }
 });
 
@@ -180,5 +180,7 @@ var LeaferApp = defineComponent({
   }
 });
 export {
-  LeaferApp
+  LeaferApp,
+  compilerOptions,
+  isCustomElement
 };

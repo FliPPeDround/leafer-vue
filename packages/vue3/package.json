@@ -52,14 +52,11 @@
     "typecheck": "tsc --noEmit"
   },
   "peerDependencies": {
-    "leafer-ui": ">=1.0.1"
+    "leafer-ui": ">= 1.0.2"
   },
   "dependencies": {
-    "@vue/runtime-core": "^3",
-    "leafer-ui": "1.0.1",
-    "vue": "^3"
-  },
-  "devDependencies": {
-    "@leafer-ui/interface": "^1.0.1"
+    "@vue/runtime-core": "^3.5.4",
+    "leafer-ui": "^1.0.2",
+    "vue": "^3.5.4"
   }
 }

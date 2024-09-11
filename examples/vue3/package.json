@@ -11,17 +11,18 @@
   },
   "dependencies": {
     "leafer-flex-plugin": "^0.0.2",
-    "leafer-vue": "workspace:^3.0.0",
-    "vue": "^3.3.4"
+    "leafer-ui": "^1.0.2",
+    "leafer-vue": "workspace:^",
+    "vue": "^3.5.4"
   },
   "devDependencies": {
     "@tsconfig/node18": "^2.0.1",
-    "@types/node": "^18.16.17",
-    "@vitejs/plugin-vue": "^4.2.3",
+    "@types/node": "^18.19.50",
+    "@vitejs/plugin-vue": "^4.6.2",
     "@vue/tsconfig": "^0.4.0",
     "npm-run-all": "^4.1.5",
     "typescript": "~5.0.4",
-    "vite": "^4.3.9",
-    "vue-tsc": "^1.6.5"
+    "vite": "^4.5.3",
+    "vue-tsc": "^1.8.27"
   }
 }

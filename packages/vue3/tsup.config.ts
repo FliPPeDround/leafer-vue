@@ -8,8 +8,8 @@ export default defineConfig ((options) => {
 
   return {
     entry: ['index.ts', 'compiler.ts'],
-    format: ['cjs', 'esm', 'iife'],
-    target: 'node16',
+    format: ['cjs', 'esm'],
+    target: 'node18',
     tsconfig: './tsconfig.json',
     clean: true,
     minify: !options.watch,

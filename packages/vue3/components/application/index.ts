@@ -2,6 +2,7 @@ import { defineComponent, h, onMounted, onUnmounted, ref, renderSlot } from 'vue
 import { App } from 'leafer-ui'
 import { createApp } from './../../renderer'
 import { useEffectUpdate, useGetPropsByAttrs } from '@/composables'
+import type { ElementWithProps } from '@/renderer/renderer'
 
 export const LeaferApp = defineComponent({
   inheritAttrs: false,
@@ -22,7 +23,7 @@ export const LeaferApp = defineComponent({
       const app = createApp({
         render: () => renderSlot(slots, 'default'),
       })
-      app.mount(container)
+      app.mount(container as unknown as ElementWithProps)
     }
 
     function unMount() {
@@ -31,7 +32,7 @@ export const LeaferApp = defineComponent({
 
     onMounted(() => {
       mount()
-      useEffectUpdate(attrs, container)
+      useEffectUpdate(attrs, container as unknown as ElementWithProps)
       expose(container)
     })
 

@@ -12,16 +12,16 @@
     "docs:preview": "vitepress preview"
   },
   "dependencies": {
-    "@vue/repl": "^4.3.1",
-    "@vueuse/core": "^10.11.0",
-    "leafer-vue": "workspace:^3.0.0",
-    "vue": "^3.4.34"
+    "@vue/repl": "^4.4.1",
+    "@vueuse/core": "^10.11.1",
+    "leafer-vue": "workspace:^",
+    "vue": "^3.5.4"
   },
   "devDependencies": {
-    "@iconify-json/vscode-icons": "^1.2.0",
+    "@iconify-json/vscode-icons": "^1.2.1",
     "@vue/tsconfig": "^0.5.1",
     "leafer-ui": "1.0.1",
     "naive-ui": "^2.39.0",
-    "vitepress": "^1.3.1"
+    "vitepress": "^1.3.4"
   }
 }

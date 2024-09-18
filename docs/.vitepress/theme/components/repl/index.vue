@@ -2,7 +2,7 @@
 import { useDark } from '@vueuse/core'
 import { Repl, useStore } from '@vue/repl'
 import CodeMirror from '@vue/repl/codemirror-editor'
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
 import { isCustomElement } from 'leafer-vue/compiler'
 
 const { code } = defineProps<{ code: string }>()
@@ -32,6 +32,18 @@ function handleKeydown(evt: KeyboardEvent) {
   if ((evt.ctrlKey || evt.metaKey) && evt.code === 'KeyS')
     evt.preventDefault()
 }
+const previewOptions = computed(() => {
+  return {
+    bodyHTML: /* html */ `
+      <style>
+        html{
+          background-color: ${isDark ? '#1b1b1f' : '#ffffff'};
+          color: ${isDark ? '#fffff5DB' : '#3c3c43'};
+        }
+      </style>
+      `,
+  }
+})
 </script>
 
 <template>
@@ -46,16 +58,7 @@ function handleKeydown(evt: KeyboardEvent) {
       :show-ts-config="false"
       layout="vertical"
       layout-reverse
-      :preview-options="{
-        bodyHTML: /* html */ `
-          <style>
-            html{
-              background-color: ${isDark ? '#1b1b1f' : '#ffffff'};
-              color: ${isDark ? '#fffff5DB' : '#3c3c43'};
-            }
-          </style>
-          `,
-      }"
+      :preview-options
       @keydown="handleKeydown"
     />
   </ClientOnly>

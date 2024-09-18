@@ -1,7 +1,7 @@
 import type { IUI } from '@leafer-ui/interface'
 import { UI } from 'leafer-ui'
-import { camelize, createRenderer, markRaw } from 'vue'
-import { Comment } from './commentTag'
+import { camelize, createRenderer, markRaw } from '@vue/runtime-core'
+import { Empty } from './commentTag'
 import { useLogger } from '@/composables/useLogger'
 import { getEventNameByAttrName, isOn } from '@/utils'
 
@@ -32,6 +32,9 @@ export const renderer = createRenderer<IUI, ElementWithProps>({
     }
   },
   insert(el, parent) {
+    if (parent?.tag === 'App' && el?.tag !== 'Leafer') {
+      return
+    }
     if (el && parent)
       parent.add(el)
   },
@@ -59,10 +62,10 @@ export const renderer = createRenderer<IUI, ElementWithProps>({
         },
       ])
     }
-    return null as unknown as IUI
+    return new Empty() as unknown as IUI
   },
   createComment() {
-    return new Comment() as unknown as IUI
+    return new Empty() as unknown as IUI
   },
   setText() {},
   setElementText() {},

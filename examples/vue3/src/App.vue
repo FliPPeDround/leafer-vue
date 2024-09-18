@@ -2,16 +2,11 @@
 import { LeaferApp } from 'leafer-vue'
 import { nextTick, ref } from 'vue'
 
-const count = ref(1)
-
-function handleReady() {
-  // console.log('leafer ready')
-}
+const count = ref(3)
 </script>
 
 <template>
   {{ count }}
-  <!-- <input v-model="count" min="1" max="5"> -->
   <button @click="nextTick(() => count++)">
     add
   </button>
@@ -19,19 +14,16 @@ function handleReady() {
     del
   </button>
   <LeaferApp :width="672" :height="340" type="draw">
-    <Leafer @leafer-ready="handleReady">
-      <template
-        v-for="(item, index) in count"
-        :key="index"
-      >
-        <Rect
-          :width="50"
-          :height="50"
-          :x="index * 60"
-          :y="0"
-          fill="#00a98e"
-        />
-      </template>
+    <Leafer>
+      <Rect
+        v-for="(_, i) in count"
+        :key="i"
+        :width="40"
+        :height="40"
+        fill="#00a98e"
+        :x="(i % 5) * 40"
+        :y="Math.floor(i / 5) * 40"
+      />
     </Leafer>
   </LeaferApp>
 </template>

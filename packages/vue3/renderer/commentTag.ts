@@ -1,5 +1,5 @@
 import { UI } from 'leafer-ui'
 
-export class Comment extends UI {
+export class Empty extends UI {
   visible = false
 }

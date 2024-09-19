@@ -3,12 +3,12 @@ import { defineComponent, h, onMounted, onUnmounted, ref, renderSlot } from "vue
 import { App } from "leafer-ui";
 
 // renderer/renderer.ts
-import { UI as UI2 } from "leafer-ui";
+import { UI } from "leafer-ui";
 import { camelize, createRenderer, markRaw } from "@vue/runtime-core";
 
-// renderer/commentTag.ts
-import { UI } from "leafer-ui";
-var Empty = class extends UI {
+// tags/Empty.ts
+import { Leaf } from "leafer-ui";
+var Empty = class extends Leaf {
   constructor() {
     super(...arguments);
     this.visible = false;
@@ -23,7 +23,8 @@ function useLogger() {
       css: []
     };
     colorInfo.unshift({
-      content: "\u2618\uFE0FLeafer-vue warn:"
+      content: " [Leafer-vue warn:] ",
+      color: "#FFF"
     });
     colorInfo.forEach((item, index) => {
       logData.content += `%c${item?.content ?? " "}`;
@@ -53,7 +54,7 @@ function getEventNameByAttrName(attrName) {
 var { log } = useLogger();
 var renderer = createRenderer({
   createElement(tag) {
-    const element = UI2.one({ tag });
+    const element = UI.one({ tag });
     markRaw(element);
     return element;
   },
@@ -83,10 +84,6 @@ var renderer = createRenderer({
     const trimmedText = text.trim();
     if (trimmedText) {
       log([
-        {
-          content: "[leafer-vue warn:]",
-          color: "#feb027"
-        },
         {
           content: "Direct text writing is not supported, please use "
         },

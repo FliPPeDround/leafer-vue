@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import { LeaferApp } from 'leafer-vue'
-import { nextTick, ref } from 'vue'
+import { ref } from 'vue'
 
 const count = ref(3)
 </script>
 
 <template>
   {{ count }}
-  <button @click="nextTick(() => count++)">
+  <button @click="count++">
     add
   </button>
   <button @click="count--">
@@ -15,6 +15,7 @@ const count = ref(3)
   </button>
   <LeaferApp :width="672" :height="340" type="draw">
     <Leafer>
+      1231231231
       <Rect
         v-for="(_, i) in count"
         :key="i"

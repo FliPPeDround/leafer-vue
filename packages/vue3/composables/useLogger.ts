@@ -15,7 +15,8 @@ export function useLogger() {
       css: [],
     }
     colorInfo.unshift({
-      content: '☘️Leafer-vue warn:',
+      content: ' [Leafer-vue warn:] ',
+      color: '#FFF',
     })
     colorInfo.forEach((item, index) => {
       logData.content += `%c${item?.content ?? ' '}`

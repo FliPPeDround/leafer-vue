@@ -1,7 +1,7 @@
 import type { IUI } from '@leafer-ui/interface'
 import { UI } from 'leafer-ui'
 import { camelize, createRenderer, markRaw } from '@vue/runtime-core'
-import { Empty } from './commentTag'
+import { Empty } from '../tags/Empty'
 import { useLogger } from '@/composables/useLogger'
 import { getEventNameByAttrName, isOn } from '@/utils'
 
@@ -45,10 +45,6 @@ export const renderer = createRenderer<IUI, ElementWithProps>({
     const trimmedText = text.trim()
     if (trimmedText) {
       log([
-        {
-          content: '[leafer-vue warn:]',
-          color: '#feb027',
-        },
         {
           content: 'Direct text writing is not supported, please use ',
         },

@@ -4,14 +4,14 @@
     "kolorist",
     "pathe"
   ],
-  "eslint.experimental.useFlatConfig": true,
   "prettier.enable": false,
   "editor.formatOnSave": false,
+
   "editor.codeActionsOnSave": {
-    "source.fixAll": "never",
     "source.fixAll.eslint": "explicit",
     "source.organizeImports": "never"
   },
+
   "eslint.validate": [
     "javascript",
     "javascriptreact",
@@ -22,6 +22,17 @@
     "markdown",
     "json",
     "jsonc",
-    "yaml"
+    "yaml",
+    "toml",
+    "xml",
+    "gql",
+    "graphql",
+    "astro",
+    "svelte",
+    "css",
+    "less",
+    "scss",
+    "pcss",
+    "postcss"
   ]
 }

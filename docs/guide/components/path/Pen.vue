@@ -1,7 +1,7 @@
 <script setup lang="ts">
+import { Pen } from 'leafer-ui'
 import { LeaferApp } from 'leafer-vue'
 import { ref } from 'vue'
-import { Pen } from 'leafer-ui'
 
 const penRef = ref<Pen>()
 

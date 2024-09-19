@@ -1,8 +1,8 @@
 import DefaultTheme from 'vitepress/theme'
 import { h } from 'vue'
-import Layout from './Layout.vue'
 import ApiTyping from './components/ApiTyping/index.vue'
 import Repl from './components/repl/index.vue'
+import Layout from './Layout.vue'
 
 import 'uno.css'
 import './var.css'

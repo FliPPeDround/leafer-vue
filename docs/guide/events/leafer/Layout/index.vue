@@ -3,21 +3,17 @@ import { LeaferApp } from 'leafer-vue'
 import { ref } from 'vue'
 
 const count = ref(2)
-function handleAdd() {
-  alert('child-add')
-}
-function handleRemove() {
-  alert('child-remove')
+function handleLayout() {
+  alert('Layout !')
 }
 </script>
 
 <template>
-  <input v-model="count" type="number" min="1" max="5">
+  <button @click="count++">
+    添加元素
+  </button>
   <LeaferApp :width="672" :height="340" type="draw">
-    <Leafer
-      @child-add="handleAdd"
-      @child-remove="handleRemove"
-    >
+    <Leafer @layout="handleLayout">
       <Rect
         v-for="item in count"
         :key="item"

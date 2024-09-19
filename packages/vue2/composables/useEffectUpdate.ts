@@ -1,7 +1,7 @@
-import { watch } from 'vue-demi'
 import type { IUI } from '@leafer-ui/interface'
-import { useGetPropsByAttrs } from '.'
 import { diff } from '@/utils'
+import { watch } from 'vue-demi'
+import { useGetPropsByAttrs } from '.'
 
 export function useEffectUpdate(
   attrs: Record<string, any>,

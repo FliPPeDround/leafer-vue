@@ -26,8 +26,8 @@
 
 ```vue [<div flex items-center><div i-vscode-icons:file-type-vue mr2 /> App.vue</div>]
 <script setup lang="ts">
-import { LeaferApp } from 'leafer-vue'
 import { Leafer as LeaferUI } from 'leafer-ui'
+import { LeaferApp } from 'leafer-vue'
 import { ref } from 'vue'
 
 const LeaferRef = ref<LeaferUI>(null)
@@ -54,8 +54,8 @@ function handelTap() {
 
 ```vue [<div flex items-center><div i-vscode-icons:file-type-vue mr2 /> App.vue</div>]
 <script setup lang="ts">
-import { LeaferApp } from 'leafer-vue'
 import { Leafer as LeaferUI } from 'leafer-ui'
+import { LeaferApp } from 'leafer-vue'
 import { nextTick, ref } from 'vue'
 
 const LeaferRef = ref<LeaferUI>(null)

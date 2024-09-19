@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { LeaferApp } from 'leafer-vue'
 import { Rect } from 'leafer-ui'
+import { LeaferApp } from 'leafer-vue'
 
 class Custom extends Rect {
   get __tag() {

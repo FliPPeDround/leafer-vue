@@ -1,5 +1,5 @@
-import { watch } from 'vue'
 import type { IUI } from '@leafer-ui/interface'
+import { watch } from 'vue'
 import { useGetPropsByAttrs } from './index'
 
 export function useEffectUpdate(

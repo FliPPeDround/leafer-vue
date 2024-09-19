@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import { useDark } from '@vueuse/core'
 import { Repl, useStore } from '@vue/repl'
 import CodeMirror from '@vue/repl/codemirror-editor'
-import { computed, ref } from 'vue'
+import { useDark } from '@vueuse/core'
 import { isCustomElement } from 'leafer-vue/compiler'
+import { computed, ref } from 'vue'
 
-const { code } = defineProps<{ code: string }>()
+const props = defineProps<{ code: string, imports?: Record<string, string> }>()
 
 const isDark = useDark()
 const store = useStore({
   template: ref({
-    welcomeSFC: code,
+    welcomeSFC: props.code,
   }),
   sfcOptions: ref({
     template: {
@@ -24,6 +24,7 @@ const store = useStore({
       'vue': 'https://unpkg.com/vue/dist/vue.esm-browser.prod.js',
       'leafer-ui': 'https://unpkg.com/leafer-ui/dist/web.module.min.js',
       'leafer-vue': `${location.origin}/leafer-vue.proxy.js`,
+      ...props.imports,
     },
   }),
 })

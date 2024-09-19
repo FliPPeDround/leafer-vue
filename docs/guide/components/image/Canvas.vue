@@ -1,7 +1,7 @@
 <script setup lang="ts">
+import { Canvas } from 'leafer-ui'
 import { LeaferApp } from 'leafer-vue'
 import { nextTick, ref } from 'vue'
-import { Canvas } from 'leafer-ui'
 
 const canvasRef = ref<Canvas>()
 

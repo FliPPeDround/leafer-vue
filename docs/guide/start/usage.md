@@ -30,9 +30,9 @@ bun add leafer-vue
 ::: code-group
 
 ```ts [<div flex items-center><div i-vscode-icons:file-type-vite mr2 /> vite.config.ts</div>]
-import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { isCustomElement } from 'leafer-vue/compiler'
+import { defineConfig } from 'vite'
 
 export default defineConfig({
   plugins: [

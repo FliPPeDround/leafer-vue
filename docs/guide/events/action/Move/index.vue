@@ -1,7 +1,7 @@
 <script setup lang="ts">
+import type { IMoveEvent } from '@leafer-ui/interface'
 import { LeaferApp } from 'leafer-vue'
 import { ref } from 'vue'
-import type { IMoveEvent } from '@leafer-ui/interface'
 
 const point = ref({ x: 250, y: 100 })
 function handeleMove(e: IMoveEvent) {

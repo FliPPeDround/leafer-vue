@@ -5,7 +5,7 @@
 ## 示例
 
 <script setup lang="ts">
-import code from './../../components/image/Image.vue?raw'
+import code from './../../../components/image/Image.vue?raw'
 </script>
 
 <Repl :code="code"  />

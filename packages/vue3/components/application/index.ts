@@ -1,8 +1,8 @@
-import { defineComponent, h, onMounted, onUnmounted, ref, renderSlot } from 'vue'
-import { App } from 'leafer-ui'
-import { createApp } from './../../renderer'
-import { useEffectUpdate, useGetPropsByAttrs } from '@/composables'
 import type { ElementWithProps } from '@/renderer/renderer'
+import { useEffectUpdate, useGetPropsByAttrs } from '@/composables'
+import { App } from 'leafer-ui'
+import { defineComponent, h, onMounted, onUnmounted, ref, renderSlot } from 'vue'
+import { createApp } from './../../renderer'
 
 export const LeaferApp = defineComponent({
   inheritAttrs: false,

@@ -1,5 +1,3 @@
-import { defineComponent, getCurrentInstance, onMounted, onUnmounted } from 'vue-demi'
-import { Leafer } from 'leafer-ui'
 import {
   useCreateEvents,
   useEffectUpdate,
@@ -8,6 +6,8 @@ import {
   useGetPropsAndEventByAttrs,
   useInsertBefore,
 } from '@/composables'
+import { Leafer } from 'leafer-ui'
+import { defineComponent, getCurrentInstance, onMounted, onUnmounted } from 'vue-demi'
 
 export const lfLeafer = defineComponent({
   name: 'LfLeafer',

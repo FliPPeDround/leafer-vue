@@ -1,7 +1,7 @@
 <script setup lang="ts">
+import type { IKeyEvent } from '@leafer-ui/interface'
 import { LeaferApp } from 'leafer-vue'
 import { ref } from 'vue'
-import type { IKeyEvent } from '@leafer-ui/interface'
 
 const position = ref({ x: 250, y: 100 })
 function handeleZoom(e: IKeyEvent) {

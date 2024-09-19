@@ -1,6 +1,6 @@
 import type { IBoxInputData, ICanvasInputData, IEllipseInputData, IFrameInputData, IGroupInputData, IImageInputData, ILeaferInputData, ILineInputData, IPathInputData, IPenInputData, IPolygonInputData, IRectInputData, IStarInputData, ITextInputData } from '@leafer-ui/interface'
-import type { LeaferVueComponent } from './LeaferVueComponent'
 import type { _LeaferEvent } from './LeaferEventType'
+import type { LeaferVueComponent } from './LeaferVueComponent'
 
 interface LeaferVueComponents {
   Leafer: LeaferVueComponent<ILeaferInputData & _LeaferEvent>

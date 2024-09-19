@@ -1,7 +1,7 @@
 <script setup lang="ts">
+import type { IZoomEvent } from '@leafer-ui/interface'
 import { LeaferApp } from 'leafer-vue'
 import { ref } from 'vue'
-import type { IZoomEvent } from '@leafer-ui/interface'
 
 const size = ref({ width: 100, height: 100 })
 function handeleZoom(e: IZoomEvent) {

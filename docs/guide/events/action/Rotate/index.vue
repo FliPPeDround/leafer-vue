@@ -1,7 +1,7 @@
 <script setup lang="ts">
+import type { IRotateEvent } from '@leafer-ui/interface'
 import { LeaferApp } from 'leafer-vue'
 import { ref } from 'vue'
-import type { IRotateEvent } from '@leafer-ui/interface'
 
 const rotation = ref(0)
 function handeleRotate(e: IRotateEvent) {

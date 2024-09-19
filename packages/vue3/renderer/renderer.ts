@@ -1,9 +1,9 @@
 import type { IUI } from '@leafer-ui/interface'
-import { UI } from 'leafer-ui'
-import { camelize, createRenderer, markRaw } from '@vue/runtime-core'
-import { Empty } from '../tags/Empty'
 import { useLogger } from '@/composables/useLogger'
 import { getEventNameByAttrName, isOn } from '@/utils'
+import { UI } from 'leafer-ui'
+import { camelize, createRenderer, markRaw } from 'vue'
+import { Empty } from '../tags/Empty'
 
 const { log } = useLogger()
 

@@ -24,6 +24,14 @@ export default defineConfig({
         text: '演练场',
         link: 'https://leafer-vue.vercel.app/',
       },
+      {
+        text: '生态',
+        items: [
+          { text: 'vue2', link: '/intro/vue2' },
+          { text: 'uni-app', link: '/intro/uni' },
+          { text: 'nuxt', link: '/intro/nuxt' },
+        ],
+      },
     ],
 
     sidebar: {

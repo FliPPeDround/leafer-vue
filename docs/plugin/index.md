@@ -8,9 +8,10 @@ leafer-vue完全兼容leafer插件，你可以通过插件来扩展leafer-vue的
 ### 图形编辑器
 
 #### 安装
+
 ::: code-group
 
-<!-- ```bash [<div flex items-center><div i-vscode-icons:file-type-pnpm mr2 /> pnpm</div>]
+```bash [<div flex items-center><div i-vscode-icons:file-type-pnpm mr2 /> pnpm</div>]
 pnpm i @leafer-in/editor
 ```
 
@@ -23,22 +24,6 @@ npm i @leafer-in/editor
 ```
 
 ```bash [<div flex items-center><div i-vscode-icons:file-type-bun mr2 /> bun</div>]
-bun add @leafer-in/editor
-``` -->
-
-```bash [pnpm]
-pnpm i @leafer-in/editor
-```
-
-```bash [yarn]
-yarn add @leafer-in/editor
-```
-
-```bash [npm]
-npm i @leafer-in/editor
-```
-
-```bash [bun]
 bun add @leafer-in/editor
 ```
 :::

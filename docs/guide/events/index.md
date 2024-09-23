@@ -5,7 +5,7 @@
 ```vue
 <Rect @tap="() => console.log('Tap')" />
 ```
-> 详情请查看 <i inline-block i-vscode-icons:file-type-vue /> [Vue事件处理](https://cn.vuejs.org/guide/essentials/event-handling.html)
+> 详情请查看 [Vue事件处理](https://cn.vuejs.org/guide/essentials/event-handling.html)
 
 ## 事件修饰符
 
@@ -16,7 +16,7 @@
 <Rect @tap.once="() => console.log('Tap')" />
 ```
 
-> 详情请查看[once |🌿 Leafer UI ](https://www.leaferjs.com/ui/reference/property/on.html#%E5%8F%AA%E7%9B%91%E5%90%AC%E4%B8%80%E6%AC%A1%E4%BA%8B%E4%BB%B6)
+> 详情请查看 [once |🌿 Leafer UI ](https://www.leaferjs.com/ui/reference/property/on.html#%E5%8F%AA%E7%9B%91%E5%90%AC%E4%B8%80%E6%AC%A1%E4%BA%8B%E4%BB%B6)
 
 ## 移除事件
 
@@ -44,6 +44,7 @@ function handelTap() {
 </template>
 ```
 :::
+
 > 详情请查看 [off |🌿 Leafer UI ](https://www.leaferjs.com/ui/reference/property/off.html)
 
 ## 派发事件

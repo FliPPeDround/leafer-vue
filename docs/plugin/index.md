@@ -35,7 +35,10 @@ import code from './editor.vue?raw'
 <Repl
   :code="code"
   :imports="{
-    '@leafer-in/arrow': 'https://unpkg.com/@leafer-in/arrow@1.0.2/dist/arrow.esm.js',
-    '@leafer-ui/draw': 'https://unpkg.com/leafer-draw@1.0.2/dist/web.module.min.js'
+    '@leafer/core': 'https://unpkg.com/@leafer/core/lib/core.esm.js',
+    '@leafer-ui/draw': 'https://unpkg.com/@leafer-ui/draw/lib/draw.esm.js',
+    '@leafer-ui/core': 'https://unpkg.com/@leafer-ui/core/lib/core.esm.js',
+    'leafer-ui': 'https://unpkg.com/leafer-editor/dist/web.module.min.js',
+    '@leafer-in/editor': 'https://unpkg.com/@leafer-in/editor/dist/editor.esm.js',
   }"
 />

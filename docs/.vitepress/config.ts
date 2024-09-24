@@ -186,21 +186,6 @@ export default defineConfig({
           ],
         },
       ],
-      '/plugin/': [
-        {
-          text: '插件',
-          items: [
-            {
-              text: '插件介绍',
-              link: '/plugins/index',
-            },
-            {
-              text: '插件列表',
-              link: '/plugins/list',
-            },
-          ],
-        },
-      ],
     },
 
     socialLinks: [

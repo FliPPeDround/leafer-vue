@@ -1,15 +1,20 @@
 <script setup lang="ts">
 import { LeaferApp } from 'leafer-vue'
-import '@leafer-in/arrow'
+import '@leafer-in/editor'
 </script>
 
 <template>
-  <LeaferApp :width="672" :height="340" type="draw">
+  <LeaferApp :width="672" :height="340" type="draw" :editor="{}">
     <Leafer>
-      <Arrow
-        v-bind="{ y: 50,
-                  strokeWidth: 5,
-                  stroke: 'rgb(50,205,121)' }"
+      <Text
+        text="Hello Leafer Vue"
+        fill="#00a98e"
+        font-weight="black"
+        :italic="true"
+        :x="100"
+        :y="100"
+        editable
+        :font-size="60"
       />
     </Leafer>
   </LeaferApp>

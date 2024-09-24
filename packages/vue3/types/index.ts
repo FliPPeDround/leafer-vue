@@ -24,7 +24,7 @@ interface LeaferVueComponents {
 }
 
 declare module 'vue' {
-  export interface GlobalComponents extends LeaferVueComponents {}
+  interface GlobalComponents extends LeaferVueComponents {}
 }
 
 declare module '@vue/runtime-core' {

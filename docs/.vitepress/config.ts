@@ -185,6 +185,27 @@ export default defineConfig({
             },
           ],
         },
+        {
+          text: '更多',
+          items: [
+            {
+              text: '插件',
+              link: '/plugin/index',
+            },
+            {
+              text: 'vue2',
+              link: '/intro/vue2',
+            },
+            {
+              text: 'Nuxt',
+              link: 'intro/nuxt',
+            },
+            {
+              text: 'uni-app',
+              link: '/intro/uni',
+            },
+          ],
+        },
       ],
     },
 

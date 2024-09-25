@@ -137,7 +137,7 @@ export default defineConfig({
           text: '自定义元素',
           items: [
             {
-              text: '自定义元素',
+              text: 'Custom',
               link: '/guide/components/custom/index',
             },
           ],

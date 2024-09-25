@@ -10,28 +10,10 @@ import code from './index.vue?raw'
 
 > [!TIP]
 > - 自定义tag名不能与内置的tag名冲突，需要全局唯一
-> - 自定义tag名不能与`<script />`中定义的类名一致
+> - 自定义类名不能与`<template />`中声明的组件名一致
 
-## 原生自定义元素
-
-自定义元素，vue编译器无法识别，会出现警告，需要手动注册。
-::: code-group
-
-```ts [<div flex items-center><div i-vscode-icons:file-type-vite mr2 /> vite.config.ts</div>]
-import vue from '@vitejs/plugin-vue'
-import { isCustomElement } from 'leafer-vue/compiler'
-import { defineConfig } from 'vite'
-
-export default defineConfig({
-  plugins: [
-    vue({
-      template: {
-        compilerOptions: {
-          isCustomElement: tag => isCustomElement(tag, ['CustomRect']),
-        },
-      },
-    }),
-  ],
-})
-```
-:::
+## API
+### 属性
+| 属性名 | 类型 | 默认值 | 说明 |
+| :--- | :--- | :--- | :--- |
+| is | `Constructor` | - | 自定义元素类 |

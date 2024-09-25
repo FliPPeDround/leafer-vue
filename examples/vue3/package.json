@@ -10,9 +10,10 @@
     "type-check": "vue-tsc --noEmit -p tsconfig.app.json --composite false"
   },
   "dependencies": {
-    "@leafer-in/editor": "^1.0.3",
+    "@leafer-in/arrow": "^1.0.4",
+    "@leafer-in/editor": "^1.0.4",
     "leafer-flex-plugin": "^0.0.2",
-    "leafer-ui": "^1.0.2",
+    "leafer-ui": "^1.0.4",
     "leafer-vue": "workspace:^",
     "vue": "^3.5.4"
   },

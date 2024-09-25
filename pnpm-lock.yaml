@@ -139,15 +139,18 @@ importers:
 
   examples/vue3:
     dependencies:
+      '@leafer-in/arrow':
+        specifier: ^1.0.4
+        version: 1.0.4
       '@leafer-in/editor':
-        specifier: ^1.0.3
-        version: 1.0.3
+        specifier: ^1.0.4
+        version: 1.0.4
       leafer-flex-plugin:
         specifier: ^0.0.2
         version: 0.0.2
       leafer-ui:
-        specifier: ^1.0.2
-        version: 1.0.2
+        specifier: ^1.0.4
+        version: 1.0.4
       leafer-vue:
         specifier: workspace:^
         version: link:../../packages/vue3
@@ -1780,6 +1783,14 @@ packages:
     resolution: {integrity: sha512-dfLbk+PwWvFzSxwk3n5ySL0hfBog779o8h68wK/7/APo/7cgyWp5jcXockbxdk5kFRkbeXWm4Fbi9FrdN381sA==}
     dev: true
 
+  /@leafer-in/arrow@1.0.4:
+    resolution: {integrity: sha512-heZqBS06rP4l7oPTAYG2QpdGPTWXz3/OZyWrqZa6m29PQZngVMqg5W5luzhzqIvcZSBN4WXmNydP4AUoa+Wzwg==}
+    dependencies:
+      '@leafer-in/interface': 1.0.4
+      '@leafer-ui/draw': 1.0.4
+      '@leafer-ui/interface': 1.0.4
+    dev: false
+
   /@leafer-in/editor@1.0.0-rc.6:
     resolution: {integrity: sha512-yfjjPO4EKF+cg2+9ZCEQe/diF44o3Pbjd2nsfcVvcIRKzbJuGQSmnBswPkQ+WYolMFCmAQQHPbEIUb06iFsUBA==}
     dependencies:
@@ -1787,13 +1798,13 @@ packages:
       '@leafer/core': 1.0.0-rc.6
     dev: false
 
-  /@leafer-in/editor@1.0.3:
-    resolution: {integrity: sha512-hgwGlPVwP7PYMZl0Ie6wBYu6DJbjYp/nnDfpAwhUfEN4iMj8WLJBV5gneY60ZKWhOv87N3Qb/K3ASpfYO18VpA==}
+  /@leafer-in/editor@1.0.4:
+    resolution: {integrity: sha512-ToQ+Dj63S1KLaMKLpcz9W1saX9ZRL1iEJWM/uZ7/Q0FXd4cw2tg95YcS2DikJ6Mc0JGGA8ovVHLT9X8kZy7MCA==}
     dependencies:
-      '@leafer-in/interface': 1.0.3
-      '@leafer-in/resize': 1.0.3
-      '@leafer-ui/core': 1.0.3
-      '@leafer-ui/interface': 1.0.3
+      '@leafer-in/interface': 1.0.4
+      '@leafer-in/resize': 1.0.4
+      '@leafer-ui/core': 1.0.4
+      '@leafer-ui/interface': 1.0.4
     dev: false
 
   /@leafer-in/interface@1.0.0-rc.6:
@@ -1803,18 +1814,18 @@ packages:
       '@leafer/interface': 1.0.0-rc.6
     dev: false
 
-  /@leafer-in/interface@1.0.3:
-    resolution: {integrity: sha512-XUPeA44gdcT3YdSlMV0Ck+UVd4qPHZjpXfx3COGfJm/TbqXAG2CoT53nXOo6NSxkBkvlHqba3M21Y0DBIxtUrg==}
+  /@leafer-in/interface@1.0.4:
+    resolution: {integrity: sha512-tTJeD0pmhpisVDvzeCp3Q9G7fonigP4TVZdrMF0WmxDyBlpf4k+eMZZVHRXOgPFD68Fd/5KH0nEH46ZoXmVkew==}
     dependencies:
-      '@leafer-ui/interface': 1.0.3
-      '@leafer/interface': 1.0.3
+      '@leafer-ui/interface': 1.0.4
+      '@leafer/interface': 1.0.4
     dev: false
 
-  /@leafer-in/resize@1.0.3:
-    resolution: {integrity: sha512-DGD+1gL/e5R86PtYmQu7jnCEowKgzgKkYRxwGMI8fbkL75K6DmSG3PJrnFvE/1p0dp7YDG+Po4A5dTx23WQ2OA==}
+  /@leafer-in/resize@1.0.4:
+    resolution: {integrity: sha512-VXjmucJJU/1nehxiCjybTFjtV/LIkc2HZBWJaLwpDq4CCYb8RAlXMYEbgqzrkpaTKnglisrRK3192PRqxUMBqQ==}
     dependencies:
-      '@leafer-ui/draw': 1.0.3
-      '@leafer-ui/interface': 1.0.3
+      '@leafer-ui/draw': 1.0.4
+      '@leafer-ui/interface': 1.0.4
     dev: false
 
   /@leafer-ui/app@1.0.0-beta.9:
@@ -1843,13 +1854,13 @@ packages:
       '@leafer-ui/type': 1.0.2
       '@leafer/core': 1.0.2
 
-  /@leafer-ui/app@1.0.3:
-    resolution: {integrity: sha512-lkLdpyLMMub/fODodLBkUT4w3Tel8egvzblYh7opgMSMdpzccyGId9CDegFTUwFYx51L0KGS2FbUCXuabEQQhg==}
+  /@leafer-ui/app@1.0.4:
+    resolution: {integrity: sha512-khDq0Gf87nh1omJyjUmznVzNO+5Emh/4qzRV/hxKElXXzxlRoZGT9gX8NZ00RPRfahTpyXUbcFy1IzDBmTfawg==}
     dependencies:
-      '@leafer-ui/data': 1.0.3
-      '@leafer-ui/display': 1.0.3
-      '@leafer-ui/type': 1.0.3
-      '@leafer/core': 1.0.3
+      '@leafer-ui/data': 1.0.4
+      '@leafer-ui/display': 1.0.4
+      '@leafer-ui/type': 1.0.4
+      '@leafer/core': 1.0.4
     dev: false
 
   /@leafer-ui/bounds@1.0.0-beta.9:
@@ -1869,10 +1880,10 @@ packages:
     dependencies:
       '@leafer/core': 1.0.2
 
-  /@leafer-ui/bounds@1.0.3:
-    resolution: {integrity: sha512-uoaDE04hG9ZSaJG8ppIqupWZQCl0KxqawNbh8ybN77e3nbwm53aWd31pz0/clThpSvJkF6MWP3FbgTqEbgIpOw==}
+  /@leafer-ui/bounds@1.0.4:
+    resolution: {integrity: sha512-KXhSs9RlF8RdQHrgxThTuzpe9NqW547M3Um2Gt2YyHXlKAXPAfB8NWjEt2lFu2mCmLF26Ple+IFO4nRCxPRL6g==}
     dependencies:
-      '@leafer/core': 1.0.3
+      '@leafer/core': 1.0.4
     dev: false
 
   /@leafer-ui/color@1.0.0-beta.9:
@@ -1881,6 +1892,12 @@ packages:
 
   /@leafer-ui/color@1.0.2:
     resolution: {integrity: sha512-S2BwhouvQLhF4rT4JQBM+cHxMYIxv+hAN+3OepQW8vEFgdS7j/55lhg4tM4h6xvhGsRyzrX456NSmlUTjjDi1A==}
+
+  /@leafer-ui/color@1.0.4:
+    resolution: {integrity: sha512-YcFBJW7a/FABXjGfxdZ8+/8z8AZMAJGd1FPOOSYWgZOFAPERngJesx67xZw4dpe0wUxpHH4KvNtMBtwklPJnLQ==}
+    dependencies:
+      '@leafer-ui/draw': 1.0.4
+    dev: false
 
   /@leafer-ui/core@1.0.0-beta.9:
     resolution: {integrity: sha512-o0nvN3WS1u3gyukveqs4WTonVfoBTtBYXymO7y+l62TX3UH3LDS5WYeSxSNDvTXWpLBp5iqpsYgZx9P8tYLgPQ==}
@@ -1915,15 +1932,15 @@ packages:
       '@leafer-ui/interaction': 1.0.2
       '@leafer-ui/type': 1.0.2
 
-  /@leafer-ui/core@1.0.3:
-    resolution: {integrity: sha512-vnmL/LTk3s6C8hdqT488AuSYqpNav2WAxve8hxHnvhhGIKXUj6lPuDOWD0Rt7sIEIRDSWIO4L5bwLxnqBcjcAw==}
+  /@leafer-ui/core@1.0.4:
+    resolution: {integrity: sha512-b9RzIC8o03qBpG4Te96/MhwpFGmVru+t8GYiUjKUdNPz6blcHeobRf4W8VF7OQlZep/pgJZmtcotUodLi8ZcIg==}
     dependencies:
-      '@leafer-ui/app': 1.0.3
-      '@leafer-ui/draw': 1.0.3
-      '@leafer-ui/event': 1.0.3
-      '@leafer-ui/hit': 1.0.3
-      '@leafer-ui/interaction': 1.0.3
-      '@leafer-ui/type': 1.0.3
+      '@leafer-ui/app': 1.0.4
+      '@leafer-ui/draw': 1.0.4
+      '@leafer-ui/event': 1.0.4
+      '@leafer-ui/hit': 1.0.4
+      '@leafer-ui/interaction': 1.0.4
+      '@leafer-ui/type': 1.0.4
     dev: false
 
   /@leafer-ui/data@1.0.0-beta.9:
@@ -1945,11 +1962,11 @@ packages:
       '@leafer-ui/external': 1.0.2
       '@leafer/core': 1.0.2
 
-  /@leafer-ui/data@1.0.3:
-    resolution: {integrity: sha512-TQQMH7MGa0Q3//ZfTTIZlkYk/iuui5PGBgPet8HUztZnJEXYtLurAYCBnNDAEnQQv9/bjRaYKxh7ffrJAIeCdQ==}
+  /@leafer-ui/data@1.0.4:
+    resolution: {integrity: sha512-ZSxCtjKPQacpWDcjHBQjbwBvuBbWCQDqiZT98MjBIjv9BCL6sSe6GaMeQ26sXrhu8LLGLWKLxo4rk44B/98cZA==}
     dependencies:
-      '@leafer-ui/external': 1.0.3
-      '@leafer/core': 1.0.3
+      '@leafer-ui/external': 1.0.4
+      '@leafer/core': 1.0.4
     dev: false
 
   /@leafer-ui/decorator@1.0.0-beta.9:
@@ -1969,10 +1986,10 @@ packages:
     dependencies:
       '@leafer/core': 1.0.2
 
-  /@leafer-ui/decorator@1.0.3:
-    resolution: {integrity: sha512-KaPLjOuzbVHWlviW3CA/aGmjHQEdhNXs/UBdvABbuEUzpd0IJRUGS29CGz43OypnvIb4Hsgkn6IFM0U+59nEOA==}
+  /@leafer-ui/decorator@1.0.4:
+    resolution: {integrity: sha512-kqB6zIjkMq/dO1s6BWFDDCdJ6Zzlifw1pQjSVOvAbao8lsDtogKR84b4Sqjcu4lk95OOPP0W4zPZJxSdt25CFg==}
     dependencies:
-      '@leafer/core': 1.0.3
+      '@leafer/core': 1.0.4
     dev: false
 
   /@leafer-ui/display-module@1.0.0-beta.9:
@@ -1998,12 +2015,12 @@ packages:
       '@leafer-ui/data': 1.0.2
       '@leafer-ui/render': 1.0.2
 
-  /@leafer-ui/display-module@1.0.3:
-    resolution: {integrity: sha512-zspJcdSHC8nxkYBX6gu3Nrq33ogXrzZgzQGhEz0a50smK0fIGD1LRLncBalwZd/RI/hswoUhLMurPjNp5YYtiQ==}
+  /@leafer-ui/display-module@1.0.4:
+    resolution: {integrity: sha512-f92SiTafalaUaoE3g5qGUAr5FgWZ9wDvaoXsm+NRNyg503ymo2RcRtxNqbXFXh128QGHVYV0oixzCx8w2LUyEw==}
     dependencies:
-      '@leafer-ui/bounds': 1.0.3
-      '@leafer-ui/data': 1.0.3
-      '@leafer-ui/render': 1.0.3
+      '@leafer-ui/bounds': 1.0.4
+      '@leafer-ui/data': 1.0.4
+      '@leafer-ui/render': 1.0.4
     dev: false
 
   /@leafer-ui/display@1.0.0-beta.9:
@@ -2035,14 +2052,14 @@ packages:
       '@leafer-ui/external': 1.0.2
       '@leafer/core': 1.0.2
 
-  /@leafer-ui/display@1.0.3:
-    resolution: {integrity: sha512-hzcgoBuVNYz4vp+JgON4VpCpKewKrUE8sOuzW1aum4i4SvNR8CtVCAucklxdPM5cALhEOMCQT3RcEkh+qdfkEg==}
+  /@leafer-ui/display@1.0.4:
+    resolution: {integrity: sha512-t37l1vbva6REaoKtyvNGZDAmUpyJUQskAJSK65iQqdsPOM8z+0DoDWXncaW0ufd4iqmFLW+ckLdWUTISos6Igw==}
     dependencies:
-      '@leafer-ui/data': 1.0.3
-      '@leafer-ui/decorator': 1.0.3
-      '@leafer-ui/display-module': 1.0.3
-      '@leafer-ui/external': 1.0.3
-      '@leafer/core': 1.0.3
+      '@leafer-ui/data': 1.0.4
+      '@leafer-ui/decorator': 1.0.4
+      '@leafer-ui/display-module': 1.0.4
+      '@leafer-ui/external': 1.0.4
+      '@leafer/core': 1.0.4
     dev: false
 
   /@leafer-ui/draw@1.0.2:
@@ -2054,14 +2071,14 @@ packages:
       '@leafer-ui/external': 1.0.2
       '@leafer/core': 1.0.2
 
-  /@leafer-ui/draw@1.0.3:
-    resolution: {integrity: sha512-ODEzfC9L9eGyI9Fe3ZbXpnGovO887hKU+Lrpx9T2jJcmhX1yqmyjWrtcNz1rT7cXyqwD17gvQ7MOmF1iua8sCw==}
+  /@leafer-ui/draw@1.0.4:
+    resolution: {integrity: sha512-XUdAzfK39uprhtBuVkuivGjyDu0M/wDIELrn/wlShCI/TBnHhmaK5emdYGUpGCuRdFBLkYBvDm2PUXWFSAy6Nw==}
     dependencies:
-      '@leafer-ui/decorator': 1.0.3
-      '@leafer-ui/display': 1.0.3
-      '@leafer-ui/display-module': 1.0.3
-      '@leafer-ui/external': 1.0.3
-      '@leafer/core': 1.0.3
+      '@leafer-ui/decorator': 1.0.4
+      '@leafer-ui/display': 1.0.4
+      '@leafer-ui/display-module': 1.0.4
+      '@leafer-ui/external': 1.0.4
+      '@leafer/core': 1.0.4
     dev: false
 
   /@leafer-ui/effect@1.0.0-beta.9:
@@ -2079,21 +2096,33 @@ packages:
     dependencies:
       '@leafer/core': 1.0.2
 
+  /@leafer-ui/effect@1.0.4:
+    resolution: {integrity: sha512-GGkJFZgQfvMqA28yv6QTB/zf0zX8UEPFiAybQuu8BVm7sgvIxZfIG8/cR+ehC2BublbAPQSKf0ScungWIOvcMw==}
+    dependencies:
+      '@leafer/core': 1.0.4
+    dev: false
+
   /@leafer-ui/event@1.0.2:
     resolution: {integrity: sha512-5mT4EFYQDWKbNitKefwObO4il48+IhPLWudqvPhH2kYiGlWGnmozijjmTyXsdPjvNhqgGa+AKYlMDlVHbZG+1w==}
     dependencies:
       '@leafer/core': 1.0.2
 
-  /@leafer-ui/event@1.0.3:
-    resolution: {integrity: sha512-V0VAuqZfUboe6KgCy6e2yjn9xAlkIQ7dafesJK3kJFQqc7dHi6PT49pV+hyju77waE6spKh0jydDGO0vDg46Mg==}
+  /@leafer-ui/event@1.0.4:
+    resolution: {integrity: sha512-OxFiZAJZw1kCPbDCI9t6x6S1VSQitgAQUFwIA5NccdntHVwm34XcFOOJyds9hzZBZ07/KfNIExf0tCmRRRTQzw==}
     dependencies:
-      '@leafer/core': 1.0.3
+      '@leafer/core': 1.0.4
     dev: false
 
   /@leafer-ui/export@1.0.2:
     resolution: {integrity: sha512-RseK22Qe+sThgRlKdOBMX1dhYxxGpyW2d0AQtViag7266v8GXm+lvUuRkUl0rOxPBhr7WOn9DQy0H3CE9vG4Mg==}
     dependencies:
       '@leafer/core': 1.0.2
+
+  /@leafer-ui/export@1.0.4:
+    resolution: {integrity: sha512-h5ijzlXJzYNlHIxCmfRWv/CIQ64+dCZQovxMC3YO/Xgia2BbX1Rxng7JfDZfvFLVs9LpFxfPeP4cE1o//1RXsA==}
+    dependencies:
+      '@leafer/core': 1.0.4
+    dev: false
 
   /@leafer-ui/external@1.0.0-beta.9:
     resolution: {integrity: sha512-Ful7accR8c3hQzQqtWgslxzbvZdtmuy/2oWfJJFr5MJycGu4dvGDAB4ecZPd6Aj3fdbzwgRMY+gy7zsqEiiU9w==}
@@ -2109,10 +2138,10 @@ packages:
   /@leafer-ui/external@1.0.2:
     resolution: {integrity: sha512-cI7Eo+l/OGsG4FFpwbZe+DLXJz/DtY/Yo8Yh/r1gADQ2b504cwWz0+1GpIVWtL7/NB8u88hNCRc5aILwDbJcFQ==}
 
-  /@leafer-ui/external@1.0.3:
-    resolution: {integrity: sha512-zSPOu/03jCf0nXsut9jwGR0hxKb0USSFvVej6Fa6vHYDoNq+rMo781CYIPwC9Rnpycm6IphTp4fdcrnS1wDScQ==}
+  /@leafer-ui/external@1.0.4:
+    resolution: {integrity: sha512-TRvFhLIGujO/NXa3rUfQQlkdZgYIwZtxHQZ07h7M5LfnOtnFdTQNWE2CNQHntvJRnMJf8mgs6k/DTMxuukekTg==}
     dependencies:
-      '@leafer/core': 1.0.3
+      '@leafer/core': 1.0.4
     dev: false
 
   /@leafer-ui/hit@1.0.0-beta.9:
@@ -2129,11 +2158,11 @@ packages:
       '@leafer-ui/draw': 1.0.2
       '@leafer/core': 1.0.2
 
-  /@leafer-ui/hit@1.0.3:
-    resolution: {integrity: sha512-ouRez2U+70zSU0nHwxrPlhMI56nZBUvm20x7tw4rUyOaRyemEfI2xb+yX/x+giQIGxgEJ47yGCX9N+e40WlSOw==}
+  /@leafer-ui/hit@1.0.4:
+    resolution: {integrity: sha512-7dIzonoBNmtnGni5y1+zFvm4xKjtVgzDb0C658g8VqpFYewXOKT6YN5lroq3nm3NAzmwsqHJFFoFQ99cG/dzNg==}
     dependencies:
-      '@leafer-ui/draw': 1.0.3
-      '@leafer/core': 1.0.3
+      '@leafer-ui/draw': 1.0.4
+      '@leafer/core': 1.0.4
     dev: false
 
   /@leafer-ui/interaction-web@1.0.2:
@@ -2142,6 +2171,13 @@ packages:
       '@leafer-ui/core': 1.0.2
       '@leafer/core': 1.0.2
 
+  /@leafer-ui/interaction-web@1.0.4:
+    resolution: {integrity: sha512-OjWaMB+JiGuhcEwzVa79wklxMjN6aL/9Ddr+8vIxiI5FELCmY0YQKUXFna62j2AnWhl5Qrj9t+hPJuIEjsfJgw==}
+    dependencies:
+      '@leafer-ui/core': 1.0.4
+      '@leafer/core': 1.0.4
+    dev: false
+
   /@leafer-ui/interaction@1.0.2:
     resolution: {integrity: sha512-ur+CeY765R4h9L4ORhX2bKm37AH4Y9N7yW7dbUtFMurbCbn9zawGg4CvNlZlkHaza8iNyOAUVe/dVPfsibFIMQ==}
     dependencies:
@@ -2149,12 +2185,12 @@ packages:
       '@leafer-ui/event': 1.0.2
       '@leafer/core': 1.0.2
 
-  /@leafer-ui/interaction@1.0.3:
-    resolution: {integrity: sha512-4cND3CQ3VauD5ARdmiy80YqrS1dUmxnXWOL86PYtamHnZTglu349KhxI/0y/bZWUKueDS7zoTc111tTqLBqEFg==}
+  /@leafer-ui/interaction@1.0.4:
+    resolution: {integrity: sha512-VHJposImQK3R+RP/ZCRVqEdwd/IbulUXVTAabUQvAecg1GQZjjWXiq/6nMLq3gdUSPc9im3nD0Rh+xVlQTkk9w==}
     dependencies:
-      '@leafer-ui/draw': 1.0.3
-      '@leafer-ui/event': 1.0.3
-      '@leafer/core': 1.0.3
+      '@leafer-ui/draw': 1.0.4
+      '@leafer-ui/event': 1.0.4
+      '@leafer/core': 1.0.4
     dev: false
 
   /@leafer-ui/interface@1.0.0-beta.9:
@@ -2174,10 +2210,10 @@ packages:
     dependencies:
       '@leafer/interface': 1.0.2
 
-  /@leafer-ui/interface@1.0.3:
-    resolution: {integrity: sha512-DTFxbwLupcs1H72LCFiavLQ1360DNwbEeyB5DvXl9Pwl1Umjeabiw/yLfzsDL7n2JqYB4Nx2dQsCwjkrmT5xNQ==}
+  /@leafer-ui/interface@1.0.4:
+    resolution: {integrity: sha512-ekNzCQHhzyysNNfYmuxdOmjSYR2CCuZeyLO8ZCfLrp4lxOszWbNIK+EjM7EKS7F+PfBvvkvvpSnfyUWWgm5L9A==}
     dependencies:
-      '@leafer/interface': 1.0.3
+      '@leafer/interface': 1.0.4
     dev: false
 
   /@leafer-ui/paint@1.0.0-beta.9:
@@ -2199,6 +2235,13 @@ packages:
       '@leafer-ui/draw': 1.0.2
       '@leafer/core': 1.0.2
 
+  /@leafer-ui/paint@1.0.4:
+    resolution: {integrity: sha512-ky8RCMJ/CRI71D2/nvw8zWeBbQayqu2yn9SXyudxCygwAhT7UL6tvXYB2D8Ep2WxvaNWZ7gQft5PoQ4MDFAPsQ==}
+    dependencies:
+      '@leafer-ui/draw': 1.0.4
+      '@leafer/core': 1.0.4
+    dev: false
+
   /@leafer-ui/partner@1.0.0-rc.6:
     resolution: {integrity: sha512-FITs4LQYezPGlqyWibArttp7rI3UXSAtdya7gq6G+hxMiKudp49i3wjf4bH/ubLk/W6DFTYCRVODLgSkPxsENA==}
     dependencies:
@@ -2215,6 +2258,17 @@ packages:
       '@leafer-ui/export': 1.0.2
       '@leafer-ui/paint': 1.0.2
       '@leafer-ui/text': 1.0.2
+
+  /@leafer-ui/partner@1.0.4:
+    resolution: {integrity: sha512-v7Vy7mYfZUIsxf2SNyz5rYySL2lQWUPutFvCUtUMNR//3M9fEOv1sLSUDiz0oGdl5Q+u2pSO7u94KYHwtIGlbA==}
+    dependencies:
+      '@leafer-ui/color': 1.0.4
+      '@leafer-ui/draw': 1.0.4
+      '@leafer-ui/effect': 1.0.4
+      '@leafer-ui/export': 1.0.4
+      '@leafer-ui/paint': 1.0.4
+      '@leafer-ui/text': 1.0.4
+    dev: false
 
   /@leafer-ui/render@1.0.0-beta.9:
     resolution: {integrity: sha512-JpVqQSeYq9Hjre54HJJPRYDHrULFcTAdN/KUE+YCbb2ANnOpUMKLLW7QtDobMo5hXCQE2w7Md4YiUf5ZvobrPQ==}
@@ -2233,10 +2287,10 @@ packages:
     dependencies:
       '@leafer-ui/external': 1.0.2
 
-  /@leafer-ui/render@1.0.3:
-    resolution: {integrity: sha512-GS/r4aG/y5Ol9N4DZEUF6GyubZJZ3+qj1+H4n1l5vOFQ9LUQO5Igukpta+Ru2svgpfHp89pOwvrMoGV+TfNXEQ==}
+  /@leafer-ui/render@1.0.4:
+    resolution: {integrity: sha512-6hOb0ByOwwku6rP+6ZX9dMgZCEZkt34wj3d2gVcJn2QrTzKkiBjfRL8O3EBXv11D9PYSi2aUJnGePemnU+pZFA==}
     dependencies:
-      '@leafer-ui/external': 1.0.3
+      '@leafer-ui/external': 1.0.4
     dev: false
 
   /@leafer-ui/text@1.0.0-beta.9:
@@ -2249,6 +2303,12 @@ packages:
     resolution: {integrity: sha512-p+DwLx14T6V1Ys8wJHh3JNguOxc+xdAaTwLSBOHwqumbDV/QknO96lk/Mwd4LvMMWlLroxR0vsuAW4y28Db2IA==}
     dependencies:
       '@leafer/core': 1.0.2
+
+  /@leafer-ui/text@1.0.4:
+    resolution: {integrity: sha512-YDFwTP5JmnJSoQUXuKYBFAwxRxSpxyq9Pxbufwc8tDP/a0KbBoHvLy7wZtE2SJXun0or97bvBZIdJEagu5xq7w==}
+    dependencies:
+      '@leafer/core': 1.0.4
+    dev: false
 
   /@leafer-ui/type@1.0.0-beta.9:
     resolution: {integrity: sha512-Rps6zh6JpTpNc3FtcX5earxUKpx4f4bjNrXoBPzKQhLzeAn6Hj4sZxVBPaDqqGlzpSwVks4fy1AX/N2mV4EPZQ==}
@@ -2269,12 +2329,12 @@ packages:
       '@leafer-ui/event': 1.0.2
       '@leafer/core': 1.0.2
 
-  /@leafer-ui/type@1.0.3:
-    resolution: {integrity: sha512-JaQFiWBcpfaSG6gdQwTY9buFHVa8KTOxCpTKuQ5WIpUS374l0hkddOrQPYc6elLvIfAkEcZUxZ5V22J0SCNXrg==}
+  /@leafer-ui/type@1.0.4:
+    resolution: {integrity: sha512-b2OLH66yda8Opl5+2o+sFjxbvQdoQkDQv8U+7NFonhV33CBkG+H2p1f3IS1u7Fy49hhRU6ankXnm5Tg6t1ElRQ==}
     dependencies:
-      '@leafer-ui/draw': 1.0.3
-      '@leafer-ui/event': 1.0.3
-      '@leafer/core': 1.0.3
+      '@leafer-ui/draw': 1.0.4
+      '@leafer-ui/event': 1.0.4
+      '@leafer/core': 1.0.4
     dev: false
 
   /@leafer-ui/web@1.0.0-beta.9:
@@ -2307,6 +2367,20 @@ packages:
       '@leafer/partner': 1.0.2
       '@leafer/web': 1.0.2
 
+  /@leafer-ui/web@1.0.4:
+    resolution: {integrity: sha512-X8FOk/vOyP+oW+4LZHz4aVthp4s0nlwdvwIi82H23nEQfQtQVarH+PLW1+DqS/9qRod6cMcX/16ePLVwFw3pbA==}
+    dependencies:
+      '@leafer-ui/core': 1.0.4
+      '@leafer-ui/draw': 1.0.4
+      '@leafer-ui/interaction-web': 1.0.4
+      '@leafer-ui/interface': 1.0.4
+      '@leafer-ui/partner': 1.0.4
+      '@leafer/core': 1.0.4
+      '@leafer/interface': 1.0.4
+      '@leafer/partner': 1.0.4
+      '@leafer/web': 1.0.4
+    dev: false
+
   /@leafer/canvas-web@1.0.0-beta.9:
     resolution: {integrity: sha512-As2v8WwahCfNZEZVitR80UkCozfDA7KTMxBHR0lEvFK/Y/iPMxQyrtVgoo0mGjC9BoD9MNADtj2Oz8clrbFs7A==}
     dependencies:
@@ -2328,6 +2402,12 @@ packages:
     resolution: {integrity: sha512-SNanOVDrkIPmkBeuL2iJ32+TDpQaIzb4W12URmUdnVnBS5Lrv9LqfKRJ4KKUINar+yQlm5Lx49hfJHs6T41wjA==}
     dependencies:
       '@leafer/core': 1.0.2
+
+  /@leafer/canvas-web@1.0.4:
+    resolution: {integrity: sha512-Hzg+YUaD/3EkTkzorr71xuPVw9ICqIhkN03FuTKMctxTKS4WUS3jFrwJjd9jD8m5f7g+5F3EKOBxIYldYPABsQ==}
+    dependencies:
+      '@leafer/core': 1.0.4
+    dev: false
 
   /@leafer/canvas@1.0.0-beta.9:
     resolution: {integrity: sha512-HI64xpeZprOQwg475tG/7jj63MXc3DKyfiT9oF5r2D+URj686GYyVdaWf964yZkEcm70vnLK7mDqnpzhM9hxiA==}
@@ -2364,16 +2444,16 @@ packages:
       '@leafer/path': 1.0.2
       '@leafer/platform': 1.0.2
 
-  /@leafer/canvas@1.0.3:
-    resolution: {integrity: sha512-FOXauIb0KqUM3zGoLIb1ecltPsUMnuWG/JFn7kxAl/nZ5k7H0rV03YqB84OLQVgJzo8zVxXcFWDU43HZ3YO3fQ==}
+  /@leafer/canvas@1.0.4:
+    resolution: {integrity: sha512-iFs6EXw6YcYZabCIelz/yPmID1pojDvcciawhzoF4lmvTiCpCySqM9oZDNA/aFp6Wqn3FQmsFCc5dVUkzFMiMg==}
     dependencies:
-      '@leafer/data': 1.0.3
-      '@leafer/debug': 1.0.3
-      '@leafer/file': 1.0.3
-      '@leafer/list': 1.0.3
-      '@leafer/math': 1.0.3
-      '@leafer/path': 1.0.3
-      '@leafer/platform': 1.0.3
+      '@leafer/data': 1.0.4
+      '@leafer/debug': 1.0.4
+      '@leafer/file': 1.0.4
+      '@leafer/list': 1.0.4
+      '@leafer/math': 1.0.4
+      '@leafer/path': 1.0.4
+      '@leafer/platform': 1.0.4
     dev: false
 
   /@leafer/core@1.0.0-beta.9:
@@ -2444,25 +2524,25 @@ packages:
       '@leafer/platform': 1.0.2
       '@leafer/task': 1.0.2
 
-  /@leafer/core@1.0.3:
-    resolution: {integrity: sha512-rSwinKzPlPPkGFrX3o3ANd2YCX1nn0jKlX6Vf8zhJWgQ7KBsammYBnZcIA9ye/zew921dmFkDiikNP0jcWpCng==}
+  /@leafer/core@1.0.4:
+    resolution: {integrity: sha512-WoMNfA+e6+EQjM+DO0wZXQZhm8vYqd7WYziluiuODfxpvTghmSx4a3udPk4x1iBm9KR9NXnB9qJUxQ9JLdu1og==}
     dependencies:
-      '@leafer/canvas': 1.0.3
-      '@leafer/data': 1.0.3
-      '@leafer/debug': 1.0.3
-      '@leafer/decorator': 1.0.3
-      '@leafer/display': 1.0.3
-      '@leafer/display-module': 1.0.3
-      '@leafer/event': 1.0.3
-      '@leafer/file': 1.0.3
-      '@leafer/helper': 1.0.3
-      '@leafer/image': 1.0.3
-      '@leafer/layout': 1.0.3
-      '@leafer/list': 1.0.3
-      '@leafer/math': 1.0.3
-      '@leafer/path': 1.0.3
-      '@leafer/platform': 1.0.3
-      '@leafer/task': 1.0.3
+      '@leafer/canvas': 1.0.4
+      '@leafer/data': 1.0.4
+      '@leafer/debug': 1.0.4
+      '@leafer/decorator': 1.0.4
+      '@leafer/display': 1.0.4
+      '@leafer/display-module': 1.0.4
+      '@leafer/event': 1.0.4
+      '@leafer/file': 1.0.4
+      '@leafer/helper': 1.0.4
+      '@leafer/image': 1.0.4
+      '@leafer/layout': 1.0.4
+      '@leafer/list': 1.0.4
+      '@leafer/math': 1.0.4
+      '@leafer/path': 1.0.4
+      '@leafer/platform': 1.0.4
+      '@leafer/task': 1.0.4
     dev: false
 
   /@leafer/data@1.0.0-beta.9:
@@ -2476,8 +2556,8 @@ packages:
   /@leafer/data@1.0.2:
     resolution: {integrity: sha512-GFSXlHFVfvg7RbMrpl6yGCTGfWBLc+0EF4V4210cgpK2gIDOZCg6r4R1m+kYFHiBZnY/aLvGbRF/EczgYqnfpw==}
 
-  /@leafer/data@1.0.3:
-    resolution: {integrity: sha512-FMbO+0MH18+2c/2Stpsi72C/0if51v1Qzr+r+74daW5wOC3nCim6kJ1B+eM2B3tgs6ipbSpLf7ZIanJRRjQ29A==}
+  /@leafer/data@1.0.4:
+    resolution: {integrity: sha512-2lH8Tf8iWQ4/QAuE1FqnF4UfYIoaXGZlK5DIjIKG3KqvFeKo/bmJR4V5/M32e4aO5qUObTJ1vMA59BDUMrrXCQ==}
     dev: false
 
   /@leafer/debug@1.0.0-beta.9:
@@ -2497,10 +2577,10 @@ packages:
     dependencies:
       '@leafer/math': 1.0.2
 
-  /@leafer/debug@1.0.3:
-    resolution: {integrity: sha512-s6BvqFm85qxIJwDgVEGNW/jwdi6qsQGifyNpkQcfmBdhpktswb2W4IoKqANhz6TI0X1UMUsqbKvQoGHfLuvKyA==}
+  /@leafer/debug@1.0.4:
+    resolution: {integrity: sha512-SaZBHq1q7VOMlgiQUIAw0mWRWYWWgB+SZWQacEvgzenuUgHYpw5QiLFi1BBn2+kbFZEW36oWL1CfKuuwGm3KNg==}
     dependencies:
-      '@leafer/math': 1.0.3
+      '@leafer/math': 1.0.4
     dev: false
 
   /@leafer/decorator@1.0.0-beta.9:
@@ -2523,12 +2603,12 @@ packages:
       '@leafer/debug': 1.0.2
       '@leafer/platform': 1.0.2
 
-  /@leafer/decorator@1.0.3:
-    resolution: {integrity: sha512-UlqAhkdad/VmE3Bkayh5xy2lqIJ4fWFFOmvwBE3FBFKRnUK77v0/cgBbTQNhwRDSTH6k9XDHa+Dp6NbwidMT2g==}
+  /@leafer/decorator@1.0.4:
+    resolution: {integrity: sha512-FRcR3dtmiTPj8i3V0O3NLRq8JjJYIe9SHREsM6xtfmjxrCY6bFAzIu4RpTh0mvJeGb+iae608APjTYexIPwQQw==}
     dependencies:
-      '@leafer/data': 1.0.3
-      '@leafer/debug': 1.0.3
-      '@leafer/platform': 1.0.3
+      '@leafer/data': 1.0.4
+      '@leafer/debug': 1.0.4
+      '@leafer/platform': 1.0.4
     dev: false
 
   /@leafer/display-module@1.0.0-beta.9:
@@ -2553,13 +2633,13 @@ packages:
       '@leafer/helper': 1.0.2
       '@leafer/math': 1.0.2
 
-  /@leafer/display-module@1.0.3:
-    resolution: {integrity: sha512-TIiF6gQ2j6tKfeZ1JChgPM2aTGzY59aCmJDLC4asRHXf9fkO8BmmxBD2JqiNThd/435WMlEQMtPSkqSFnnNNRg==}
+  /@leafer/display-module@1.0.4:
+    resolution: {integrity: sha512-2uXbhXcmbol2Q5Cpbnz8MDHISRGYqare61/vt5DfSO19avei+5Bf3oREI/ZMeukcxm4XvIZWCdLIuTgL1c1eDw==}
     dependencies:
-      '@leafer/debug': 1.0.3
-      '@leafer/event': 1.0.3
-      '@leafer/helper': 1.0.3
-      '@leafer/math': 1.0.3
+      '@leafer/debug': 1.0.4
+      '@leafer/event': 1.0.4
+      '@leafer/helper': 1.0.4
+      '@leafer/math': 1.0.4
     dev: false
 
   /@leafer/display@1.0.0-beta.9:
@@ -2599,18 +2679,18 @@ packages:
       '@leafer/math': 1.0.2
       '@leafer/platform': 1.0.2
 
-  /@leafer/display@1.0.3:
-    resolution: {integrity: sha512-yiFw/TNncrHoOgWZ00pwdHipTt/TNcTAeXZoZ41T7fGrpeEORVVThJkbkcqkWoirmWaWTSBCAcHiVoD8HrzuAg==}
+  /@leafer/display@1.0.4:
+    resolution: {integrity: sha512-+IfM8Gqe743bXPpVwcsafq39tAqsVpcWG2G8V7usFYyM5o6Tap9U8j80+jsIkDtxxIbuFv9nYf4JikSd1v1GUA==}
     dependencies:
-      '@leafer/data': 1.0.3
-      '@leafer/debug': 1.0.3
-      '@leafer/decorator': 1.0.3
-      '@leafer/display-module': 1.0.3
-      '@leafer/event': 1.0.3
-      '@leafer/helper': 1.0.3
-      '@leafer/layout': 1.0.3
-      '@leafer/math': 1.0.3
-      '@leafer/platform': 1.0.3
+      '@leafer/data': 1.0.4
+      '@leafer/debug': 1.0.4
+      '@leafer/decorator': 1.0.4
+      '@leafer/display-module': 1.0.4
+      '@leafer/event': 1.0.4
+      '@leafer/helper': 1.0.4
+      '@leafer/layout': 1.0.4
+      '@leafer/math': 1.0.4
+      '@leafer/platform': 1.0.4
     dev: false
 
   /@leafer/event-ui@1.0.0-beta.9:
@@ -2648,12 +2728,12 @@ packages:
       '@leafer/decorator': 1.0.2
       '@leafer/platform': 1.0.2
 
-  /@leafer/event@1.0.3:
-    resolution: {integrity: sha512-rSJqV/gpBo8zZWUaZdrH8Tpp1No0DTjwAw36T1m/RW0I4V4G+bvAvssxnSK8igCuUzJpNB27tvD+/nYlGTDDVQ==}
+  /@leafer/event@1.0.4:
+    resolution: {integrity: sha512-0qVmI/5Jlh/mR7VtU1QYkpZrR1UZbx+FLPQq7PRgAtQ542PJe0t7u0F8oLYNQ/Shdn1YAAj65BrZdTHGgbUujg==}
     dependencies:
-      '@leafer/decorator': 1.0.3
-      '@leafer/math': 1.0.3
-      '@leafer/platform': 1.0.3
+      '@leafer/decorator': 1.0.4
+      '@leafer/math': 1.0.4
+      '@leafer/platform': 1.0.4
     dev: false
 
   /@leafer/file@1.0.0-beta.9:
@@ -2673,10 +2753,10 @@ packages:
     dependencies:
       '@leafer/debug': 1.0.2
 
-  /@leafer/file@1.0.3:
-    resolution: {integrity: sha512-v0iuKlx6ew0ssFlI6i72i/Ij5ZPG/KsZAYi7mvPPdE75qHBSE9/zP6f4cKdra/ZyCnXAEIIDFTFHTfQGiaF4IQ==}
+  /@leafer/file@1.0.4:
+    resolution: {integrity: sha512-HBFFY6vVoI4D1ryhLBT2JYC1ZwvFbCIxnb8hPVPMoRko97utSwQAZUqRHt7A+Uvi3SSJTK8tZw2Polc3oS7hMw==}
     dependencies:
-      '@leafer/debug': 1.0.3
+      '@leafer/debug': 1.0.4
     dev: false
 
   /@leafer/helper@1.0.0-beta.9:
@@ -2696,10 +2776,10 @@ packages:
     dependencies:
       '@leafer/math': 1.0.2
 
-  /@leafer/helper@1.0.3:
-    resolution: {integrity: sha512-tslUQaAWjeP0sZpb2K9ftUOU+21NPNVODRB/MRmafsISOsSFTVZlfdUIMmVCNOwk7KWR+OwuYClcAragIlKX1A==}
+  /@leafer/helper@1.0.4:
+    resolution: {integrity: sha512-RxWVduUTs4mLVSD9nqH05Z3qsTYIzw2WSe7IDhPtbN79J5P3eoTyjd9j0+TgR0q49hb179PXm2LuXHt04/3Y+w==}
     dependencies:
-      '@leafer/math': 1.0.3
+      '@leafer/math': 1.0.4
     dev: false
 
   /@leafer/image-web@1.0.0-beta.9:
@@ -2718,6 +2798,12 @@ packages:
     resolution: {integrity: sha512-JgunoPXohblWFPK1oyR4vZ2xdOj7wMak1HJ8TvKFEh38E4MV0THrvHvSRnrxC19tD0fiEo2gUl6oOzN20B1QfQ==}
     dependencies:
       '@leafer/core': 1.0.2
+
+  /@leafer/image-web@1.0.4:
+    resolution: {integrity: sha512-3pq7HDzsgH21y0nx7iZ3fusxicCqY36WS4d2leYyPBWe8y4YsqMx4CTxjQ58i3MF0KBQIVJqSesengL4DGVAdg==}
+    dependencies:
+      '@leafer/core': 1.0.4
+    dev: false
 
   /@leafer/image@1.0.0-beta.9:
     resolution: {integrity: sha512-KtUQoYZc/n+hs3PToZJBFrWElSgei1eaf/EeYHWLWJbV+Y2m0DOjFq5fUhSLGTRDIjR+P8tqC0SuxsAe0Sykfg==}
@@ -2741,12 +2827,12 @@ packages:
       '@leafer/platform': 1.0.2
       '@leafer/task': 1.0.2
 
-  /@leafer/image@1.0.3:
-    resolution: {integrity: sha512-MK3F5WkKExLydNrIZBom+kPQ8ivnmdbnESRGqfzbVi7mPk6n7YB9wAUO8j9c+/RH1UuYcAocVi6Vbf7ashsVJg==}
+  /@leafer/image@1.0.4:
+    resolution: {integrity: sha512-ZG1Fcugjk9EKx5tkbSK9LmtLuuaoZZx7DiO6/iFB1aCHwXlKSM2KHoDW9rliyPkSDnOkGzTR7tkHTYNgOPyaNg==}
     dependencies:
-      '@leafer/file': 1.0.3
-      '@leafer/platform': 1.0.3
-      '@leafer/task': 1.0.3
+      '@leafer/file': 1.0.4
+      '@leafer/platform': 1.0.4
+      '@leafer/task': 1.0.4
     dev: false
 
   /@leafer/interaction-web@1.0.0-beta.9:
@@ -2798,8 +2884,8 @@ packages:
   /@leafer/interface@1.0.2:
     resolution: {integrity: sha512-pFL5+dR4wilnV4VvHZK8nvTpFXqaYi8enfQX9w52nhL8Qph2hj1yQj2kBaIrNLk11PTYFWu63VxSkdvlxSEyPQ==}
 
-  /@leafer/interface@1.0.3:
-    resolution: {integrity: sha512-2YB8BKjyYo1zAm64yJoVwWiqgE4ww2c06ccjnONtvc9bYsOEbBSVi9SJelCTPOeSarFIZ3ErLAsePvD/6D2IAg==}
+  /@leafer/interface@1.0.4:
+    resolution: {integrity: sha512-jwNHYO9qeejoZbnlSBylwoXyvKfbDXDUym3qFEc2mzmY0JdxhtSXceDI1U7yPuUs6ilIGSO5nfzNqOhDRYz/YQ==}
     dev: false
 
   /@leafer/layout@1.0.0-beta.9:
@@ -2823,12 +2909,12 @@ packages:
       '@leafer/math': 1.0.2
       '@leafer/platform': 1.0.2
 
-  /@leafer/layout@1.0.3:
-    resolution: {integrity: sha512-/XTu9zJnXG8i92nb5rhL/8oyv9Km5rt+E9He8+t0+9EAHEUOZ9kVGqhFsX/VAPkSqrUycsEeO4dflZKBJn3TeA==}
+  /@leafer/layout@1.0.4:
+    resolution: {integrity: sha512-zpsTYcdDF7PlgY3GV7h7xYuwx35QsMZzW8txW8PwQe+rkHO9tCTXAeR3+4ukCMeL9pb5bAxzzhYcQ1Kn+ayr4g==}
     dependencies:
-      '@leafer/helper': 1.0.3
-      '@leafer/math': 1.0.3
-      '@leafer/platform': 1.0.3
+      '@leafer/helper': 1.0.4
+      '@leafer/math': 1.0.4
+      '@leafer/platform': 1.0.4
     dev: false
 
   /@leafer/layouter@1.0.0-beta.9:
@@ -2853,10 +2939,10 @@ packages:
     dependencies:
       '@leafer/core': 1.0.2
 
-  /@leafer/layouter@1.0.3:
-    resolution: {integrity: sha512-+SGA7gFA8RwBAo97UW4oIhGGKe3E4yZTlbV3/wu1EcSFhPHriYtIyYkH4I7qFsSArPuhpZuf3AlmskQ7HI53uw==}
+  /@leafer/layouter@1.0.4:
+    resolution: {integrity: sha512-91snu+NGeNU5CaJa20JNrrNvdUqnZnZP7MGnTsfmULDQCNDd4U0klsUQyEJY1P3xyU90WAOOKEkCt0FHICUM+A==}
     dependencies:
-      '@leafer/core': 1.0.3
+      '@leafer/core': 1.0.4
     dev: false
 
   /@leafer/list@1.0.0-beta.9:
@@ -2870,8 +2956,8 @@ packages:
   /@leafer/list@1.0.2:
     resolution: {integrity: sha512-5me8DTkPOs/gwBAFR5AJ1hPhsDtanfnLWxITAHAvlEr1ycRzItoYiRpk9WHgTnlNtJSYPdnJd6Y8KLAlS/jUsA==}
 
-  /@leafer/list@1.0.3:
-    resolution: {integrity: sha512-6goq2VhvkNkTFBsyMMgLTq3xtvfXMOrOMDzvK+/XFsZumsYfxRrQSW+RoqOEdrQ2Iq3T4nmmVkn11BBjsi3Pmw==}
+  /@leafer/list@1.0.4:
+    resolution: {integrity: sha512-n9T9XR9RSQqvFem1u2rpDNdVAQLwR/ZJrlCQ7Je04QlKh3CdYbNIjuQni1fw7B+gJKkNkeiexr2h6tOiWHm7sA==}
     dev: false
 
   /@leafer/math@1.0.0-beta.9:
@@ -2885,8 +2971,8 @@ packages:
   /@leafer/math@1.0.2:
     resolution: {integrity: sha512-AFa6MayrW1dZoGmi0itQVTZ2p1rADPExZUXYbc/wWbpFIsNnZ0JzmB75Ndl+qqKpCA5UHoeqeQc9+QlW2HzaGw==}
 
-  /@leafer/math@1.0.3:
-    resolution: {integrity: sha512-TEK3DQESxu3EdrEHIiw4C6veC30GJKjJy8UO/OzRtnonfdneoSdXk9QAlilWQn91aU8mx8MyG0R2E8IJW0EKkA==}
+  /@leafer/math@1.0.4:
+    resolution: {integrity: sha512-F4jMb/t/oAVSXZO3su5pZd6BbVk89LRc/ib7tJuldwD/MGeO98XYVIZErxs20NpjTv8bgaHLCxcK1u/ACcG4lA==}
     dev: false
 
   /@leafer/partner@1.0.0-beta.9:
@@ -2918,6 +3004,16 @@ packages:
       '@leafer/selector': 1.0.2
       '@leafer/watcher': 1.0.2
 
+  /@leafer/partner@1.0.4:
+    resolution: {integrity: sha512-pFXbTKGpOvHk+fc8ikvaaY2pHECo4ARUJtXhKyg77yXRPdhA9ioYzfSEA2HfAK7yIMVvuWI5KbQ+qd0JOJzZ1w==}
+    dependencies:
+      '@leafer/core': 1.0.4
+      '@leafer/layouter': 1.0.4
+      '@leafer/renderer': 1.0.4
+      '@leafer/selector': 1.0.4
+      '@leafer/watcher': 1.0.4
+    dev: false
+
   /@leafer/path@1.0.0-beta.9:
     resolution: {integrity: sha512-Vv09fFmXKsn1pkjJGd5S1Ljrobs31Ecy34O0TGMAhlP7MKT22avvDHNyBpczuWG7+NrfU80d+8P6k3pF+Lx9Ug==}
     dependencies:
@@ -2938,11 +3034,11 @@ packages:
       '@leafer/debug': 1.0.2
       '@leafer/math': 1.0.2
 
-  /@leafer/path@1.0.3:
-    resolution: {integrity: sha512-NAksTpjsYYUanJ/XxZm5m+GMY3dNRrcIPUBprnUxz+OKwsS+9W4RvwR348u4Z9aB5xUty1bZ5JLycK2eYAUhqg==}
+  /@leafer/path@1.0.4:
+    resolution: {integrity: sha512-qlA2n5Dfhw7MRmL79ib+JzYNBfV7B/EUVStpvv5uEDgueGWhFQJAn+D6B0poACdvNrSPU6AQxAs0lgR1eCVVeA==}
     dependencies:
-      '@leafer/debug': 1.0.3
-      '@leafer/math': 1.0.3
+      '@leafer/debug': 1.0.4
+      '@leafer/math': 1.0.4
     dev: false
 
   /@leafer/platform@1.0.0-beta.9:
@@ -2965,11 +3061,11 @@ packages:
       '@leafer/debug': 1.0.2
       '@leafer/layouter': 1.0.2
 
-  /@leafer/platform@1.0.3:
-    resolution: {integrity: sha512-Kmpk6evoOXYQu0Vbhiy8RZjV54vEGdp2Yfxw2yR8q5o1zT3yiLU71krrqzHd+HP0E4t9qGvm0AZzianKH0T8yQ==}
+  /@leafer/platform@1.0.4:
+    resolution: {integrity: sha512-TE6zYJkQDW4xCuIAJcUWrGrHQxxvssfTJV2Xa7Tyv6R9/pby917UxzLtalhCwjdROZncEyzpU6+DbWFTVOO2qQ==}
     dependencies:
-      '@leafer/debug': 1.0.3
-      '@leafer/layouter': 1.0.3
+      '@leafer/debug': 1.0.4
+      '@leafer/layouter': 1.0.4
     dev: false
 
   /@leafer/plugin@1.0.0-beta.9:
@@ -3005,6 +3101,12 @@ packages:
     dependencies:
       '@leafer/core': 1.0.2
 
+  /@leafer/renderer@1.0.4:
+    resolution: {integrity: sha512-bWepzlTQJjEcF9lZjKRFvYbEImKkmrX+isjudG3u7au0LBLQOTu7ZFUf2DVS+kESKLkMlx2Xh+nX83ujF3/riA==}
+    dependencies:
+      '@leafer/core': 1.0.4
+    dev: false
+
   /@leafer/selector@1.0.0-beta.9:
     resolution: {integrity: sha512-p/BVfW9DoWF30DuSA9gAgCuvx68czZ0cwJNYE7izgeZGXvSLmKuG0Jpz/Pzc4FynZ5OytktVYbHBsbTAZ+QOaw==}
     dependencies:
@@ -3023,6 +3125,12 @@ packages:
     resolution: {integrity: sha512-OFxyPzQ5OCV2oAFDmp/8hP1YtRLxSGtI/eals4d2mjhR3lNaF1+o6AQ8F6fUO2/d3dfhS/N/4O494xqun37YkA==}
     dependencies:
       '@leafer/core': 1.0.2
+
+  /@leafer/selector@1.0.4:
+    resolution: {integrity: sha512-LdYiRp3gChsPUMo+O+E2kl/03/Z6tO0RKkGs7mIgPHQbne5hvWFyrIPA/SvveGae8ambJyrPZnQFKx3vYt4Wwg==}
+    dependencies:
+      '@leafer/core': 1.0.4
+    dev: false
 
   /@leafer/task@1.0.0-beta.9:
     resolution: {integrity: sha512-USNvOuDvxeAHJ85zR6MnxLnJLx1rLbN21y6F21mrpEd8JlwqIP8FSHRkkt0R/Mdm4J7uTbE4U4Qh587EMuD9mg==}
@@ -3044,11 +3152,11 @@ packages:
       '@leafer/debug': 1.0.2
       '@leafer/math': 1.0.2
 
-  /@leafer/task@1.0.3:
-    resolution: {integrity: sha512-mVNjI78ZD8B/mcnFtmR5UCpGWnT6eqaVDbIMiu3HEfaQhwdRUWhL1WCEEWdEx2g7Y3fsxI+4IABw6at9Hs0yWw==}
+  /@leafer/task@1.0.4:
+    resolution: {integrity: sha512-szn+voWj0fuVXhkzX5C4dgFbphUPfXhGqA4LT5a06K2Gs4i4rLhArH9IcsBGE0c82p6THQV8ArgsBj67vRiRLA==}
     dependencies:
-      '@leafer/debug': 1.0.3
-      '@leafer/math': 1.0.3
+      '@leafer/debug': 1.0.4
+      '@leafer/math': 1.0.4
     dev: false
 
   /@leafer/watcher@1.0.0-beta.9:
@@ -3073,6 +3181,14 @@ packages:
       '@leafer/data': 1.0.2
       '@leafer/event': 1.0.2
       '@leafer/list': 1.0.2
+
+  /@leafer/watcher@1.0.4:
+    resolution: {integrity: sha512-OSr8bv86Y5TTpJK0crGPU2rK9Gy/F+ETlZYubVPyv5FPtMdMXOIVrTquolNE3Y28aFbAZ1yXTmYX2lQTPEmE+Q==}
+    dependencies:
+      '@leafer/data': 1.0.4
+      '@leafer/event': 1.0.4
+      '@leafer/list': 1.0.4
+    dev: false
 
   /@leafer/web@1.0.0-beta.9:
     resolution: {integrity: sha512-/htjNvDlMto1SBsB3wPj7ONnOXbROqHblW0wiLjY7mcp+ztN+XWB8mqD0HwibeeqUn0XYVIt+eE6leM3jydNSg==}
@@ -3100,6 +3216,14 @@ packages:
       '@leafer/canvas-web': 1.0.2
       '@leafer/core': 1.0.2
       '@leafer/image-web': 1.0.2
+
+  /@leafer/web@1.0.4:
+    resolution: {integrity: sha512-lWHZvE9YpqKnPW1loC5T6XWwYxfEaJFUfl6cP+56anrWimW8yw0qZqPBtlCERWj67X6EYa+7bbesSOt0Q93xCQ==}
+    dependencies:
+      '@leafer/canvas-web': 1.0.4
+      '@leafer/core': 1.0.4
+      '@leafer/image-web': 1.0.4
+    dev: false
 
   /@nodelib/fs.scandir@2.1.5:
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -6609,6 +6733,21 @@ packages:
       '@leafer/interface': 1.0.2
       '@leafer/partner': 1.0.2
       '@leafer/web': 1.0.2
+
+  /leafer-ui@1.0.4:
+    resolution: {integrity: sha512-WICQW2FMUygfLd3RUHiiqOS52rbAT7pMPwavaqamW6cxsNN7TQMGi6ntSaWqx0Xl71rc2UqNCnE4wkCMmaNzqA==}
+    dependencies:
+      '@leafer-ui/core': 1.0.4
+      '@leafer-ui/draw': 1.0.4
+      '@leafer-ui/interaction-web': 1.0.4
+      '@leafer-ui/interface': 1.0.4
+      '@leafer-ui/partner': 1.0.4
+      '@leafer-ui/web': 1.0.4
+      '@leafer/core': 1.0.4
+      '@leafer/interface': 1.0.4
+      '@leafer/partner': 1.0.4
+      '@leafer/web': 1.0.4
+    dev: false
 
   /levn@0.4.1:
     resolution: {integrity: sha512-+bT2uH4E5LGE7h/n3evcS/sQlJXCpIp6ym8OWJ5eV6+67Dsql/LaaT7qJBAt2rzfoa/5QBGBhxDix1dMt2kQKQ==}

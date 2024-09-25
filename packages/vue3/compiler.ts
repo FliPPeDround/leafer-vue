@@ -17,6 +17,7 @@ const elementNames = [
   'Canvas',
 
   'Text',
+  'Custom',
 ]
 
 export function isCustomElement(name: string, customElements: string[] = []) {

@@ -12,8 +12,19 @@ export interface ElementWithProps extends IUI {
 }
 
 export const renderer = createRenderer<IUI, ElementWithProps>({
-  createElement(tag) {
-    const element = UI.one({ tag })
+  createElement(tag, _?, Constructor?) {
+    let element: IUI
+    if (tag === 'Custom') {
+      if (!Constructor) {
+        throw new Error('Custom tag must have is attribute')
+      }
+      else {
+        element = new (Constructor as unknown as new () => IUI)()
+      }
+    }
+    else {
+      element = UI.one({ tag })
+    }
     markRaw(element)
     return element
   },

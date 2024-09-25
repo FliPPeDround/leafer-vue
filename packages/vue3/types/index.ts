@@ -21,6 +21,7 @@ interface LeaferVueComponents {
   Canvas: LeaferVueComponent<ICanvasInputData>
 
   Text: LeaferVueComponent<ITextInputData>
+  Custom: LeaferVueComponent<{ is: new () => unknown }>
 }
 
 declare module 'vue' {

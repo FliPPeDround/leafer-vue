@@ -74,8 +74,17 @@ var Empty = class extends Leaf {
 // renderer/renderer.ts
 var { log } = useLogger();
 var renderer = createRenderer({
-  createElement(tag) {
-    const element = UI.one({ tag });
+  createElement(tag, _, Constructor) {
+    let element;
+    if (tag === "Custom") {
+      if (!Constructor) {
+        throw new Error("Custom tag must have is attribute");
+      } else {
+        element = new Constructor();
+      }
+    } else {
+      element = UI.one({ tag });
+    }
     markRaw(element);
     return element;
   },

@@ -56,7 +56,6 @@
   },
   "dependencies": {
     "@vue/runtime-core": "^3.5.4",
-    "leafer-ui": "^1.0.2",
     "vue": "^3.5.4"
   }
 }

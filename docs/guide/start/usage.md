@@ -7,19 +7,19 @@ import code from './index.vue?raw'
 ::: code-group
 
 ```bash [<div flex items-center><div i-vscode-icons:file-type-pnpm mr2 /> pnpm</div>]
-pnpm i leafer-vue
+pnpm i leafer-ui leafer-vue
 ```
 
 ```bash [<div flex items-center><div i-vscode-icons:file-type-yarn mr2 /> yarn</div>]
-yarn add leafer-vue
+yarn add leafer-ui leafer-vue
 ```
 
 ```bash [<div flex items-center><div i-vscode-icons:file-type-npm mr2 /> npm</div>]
-npm i leafer-vue
+npm i leafer-ui leafer-vue
 ```
 
 ```bash [<div flex items-center><div i-vscode-icons:file-type-bun mr2 /> bun</div>]
-bun add leafer-vue
+bun add leafer-ui leafer-vue
 ```
 
 :::

@@ -17,6 +17,7 @@ export default defineConfig ((options) => {
     onSuccess: async () => {
       const leaferVueEsm = fs.readFileSync('./dist/index.js', 'utf-8')
       fs.writeFileSync('./../../docs/public/leafer-vue.proxy.js', leaferVueEsm)
+      fs.writeFileSync('./../../playground/public/leafer-vue.proxy.js', leaferVueEsm)
       // eslint-disable-next-line no-console
       console.log(buildBanner)
       return Promise.resolve()

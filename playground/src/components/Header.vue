@@ -2,11 +2,11 @@
 import type { Store, VersionKey } from '@/composables/store'
 import type { Ref } from 'vue'
 import {
-  getSupportedEpVersions,
+  getSupportedLfUIVersions,
+  getSupportedLfVUEVersions,
   getSupportedTSVersions,
   getSupportedVueVersions,
 } from '@/utils/dependency'
-import { languageToolsVersion } from '@vue/repl'
 
 const { store } = defineProps<{
   store: Store
@@ -14,10 +14,7 @@ const { store } = defineProps<{
 const emit = defineEmits<{
   (e: 'refresh'): void
 }>()
-const appVersion = import.meta.env.APP_VERSION
-const replVersion = import.meta.env.REPL_VERSION
 
-const nightly = ref(false)
 const dark = useDark()
 const toggleDark = useToggle(dark)
 
@@ -28,10 +25,15 @@ interface Version {
 }
 
 const versions = reactive<Record<VersionKey, Version>>({
-  elementPlus: {
-    text: 'Element Plus',
-    published: getSupportedEpVersions(nightly),
-    active: store.versions.elementPlus,
+  leaferUI: {
+    text: 'Leafer UI',
+    published: getSupportedLfUIVersions(),
+    active: store.versions.leaferUI,
+  },
+  leaferVue: {
+    text: 'Leafer Vue',
+    published: getSupportedLfVUEVersions(),
+    active: store.versions.leaferVue,
   },
   vue: {
     text: 'Vue',
@@ -49,11 +51,6 @@ async function setVersion(key: VersionKey, v: string) {
   versions[key].active = `loading...`
   await store.setVersion(key, v)
   versions[key].active = v
-}
-
-function toggleNightly() {
-  store.toggleNightly(nightly.value)
-  setVersion('elementPlus', 'latest')
 }
 
 async function copyLink() {
@@ -80,16 +77,8 @@ function refreshView() {
       >
       <div flex="~ gap-1" items-center lt-sm-hidden>
         <div text-xl>
-          Element Plus Playground
+          Leafer Vue Playground
         </div>
-        <el-tag size="small">
-          v{{ appVersion }}, repl v{{ replVersion }}, volar v{{
-            languageToolsVersion
-          }}
-        </el-tag>
-        <el-tag v-if="store.pr" size="small">
-          PR {{ store.pr }}
-        </el-tag>
       </div>
     </div>
 
@@ -109,26 +98,6 @@ function refreshView() {
           w-36
           @update:model-value="setVersion(key, $event)"
         >
-          <template v-if="key === 'elementPlus'" #header>
-            <div flex="~ items-center">
-              <el-checkbox v-model="nightly" @change="toggleNightly">
-                nightly
-              </el-checkbox>
-              <el-tooltip
-                placement="top"
-                content="A release of the development branch that is published every night."
-              >
-                <div
-                  i-ri-question-line
-                  ml-1
-                  h-4
-                  w-4
-                  cursor-pointer
-                  hover:color-primary
-                />
-              </el-tooltip>
-            </div>
-          </template>
           <el-option v-for="ver of v.published" :key="ver" :value="ver">
             {{ ver }}
           </el-option>
@@ -145,7 +114,7 @@ function refreshView() {
           @click="toggleDark()"
         />
         <a
-          href="https://github.com/element-plus/element-plus-playground"
+          href="https://github.com/FliPPeDround/leafer-vue"
           target="_blank"
           flex
           hover:color-primary

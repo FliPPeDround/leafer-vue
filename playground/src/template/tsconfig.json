@@ -4,7 +4,7 @@
     "jsx": "preserve",
     "module": "ESNext",
     "moduleResolution": "Bundler",
-    "types": ["element-plus/global.d.ts"],
+    "types": ["leafer-vue"],
     "allowImportingTsExtensions": true,
     "allowJs": true,
     "checkJs": true

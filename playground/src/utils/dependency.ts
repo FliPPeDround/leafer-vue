@@ -2,11 +2,13 @@ import type { Versions } from '@/composables/store'
 import type { ImportMap } from '@vue/repl'
 import type { MaybeRef } from '@vueuse/core'
 import type { Ref } from 'vue'
+import { IS_DEV } from '@/constants'
 import { gte } from 'semver'
 
 export interface Dependency {
   pkg?: string
   version?: string
+  devPath?: string
   path: string
 }
 
@@ -33,30 +35,20 @@ export function genCompilerSfcLink(version: string) {
   )
 }
 
-export function genImportMap({ vue, elementPlus }: Partial<Versions> = {}, nightly: boolean): ImportMap {
+export function genImportMap(version: Partial<Versions> = {}): ImportMap {
   const deps: Record<string, Dependency> = {
     'vue': {
-      pkg: '@vue/runtime-dom',
-      version: vue,
-      path: '/dist/runtime-dom.esm-browser.js',
+      version: version.vue,
+      path: '/dist/vue.esm-browser.prod.js',
     },
-    '@vue/shared': {
-      version: vue,
-      path: '/dist/shared.esm-bundler.js',
+    'leafer-ui': {
+      version: version.leaferUI,
+      path: '/dist/web.module.min.js',
     },
-    'element-plus': {
-      pkg: nightly ? '@element-plus/nightly' : 'element-plus',
-      version: elementPlus,
-      path: '/dist/index.full.min.mjs',
-    },
-    'element-plus/': {
-      pkg: 'element-plus',
-      version: elementPlus,
-      path: '/',
-    },
-    '@element-plus/icons-vue': {
-      version: '2',
-      path: '/dist/index.min.js',
+    'leafer-vue': {
+      version: version.leaferVue,
+      path: '/dist/web.module.min.js',
+      devPath: `${location.origin}/leafer-vue.proxy.js`,
     },
   }
 
@@ -64,7 +56,9 @@ export function genImportMap({ vue, elementPlus }: Partial<Versions> = {}, night
     imports: Object.fromEntries(
       Object.entries(deps).map(([key, dep]) => [
         key,
-        genCdnLink(dep.pkg ?? key, dep.version, dep.path),
+        IS_DEV && dep.devPath
+          ? dep.devPath
+          : genCdnLink(dep.pkg ?? key, dep.version, dep.path),
       ]),
     ),
   }
@@ -100,14 +94,16 @@ export function getSupportedTSVersions() {
   )
 }
 
-export function getSupportedEpVersions(nightly: MaybeRef<boolean>) {
-  const pkg = computed(() =>
-    unref(nightly) ? '@element-plus/nightly' : 'element-plus',
-  )
-  const versions = getVersions(pkg)
+export function getSupportedLfUIVersions() {
+  const versions = getVersions('leafer-ui')
   return computed(() => {
-    if (unref(nightly))
-      return versions.value
-    return versions.value.filter(version => gte(version, '1.1.0-beta.18'))
+    return versions.value.filter(version => gte(version, '1.0.0'))
+  })
+}
+
+export function getSupportedLfVUEVersions() {
+  const versions = getVersions('leafer-vue')
+  return computed(() => {
+    return versions.value.filter(version => gte(version, '1.1.0'))
   })
 }

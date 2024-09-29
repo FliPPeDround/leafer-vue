@@ -29,6 +29,7 @@
     "docs:dev": "nr -C docs docs:dev",
     "docs:build": "nr -C docs docs:build",
     "docs:preview": "nr -C docs docs:preview",
+    "deploy": "npm run build && npm run docs:build && npm run docs:deploy",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "release": "nr release:3",

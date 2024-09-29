@@ -1,12 +1,17 @@
 [build]
 publish = "/docs/.vitepress/dist"
-command = "npx pnpm i --store=node_modules/.pnpm-store && npx pnpm run docs:build"
+command = "pnpm run deploy"
 
 [build.environment]
 NPM_FLAGS = "--version"
-NODE_VERSION = "18"
+NODE_VERSION = "20"
 
 [[redirects]]
 from = "/*"
 to = "index.html"
+status = 200
+
+[[redirects]]
+from = "/play/*"
+to = "/play/index.html"
 status = 200

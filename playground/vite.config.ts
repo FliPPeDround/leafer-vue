@@ -23,11 +23,6 @@ export default defineConfig({
     'import.meta.env.APP_VERSION': JSON.stringify(pkg.version),
     'import.meta.env.REPL_VERSION': JSON.stringify('4.4.2'),
   },
-  build: {
-    rollupOptions: {
-      external: ['typescript'],
-    },
-  },
   server: {
     host: true,
   },
@@ -59,5 +54,16 @@ export default defineConfig({
   ],
   optimizeDeps: {
     exclude: ['@vue/repl'],
+  },
+  build: {
+    outDir: '../docs/dist/play',
+    emptyOutDir: true,
+    rollupOptions: {
+      external: ['typescript'],
+      input: [
+        './index.html',
+        './__play.html',
+      ],
+    },
   },
 })

@@ -1,7 +1,6 @@
 import DefaultTheme from 'vitepress/theme'
-import { h } from 'vue'
+import { h, onMounted } from 'vue'
 import ApiTyping from './components/ApiTyping/index.vue'
-import Repl from './components/repl/index.vue'
 import Layout from './Layout.vue'
 
 import 'uno.css'
@@ -14,6 +13,9 @@ export default {
   },
   enhanceApp: async ({ app }) => {
     app.component('ApiTyping', ApiTyping)
-    app.component('Repl', Repl)
+    onMounted(async () => {
+      const Repl = (await import('./components/repl/index.vue')).default
+      app.component('Repl', Repl)
+    })
   },
 }

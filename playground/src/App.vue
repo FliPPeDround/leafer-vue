@@ -53,13 +53,13 @@ function handleKeydown(evt: KeyboardEvent) {
 }
 
 // persist state
-watchEffect(() =>
+watchEffect(() => {
   history.replaceState(
     {},
     '',
     `${location.origin}${location.pathname}#${store.serialize()}`,
-  ),
-)
+  )
+})
 
 function refreshPreview() {
   replRef.value?.reload()

@@ -22,6 +22,7 @@
     "build:2": "nr -C packages/vue2 build",
     "dev:2": "nr -C packages/vue2 dev",
     "play": "nr -C playground dev",
+    "play:build": "nr -C playground build",
     "example": "nr example:3",
     "example:3": "nr -C examples/vue3 dev",
     "example:2": "nr -C examples/vue2 dev",

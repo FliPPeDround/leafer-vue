@@ -1,5 +1,5 @@
-import { Box, Frame, Group } from 'leafer-ui'
 import type { Container } from './types'
+import { Box, Frame, Group } from 'leafer-ui'
 
 const containerConstructors = {
   Frame,

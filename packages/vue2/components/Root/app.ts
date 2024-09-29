@@ -1,6 +1,6 @@
-import { defineComponent, onMounted } from 'vue-demi'
-import { App } from 'leafer-ui'
 import { useEffectUpdate, useGetPropsByAttrs, useInsertBefore, useSomeNode } from '@/composables'
+import { App } from 'leafer-ui'
+import { defineComponent, onMounted } from 'vue-demi'
 
 export const lfApp = defineComponent({
   name: 'LfApp',

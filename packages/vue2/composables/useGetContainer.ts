@@ -1,7 +1,7 @@
 import type { Leafer } from 'leafer-ui'
 import { getCurrentInstance } from 'vue-demi'
 
-export function useGetContainer(lf?: string) {
+export function useGetContainer(_lf?: string) {
   try {
     const parent = getCurrentInstance()?.proxy?.$parent
     if (parent && 'container' in parent)

@@ -1,7 +1,7 @@
-import { watch } from 'vue-demi'
-import type { IUI } from 'leafer-ui'
-import { useGetPropsByAttrs } from '.'
+import type { IUI } from '@leafer-ui/interface'
 import { diff } from '@/utils'
+import { watch } from 'vue-demi'
+import { useGetPropsByAttrs } from '.'
 
 export function useEffectUpdate(
   attrs: Record<string, any>,
@@ -11,7 +11,9 @@ export function useEffectUpdate(
     () => useGetPropsByAttrs(attrs),
     (newConfig, oldConfig) => {
       const diffConfig = diff(oldConfig, newConfig)
-      diffConfig && instance.set(diffConfig)
+      if (diffConfig) {
+        instance.set(diffConfig)
+      }
     },
   )
 }

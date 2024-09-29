@@ -10,18 +10,18 @@
     "type-check": "vue-tsc --noEmit"
   },
   "dependencies": {
-    "leafer-vue": "workspace:^2.0.0",
-    "vue": "^2.7.7"
+    "leafer-vue": "workspace:^",
+    "vue": "^2.7.16"
   },
   "devDependencies": {
-    "@types/node": "^16.11.45",
-    "@vitejs/plugin-legacy": "^2.0.0",
+    "@types/node": "^16.18.108",
+    "@vitejs/plugin-legacy": "^2.3.1",
     "@vitejs/plugin-vue2": "^1.1.2",
     "@vue/tsconfig": "^0.1.3",
     "npm-run-all": "^4.1.5",
-    "terser": "^5.14.2",
+    "terser": "^5.32.0",
     "typescript": "~4.7.4",
-    "vite": "^3.0.2",
-    "vue-tsc": "^0.38.8"
+    "vite": "^3.2.10",
+    "vue-tsc": "^0.38.9"
   }
 }

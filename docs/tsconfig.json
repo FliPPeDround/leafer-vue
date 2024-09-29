@@ -1,11 +1,11 @@
 {
-  "files": [],
-  "references": [
-    {
-      "path": "./tsconfig.node.json"
-    },
-    {
-      "path": "./tsconfig.app.json"
-    }
-  ]
+  "extends": "@vue/tsconfig/tsconfig.dom.json",
+  "compilerOptions": {
+    "composite": true,
+    "types": [
+      "leafer-vue"
+    ]
+  },
+  "include": ["**/**/*.vue", "shims.d.ts"],
+  "exclude": ["node_modules/**/*"]
 }

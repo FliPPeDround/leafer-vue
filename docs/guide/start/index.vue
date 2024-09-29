@@ -1,10 +1,6 @@
 <script setup lang="ts">
-import { lfLeafer, lfRect } from 'leafer-vue'
+import { LeaferApp } from 'leafer-vue'
 import { ref } from 'vue'
-
-function changeColor() {
-  return `#${Math.floor(Math.random() * 0xFFFFFF).toString(16)}`
-}
 
 const rotation = ref(0)
 function animate() {
@@ -12,23 +8,31 @@ function animate() {
   requestAnimationFrame(animate)
 }
 animate()
+
+const fill = ref('#a8b1ff')
+function changeColor() {
+  fill.value = `#${Math.floor(Math.random() * 0xFFFFFF).toString(16)}`
+}
 </script>
 
 <template>
-  <lfLeafer fill="black">
-    <template
-      v-for="row in 1000"
-      :key="row"
-    >
-      <lfRect
-        v-for="col in 1000"
-        :key="col"
-        :rotation="rotation"
-        :x="(row - 1) * 20" :y="(col - 1) * 20"
-        :width="15" :height="15" fill="#fff"
-        :draggable="true"
-        @tap="changeColor"
-      />
-    </template>
-  </lfLeafer>
+  <LeaferApp :width="672" :height="340" type="draw">
+    <Leafer type="draw" @tap="changeColor">
+      <template
+        v-for="row in 34"
+        :key="row"
+      >
+        <Star
+          v-for="col in 17"
+          :key="col"
+          around="center"
+          :rotation="rotation"
+          :x="(row - 1) * 20" :y="(col - 1) * 20"
+          :width="15" :height="15"
+          :fill="fill"
+          :draggable="true"
+        />
+      </template>
+    </Leafer>
+  </LeaferApp>
 </template>

@@ -72,7 +72,7 @@ export function useStore(initial: Initial) {
     }),
   )
   const store = useReplStore(storeState)
-  store.files[MAIN_FILE].hidden = IS_DEV
+  store.files[MAIN_FILE].hidden = !IS_DEV
   setVueVersion(versions.vue).then(() => {
     initial.initialized?.()
   })

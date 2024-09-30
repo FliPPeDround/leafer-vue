@@ -3,7 +3,8 @@
   "compilerOptions": {
     "composite": true,
     "types": [
-      "leafer-vue"
+      "leafer-vue",
+      "vite/client"
     ]
   },
   "include": ["**/**/*.vue", "shims.d.ts"],

@@ -23,7 +23,7 @@ export default defineConfig({
       },
       {
         text: '演练场',
-        link: 'https://leafer-vue-playground.netlify.app/',
+        link: 'https://leafer-vue.netlify.app/play/',
       },
       {
         text: '生态',

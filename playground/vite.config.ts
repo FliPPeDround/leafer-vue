@@ -14,6 +14,7 @@ import pkg from './package.json'
 const pathSrc = path.resolve(__dirname, 'src')
 
 export default defineConfig({
+  base: '/play/',
   resolve: {
     alias: {
       '@': pathSrc,

@@ -16,8 +16,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "typecheck": "vue-tsc --noEmit",
-    "release": "bumpp"
+    "typecheck": "vue-tsc --noEmit"
   },
   "dependencies": {
     "@unocss/reset": "^0.62.3",

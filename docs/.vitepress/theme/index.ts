@@ -13,9 +13,9 @@ export default {
   },
   enhanceApp: async ({ app }) => {
     app.component('ApiTyping', ApiTyping)
-    onMounted(async () => {
+    if (!import.meta.env.SSR) {
       const Repl = (await import('./components/repl/index.vue')).default
       app.component('Repl', Repl)
-    })
+    }
   },
 }

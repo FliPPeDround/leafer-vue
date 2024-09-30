@@ -13,6 +13,10 @@ export default defineConfig({
       overlay: false,
     },
   },
+
+  ssr: {
+    noExternal: ['naive-ui', 'vueuc'],
+  },
   plugins: [
     UnoCSS(),
     Components({

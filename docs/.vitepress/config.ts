@@ -3,6 +3,7 @@ import { mdPlugin } from './plugin'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  outDir: './dist',
   title: 'leafer-vue',
   description: 'leafer-vue document',
   themeConfig: {

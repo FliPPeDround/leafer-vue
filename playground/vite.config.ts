@@ -62,7 +62,6 @@ export default defineConfig({
       external: ['typescript'],
       input: [
         './index.html',
-        './__play.html',
       ],
     },
   },

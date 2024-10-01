@@ -22,10 +22,5 @@ import code from './leaferApp.vue?raw'
 | viewReady | ^[boolean] | —— | 视图是否准备就绪（完成首次渲染） |
 | running | ^[boolean] | —— | 是否运行中 |
 > 更多属性请查看[Leafer |🌿 Leafer UI](https://www.leaferjs.com/ui/guide/display/Leafer.html)
-
-## 事件
-
-| 名称 | 说明 |
-| --- | --- |
-| LeaferEvent | [Leafer事件](https://www.leaferjs.com/ui/guide/event/basic/Leafer.html) |
-| ChildEvent | [子组件事件](https://www.leaferjs.com/ui/guide/event/basic/Child.html) |
+>
+> 事件请查看[事件处理 |🌿 Leafer Vue](/guide/events/events)

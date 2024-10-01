@@ -6,19 +6,19 @@ import code from './index.vue?raw'
 
 ::: code-group
 
-```bash [<div flex items-center><div i-vscode-icons:file-type-pnpm mr2 /> pnpm</div>]
+```bash [pnpm]
 pnpm i leafer-ui leafer-vue
 ```
 
-```bash [<div flex items-center><div i-vscode-icons:file-type-yarn mr2 /> yarn</div>]
+```bash [yarn]
 yarn add leafer-ui leafer-vue
 ```
 
-```bash [<div flex items-center><div i-vscode-icons:file-type-npm mr2 /> npm</div>]
+```bash [npm]
 npm i leafer-ui leafer-vue
 ```
 
-```bash [<div flex items-center><div i-vscode-icons:file-type-bun mr2 /> bun</div>]
+```bash [bun]
 bun add leafer-ui leafer-vue
 ```
 
@@ -29,7 +29,7 @@ bun add leafer-ui leafer-vue
 添加Vue插件配置，支持自定义元素。
 ::: code-group
 
-```ts [<div flex items-center><div i-vscode-icons:file-type-vite mr2 /> vite.config.ts</div>]
+```ts [vite.config.ts]
 import vue from '@vitejs/plugin-vue'
 import { isCustomElement } from 'leafer-vue/compiler'
 import { defineConfig } from 'vite'
@@ -47,7 +47,7 @@ export default defineConfig({
 })
 ```
 
-```vue [<div flex items-center><div i-vscode-icons:file-type-vue mr2 /> App.vue</div>]
+```vue [App.vue]
 <script setup lang="ts">
 import { LeaferApp } from 'leafer-vue'
 </script>

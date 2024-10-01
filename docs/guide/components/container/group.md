@@ -14,3 +14,5 @@ import code from './Group.vue?raw'
 
 ## API
 > 详情查看[Group |🌿 Leafer UI](https://www.leaferjs.com/ui/guide/display/Group.html)。
+>
+> 事件请查看[事件处理 |🌿 Leafer Vue](/guide/events/events)

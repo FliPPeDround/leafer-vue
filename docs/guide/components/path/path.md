@@ -18,8 +18,5 @@ import code from './Path.vue?raw'
 | windingRule |  "nonzero" \| "evenodd" | nonzero | 路径缠绕规则 |
 
 > 详情查看[Path |🌿 Leafer UI](https://www.leaferjs.com/ui/guide/display/Path.html)。
-
-<!-- ## 事件
-
-| 名称 | 说明 |
-| --- | --- | -->
+>
+> 事件请查看[事件处理 |🌿 Leafer Vue](/guide/events/events)

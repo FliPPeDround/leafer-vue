@@ -139,7 +139,7 @@ export default defineConfig({
           items: [
             {
               text: 'Custom',
-              link: '/guide/components/custom/index',
+              link: '/guide/components/custom/custom',
             },
           ],
         },
@@ -148,7 +148,7 @@ export default defineConfig({
           items: [
             {
               text: '事件处理',
-              link: '/guide/events/index',
+              link: '/guide/events/events',
             },
             {
               text: '交互事件',

@@ -1,8 +1,9 @@
 import DefaultTheme from 'vitepress/theme'
-import { h, onMounted } from 'vue'
+import { h } from 'vue'
 import ApiTyping from './components/ApiTyping/index.vue'
 import Layout from './Layout.vue'
 
+import 'virtual:group-icons.css'
 import 'uno.css'
 import './var.css'
 

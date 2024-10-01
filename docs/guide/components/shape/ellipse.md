@@ -22,3 +22,5 @@ import code from './Ellipse.vue?raw'
 | innerRadius | ^[number] | —— | 内半径比例, 取值范围为 0.0 ～ 1.0 |
 
 > 详情查看[Ellipse |🌿 Leafer UI](https://www.leaferjs.com/ui/guide/display/Ellipse.html)。
+>
+> 事件请查看[事件处理 |🌿 Leafer Vue](/guide/events/events)

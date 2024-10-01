@@ -13,7 +13,6 @@
                   alt="sponsors"
                   crossorigin="anonymous"
                   inline-block
-                  width="768" height="1464"
                   class="resizable-img"
                   loading="lazy"
                   src="https://cdn.jsdelivr.net/gh/FliPPeDround/sponsors/sponsorkit/sponsors.svg"

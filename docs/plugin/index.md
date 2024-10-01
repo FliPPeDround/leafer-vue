@@ -11,19 +11,19 @@ leafer-vue完全兼容leafer插件，你可以通过插件来扩展leafer-vue的
 
 ::: code-group
 
-```bash [<div flex items-center><div i-vscode-icons:file-type-pnpm mr2 /> pnpm</div>]
+```bash [pnpm]
 pnpm i @leafer-in/editor
 ```
 
-```bash [<div flex items-center><div i-vscode-icons:file-type-yarn mr2 /> yarn</div>]
+```bash [yarn]
 yarn add @leafer-in/editor
 ```
 
-```bash [<div flex items-center><div i-vscode-icons:file-type-npm mr2 /> npm</div>]
+```bash [npm]
 npm i @leafer-in/editor
 ```
 
-```bash [<div flex items-center><div i-vscode-icons:file-type-bun mr2 /> bun</div>]
+```bash [bun]
 bun add @leafer-in/editor
 ```
 :::

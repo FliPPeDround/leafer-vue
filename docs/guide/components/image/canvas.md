@@ -22,8 +22,5 @@ import code from './Canvas.vue?raw'
 | contextSettings | ^[object] | —— | 画布上下文设置 |
 
 > 详情查看[Canvas |🌿 Leafer UI](https://www.leaferjs.com/ui/guide/display/Canvas.html)。
-
-<!-- ## 事件
-
-| 名称 | 说明 |
-| --- | --- | -->
+>
+> 事件请查看[事件处理 |🌿 Leafer Vue](/guide/events/events)

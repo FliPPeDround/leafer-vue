@@ -33,8 +33,5 @@ import code from './../app/leaferApp.vue?raw'
 | padding | ^[number[]] | —— | 文本内边距，可分别设置 4 个值 |
 
 > 更多属性请查看[Text |🌿 Leafer UI](https://www.leaferjs.com/ui/reference/display/Text.html)
-
-<!-- ## 事件
-
-| 名称 | 说明 |
-| --- | --- | -->
+>
+> 事件请查看[事件处理 |🌿 Leafer Vue](/guide/events/events)

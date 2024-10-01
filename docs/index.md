@@ -14,7 +14,7 @@ hero:
       link: https://github.com/FliPPeDround/leafer-vue
     - theme: alt
       text: 演练场
-      link: https://github.com/FliPPeDround/leafer-vue
+      link: https://leafer-vue.netlify.app/play/
 
 features:
   - title: Vue渲染器

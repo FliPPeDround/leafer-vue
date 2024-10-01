@@ -6,26 +6,26 @@
 
 ::: code-group
 
-```bash [<div flex items-center><div i-vscode-icons:file-type-pnpm mr2 /> pnpm</div>]
+```bash [pnpm]
 pnpm i leafer-vue@2
 ```
 
-```bash [<div flex items-center><div i-vscode-icons:file-type-yarn mr2 /> yarn</div>]
+```bash [yarn]
 yarn add leafer-vue@2
 ```
 
-```bash [<div flex items-center><div i-vscode-icons:file-type-npm mr2 /> npm</div>]
+```bash [npm]
 npm i leafer-vue@2
 ```
 
-```bash [<div flex items-center><div i-vscode-icons:file-type-bun mr2 /> bun</div>]
+```bash [bun]
 bun add leafer-vue@2
 ```
 
 :::
 ::: code-group
 
-```vue [<div flex items-center><div i-vscode-icons:file-type-vue mr2 /> App.vue</div>]
+```vue [App.vue]
 <script setup lang="ts">
 import { lfFrame, lfLeafer, lfRect } from 'leafer-vue'
 </script>

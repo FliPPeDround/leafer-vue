@@ -20,8 +20,5 @@ import code from './Image.vue?raw'
 | url | ^[string] | —— | 图片地址 |
 
 > 详情查看[Image |🌿 Leafer UI](https://www.leaferjs.com/ui/guide/display/Image.html)。
-
-<!-- ## 事件
-
-| 名称 | 说明 |
-| --- | --- | -->
+>
+> 事件请查看[事件处理 |🌿 Leafer Vue](/guide/events/events)

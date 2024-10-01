@@ -24,7 +24,7 @@
 
 ::: code-group
 
-```vue [<div flex items-center><div i-vscode-icons:file-type-vue mr2 /> App.vue</div>]
+```vue [App.vue]
 <script setup lang="ts">
 import { Leafer as LeaferUI } from 'leafer-ui'
 import { LeaferApp } from 'leafer-vue'
@@ -53,7 +53,7 @@ function handelTap() {
 
 ::: code-group
 
-```vue [<div flex items-center><div i-vscode-icons:file-type-vue mr2 /> App.vue</div>]
+```vue [App.vue]
 <script setup lang="ts">
 import { Leafer as LeaferUI } from 'leafer-ui'
 import { LeaferApp } from 'leafer-vue'

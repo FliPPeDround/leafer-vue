@@ -210,10 +210,22 @@ export default defineConfig({
       ],
     },
 
+    editLink: {
+      pattern: 'https://github.com/FliPPeDround/leafer-vue/edit/main/docs/:path',
+      text: '帮助改善此页面！',
+    },
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/FliPPeDround/leafer-vue' },
+      {
+        icon: 'github',
+        link: 'https://github.com/FliPPeDround/leafer-vue',
+      },
     ],
+    footer: {
+      message: 'Released under the MIT License.',
+      copyright: 'Copyright © 2023-PRESENT FliPPeDround',
+    },
   },
+
   markdown: {
     config: md => md.use(mdPlugin),
   },

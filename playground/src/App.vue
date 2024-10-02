@@ -4,7 +4,7 @@ import { Repl } from '@vue/repl'
 import Monaco from '@vue/repl/monaco-editor'
 import { useStore } from './composables/store'
 
-const loading = ref(true)
+const loading = ref(false)
 const replRef = ref<InstanceType<typeof Repl>>()
 
 const AUTO_SAVE_KEY = 'auto-save-state'
@@ -101,9 +101,14 @@ body {
   height: calc(100vh - var(--nav-height)) !important;
 }
 
-.dark .vue-repl,
+.dark .vue-repl {
+  --color-branding: #40883C !important;
+  --color-branding-dark: #40883C !important;
+}
+
 .vue-repl {
-  --color-branding: var(--el-color-primary) !important;
+  --color-branding: #66A659 !important;
+  --color-branding-dark: #66A659 !important;
 }
 
 .dark body {

@@ -5,6 +5,7 @@ hero:
   name: "leafer-vue"
   text: "vue渲染器"
   tagline: "使用vue开发leafer应用程序"
+  image: /logo.png
   actions:
     - theme: brand
       text: 快速开始

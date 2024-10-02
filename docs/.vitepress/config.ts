@@ -6,7 +6,12 @@ export default defineConfig({
   outDir: './dist',
   title: 'leafer-vue',
   description: 'leafer-vue document',
+  head: [
+    ['link', { rel: 'icon', href: '/logo.ico' }],
+    ['meta', { name: 'author', content: 'FliPPeDround' }],
+  ],
   themeConfig: {
+    logo: '/logo.png',
     nav: [
       {
         text: '文档',

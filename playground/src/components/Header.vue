@@ -73,7 +73,7 @@ function refreshView() {
         v="mid"
         top="-2px"
         alt="logo"
-        src="../assets/logo.svg"
+        src="/logo.png"
       >
       <div flex="~ gap-1" items-center lt-sm-hidden>
         <div text-xl>

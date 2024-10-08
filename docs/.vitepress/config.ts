@@ -6,6 +6,7 @@ export default defineConfig({
   outDir: './dist',
   title: 'leafer-vue',
   description: 'leafer-vue document',
+  appearance: 'dark',
   head: [
     ['link', { rel: 'icon', href: '/logo.ico' }],
     ['meta', { name: 'author', content: 'FliPPeDround' }],

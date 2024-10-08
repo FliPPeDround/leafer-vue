@@ -1,13 +1,12 @@
 <script setup lang="ts">
 import { Repl, useStore } from '@vue/repl'
 import CodeMirror from '@vue/repl/codemirror-editor'
-import { useDark } from '@vueuse/core'
 import { isCustomElement } from 'leafer-vue/compiler'
 import { computed, ref } from 'vue'
+import { isDark } from './../../composables/dark'
 
 const props = defineProps<{ code: string, imports?: Record<string, string> }>()
 
-const isDark = useDark()
 const store = useStore({
   template: ref({
     welcomeSFC: props.code,
@@ -35,11 +34,11 @@ function handleKeydown(evt: KeyboardEvent) {
 }
 const previewOptions = computed(() => {
   return {
-    bodyHTML: /* html */ `
+    headHTML: /* html */ `
       <style>
         html{
-          background-color: ${isDark ? '#1b1b1f' : '#ffffff'};
-          color: ${isDark ? '#fffff5DB' : '#3c3c43'};
+          background-color: ${isDark.value ? '#1b1b1f' : '#ffffff'};
+          color: ${isDark.value ? '#fffff5DB' : '#3c3c43'};
         }
       </style>
       `,

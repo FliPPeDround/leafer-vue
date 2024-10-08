@@ -17,6 +17,8 @@ export default {
     if (!import.meta.env.SSR) {
       const Repl = (await import('./components/repl/index.vue')).default
       app.component('Repl', Repl)
+      const MoreStarts = (await import('./components/MoreStarts.vue')).default
+      app.component('MoreStart', MoreStarts)
     }
   },
 }

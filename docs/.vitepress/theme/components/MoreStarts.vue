@@ -20,32 +20,34 @@ function handleClick() {
 </script>
 
 <template>
-  <div b="1 solid gray-500/20" flex="~ col" items-center pt2 rounded>
-    <LeaferApp :width="672" :height="340" type="draw">
-      <Leafer type="draw" @tap="changeColor">
-        <template
-          v-for="row in 34"
-          :key="row"
-        >
-          <Star
-            v-for="col in 17"
-            :key="col"
-            around="center"
-            :rotation="rotation"
-            :x="(row - 1) * 20" :y="(col - 1) * 20"
-            :width="15" :height="15"
-            :fill="fill"
-            :draggable="true"
-          />
-        </template>
-      </Leafer>
-    </LeaferApp>
-    <div b-t="1 solid gray-500/20" p2 flex justify-end w-full>
-      <div
-        i-file-icons:test-generic
-        cursor-pointer hover="c-#66A659"
-        @click="handleClick"
-      />
+  <ClientOnly>
+    <div b="1 solid gray-500/20" flex="~ col" items-center pt2 rounded>
+      <LeaferApp :width="672" :height="340" type="draw">
+        <Leafer type="draw" @tap="changeColor">
+          <template
+            v-for="row in 34"
+            :key="row"
+          >
+            <Star
+              v-for="col in 17"
+              :key="col"
+              around="center"
+              :rotation="rotation"
+              :x="(row - 1) * 20" :y="(col - 1) * 20"
+              :width="15" :height="15"
+              :fill="fill"
+              :draggable="true"
+            />
+          </template>
+        </Leafer>
+      </LeaferApp>
+      <div b-t="1 solid gray-500/20" p2 flex justify-end w-full>
+        <div
+          i-file-icons:test-generic
+          cursor-pointer hover="c-#66A659"
+          @click="handleClick"
+        />
+      </div>
     </div>
-  </div>
+  </ClientOnly>
 </template>

@@ -9,7 +9,7 @@ import code from './Rect.vue?raw'
 ## 用法
 <Repl :code />
 
-## 核心属性
+## 属性
 
 | 名称 | 类型 | 默认值 | 说明 |
 | --- | --- | --- | --- |

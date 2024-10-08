@@ -9,7 +9,7 @@ import code from './leaferApp.vue?raw'
 ## 基础用法
 <Repl :code="code"  />
 
-## 核心属性
+## 属性
 
 | 名称 | 类型 | 默认值 | 说明 |
 | --- | --- | --- | --- |

@@ -1,8 +1,8 @@
+import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import { h } from 'vue'
 import ApiTyping from './components/ApiTyping/index.vue'
 import Layout from './Layout.vue'
-
 import 'virtual:group-icons.css'
 import 'uno.css'
 import './var.css'
@@ -21,4 +21,4 @@ export default {
       app.component('MoreStart', MoreStarts)
     }
   },
-}
+} satisfies Theme

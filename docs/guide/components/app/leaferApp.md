@@ -10,9 +10,7 @@ import code from './leaferApp.vue?raw'
 ## 基础用法
 <Repl :code="code"  />
 
-## API
-
-### LeaferApp Props
+## 属性
 
 | 属性名 | 类型 | 默认值 | 说明 |
 | --- | --- | --- | --- |

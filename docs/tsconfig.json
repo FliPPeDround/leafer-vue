@@ -7,6 +7,6 @@
       "vite/client"
     ]
   },
-  "include": ["**/**/*.vue", "shims.d.ts"],
+  "include": ["**/**/*.vue", "shims.d.ts", ".vitepress/**/*.ts", ".vitepress/**/*.vue"],
   "exclude": ["node_modules/**/*"]
 }

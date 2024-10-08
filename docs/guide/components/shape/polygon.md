@@ -10,7 +10,7 @@ import code from './Polygon.vue?raw'
 
 <Repl :code />
 
-## 核心属性
+## 属性
 
 | 名称 | 类型 | 默认值 | 说明 |
 | --- | --- | --- | --- |

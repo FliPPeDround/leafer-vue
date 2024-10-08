@@ -30,7 +30,7 @@ import code from './../app/leaferApp.vue?raw'
 | paraSpacing | ^[number] | —— | 段落间距，单位为 px |
 | textAlign | ^[string] | —— | 文字对齐方式 |
 | verticalAlign | ^[string] | —— | 文字垂直对齐方式 |
-| padding | ^[number[]] | —— | 文本内边距，可分别设置 4 个值 |
+| padding | `number[]` | —— | 文本内边距，可分别设置 4 个值 |
 
 > 更多属性请查看[Text |🌿 Leafer UI](https://www.leaferjs.com/ui/reference/display/Text.html)
 >

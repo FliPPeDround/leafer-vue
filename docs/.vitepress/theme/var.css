@@ -14,6 +14,7 @@
   --vp-c-brand-dark: #296E25;
   --vp-c-brand-darker: #135317;
   --vp-c-brand-next: #357B30;
+  --vp-c-bg-soft: #488f460f;
   --vp-c-gutter: var(--vp-c-divider);
   --vp-code-block-bg: rgb(125 125 125 / 0.04);
   --vp-code-tab-divider: var(--vp-c-divider);
@@ -115,4 +116,21 @@
 
 .DocSearch {
   --docsearch-primary-color: var(--vp-c-brand-1) !important;
+}
+
+.image-container {
+  position: relative;
+  margin: 0 auto;
+}
+
+.image-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  width: 192px;
+  height: 192px;
+  background-image: var(--vp-home-hero-image-background-image);
+  filter: var(--vp-home-hero-image-filter);
+  transform: translate(-50%, -50%);
 }

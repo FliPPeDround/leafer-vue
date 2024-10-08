@@ -1,31 +1,33 @@
-<p align="center">
-  <!-- <img class="h-150px" src="/logo.svg" /> -->
-</p>
+<div align="center" class="image-container">
+  <div class="image-bg" />
+  <img class="h-150px" src="/logo.png" />
+</div>
 
-<h1
-  align="center"
->
-  Leafer Vue
-</h1>
-
-<p align="center">
-  <strong>Vue createRenderer for Leafer</strong>
-</p>
+<h1 align="center">Leafer Vue</h1>
 
 <br />
 
-<!-- <div class="flex justify-center gap-2">
-  <img src="https://img.shields.io/github/forks/FliPPeDround/leafer-vue.svg?style=flat-square" />
-  <img src="https://img.shields.io/github/stars/FliPPeDround/leafer-vue.svg?style=flat-square" />
-  <img src="https://img.shields.io/npm/dm/leafer-vue.svg?style=flat-square" />
-  <img src="https://img.shields.io/npm/v/leafer-vue?color=a1b858&style=flat-square" alt="license" />
-  <img src="https://img.shields.io/badge/license-MIT-green.svg?style=flat-square" alt="license" />
-  <img src="https://img.shields.io/badge/Leafer-v1-ff69b4.svg?style=flat-square" alt="pixi version" />
-</div> -->
+创建一个可交互`leafer-vue`应用，可以拖拽、点击改变颜色的星星。
+<MoreStart />
 
-## 在线使用
-创建一个交互应用，可以缩放平移视图、拖拽、点击改变颜色的矩形。
-<script setup lang="ts">
-import code from './index.vue?raw'
-</script>
-<Repl :code="code"  />
+## 安装
+
+::: code-group
+
+```bash [pnpm]
+pnpm i leafer-ui leafer-vue
+```
+
+```bash [yarn]
+yarn add leafer-ui leafer-vue
+```
+
+```bash [npm]
+npm i leafer-ui leafer-vue
+```
+
+```bash [bun]
+bun add leafer-ui leafer-vue
+```
+
+:::

@@ -1,6 +1,7 @@
-# <div flex items-center>Vue2 <div i-vscode-icons:file-type-vue ml2 /></div>
+# Vue2
 
 因为vue2不支持自定义渲染器，所以采用封装组件的方式，实现leafer-ui组件化
+> 性能不及vue3版本
 
 ## 快速安装
 

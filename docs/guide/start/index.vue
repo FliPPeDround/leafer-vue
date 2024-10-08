@@ -9,7 +9,7 @@ function animate() {
 }
 animate()
 
-const fill = ref('#a8b1ff')
+const fill = ref('#66A659')
 function changeColor() {
   fill.value = `#${Math.floor(Math.random() * 0xFFFFFF).toString(16)}`
 }

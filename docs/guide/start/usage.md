@@ -46,6 +46,10 @@ export default defineConfig({
   ],
 })
 ```
+:::
+
+## 基础使用
+::: code-group
 
 ```vue [App.vue]
 <script setup lang="ts">
@@ -56,6 +60,7 @@ import { LeaferApp } from 'leafer-vue'
   <LeaferApp :width="672" :height="340">
     <Leafer>
       <Star
+        fill="#66A659"
         :width="15" :height="15"
         :draggable="true"
       />
@@ -64,3 +69,7 @@ import { LeaferApp } from 'leafer-vue'
 </template>
 ```
 :::
+
+## 在线尝试
+
+<Repl :code />

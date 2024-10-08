@@ -9,6 +9,7 @@ declare module 'vue' {
   export interface GlobalComponents {
     ApiTyping: typeof import('./.vitepress/theme/components/ApiTyping/index.vue')['default']
     HomePage: typeof import('./.vitepress/theme/components/HomePage.vue')['default']
+    MoreStart: typeof import('./.vitepress/theme/components/MoreStart.vue')['default']
     Repl: typeof import('./.vitepress/theme/components/repl/index.vue')['default']
   }
 }

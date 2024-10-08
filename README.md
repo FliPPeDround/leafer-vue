@@ -1,52 +1,45 @@
-# leafer-vue
+<p align="center">
+  <img width="200" src=".github/images/logo.png" alt="logo/">
+</p>
 
-<span class="badge-npmdownloads">
-  <a href="https://www.npmjs.com/package/leafer-vue">
-    <img src="https://img.shields.io/npm/v/leafer-vue.svg" alt="Version">
-  </a>
-  <a href="https://www.npmjs.com/package/leafer-vue">
-    <img src="https://img.shields.io/npm/l/leafer-vue.svg" alt="License">
-  </a>
-</span>
+<h1 align="center">Leafer Vue</h1>
 
-## leafer-vue is a vue component library based on leafer-ui and vue
+<p align="center">
+  <img src="https://img.shields.io/github/forks/FliPPeDround/leafer-vue.svg?style=flat-square" />
+  <img src="https://img.shields.io/github/stars/FliPPeDround/leafer-vue.svg?style=flat-square" />
+  <img src="https://img.shields.io/npm/dm/leafer-vue.svg?style=flat-square" />
+  <img src="https://img.shields.io/npm/v/leafer-vue?color=a1b858&style=flat-square" alt="license" />
+  <img src="https://img.shields.io/badge/license-MIT-green.svg?style=flat-square" alt="license" />
+</p>
 
-## Features
-
-- 🚀 Support Vue 2 & 3
-- 🦾 TypeScript
+<h2 align="center">
+  <a href="https://leafer-vue.netlify.app/">Documentation</a>
+</h2>
 
 ## Install
 
 ```bash
-npm install leafer-vue
+npm install leafer-ui leafer-vue
 ```
+## Try it Online
+[![Playground](https://img.shields.io/badge/leafer-Playground-66A659.svg?style=flat-square)](https://leafer-vue.netlify.app/play/)
 
-```bash
-# for vue2
-npm install leafer-vue@2
-```
+## License
 
-## Usage
+[MIT](https://github.com/FliPPeDround/leafer-vue/blob/master/LICENSE)
 
-```html
-<script setup lang="ts">
-import { lfFrame, lfRect, lfLeafer } from 'leafer-vue'
-</script>
+## Credits
 
-<template>
-  <lfLeafer :width="500" :height="500" fill="#000">
-    <lfFrame :width="300" :height="300" fill="#0f0">
-      <lfRect
-        :width="100" :height="100" fill="#f00"
-        :draggable="true"
-        @tap="console.log('tag')"
-      />
-    </lfFrame>
-  </lfLeafer>
-</template>
-```
+- [leaferjs/ui](https://github.com/leaferjs/ui)
+- [hairyf/vue3-pixi](https://github.com/hairyf/vue3-pixi)
+- [vuejs/repl](https://github.com/vuejs/repl)
+- [element-plus/element-plus-playground](https://github.com/element-plus/element-plus-playground)
+- Icon Design by [@马清路德汀](https://weibo.com/u/5225481233)
 
-## Documentation
+## 🙇🏻‍♂️[赞助](https://afdian.com/a/flippedround)
 
-### [leafer-vue](https://leafer-vue.netlify.app/guide/start/install.html)
+<p align="center">
+  <a href="https://afdian.com/a/flippedround">
+    <img alt="sponsors" src="https://cdn.jsdelivr.net/gh/FliPPeDround/sponsors/sponsorkit/sponsors.svg"/>
+  </a>
+</p>

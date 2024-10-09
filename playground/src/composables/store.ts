@@ -13,8 +13,8 @@ import {
   useStore as useReplStore,
 } from '@vue/repl'
 import { objectOmit } from '@vueuse/core'
+import tsconfigCode from '../template/_tsconfig.json?raw'
 import mainCode from '../template/main.vue?raw'
-import tsconfigCode from '../template/tsconfig.json?raw'
 import welcomeCode from '../template/welcome.vue?raw'
 
 export interface Initial {

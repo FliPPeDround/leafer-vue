@@ -22,7 +22,7 @@ const store = useStore({
     imports: {
       'vue': 'https://unpkg.com/vue/dist/vue.esm-browser.prod.js',
       'leafer-ui': 'https://unpkg.com/leafer-ui/dist/web.module.min.js',
-      'leafer-vue': `${location.origin}/leafer-vue.proxy.js`,
+      'leafer-vue': import.meta.env.DEV ? `${location.origin}/leafer-vue.proxy.js` : 'https://unpkg.com/leafer-vue/dist/index.js',
       ...props.imports,
     },
   }),

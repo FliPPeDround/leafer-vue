@@ -47,7 +47,7 @@ export function genImportMap(version: Partial<Versions> = {}): ImportMap {
     },
     'leafer-vue': {
       version: version.leaferVue,
-      path: '/dist/web.module.min.js',
+      path: '/dist/index.js',
       devPath: `${location.origin}/leafer-vue.proxy.js`,
     },
   }
@@ -104,6 +104,6 @@ export function getSupportedLfUIVersions() {
 export function getSupportedLfVUEVersions() {
   const versions = getVersions('leafer-vue')
   return computed(() => {
-    return versions.value.filter(version => gte(version, '1.1.0'))
+    return versions.value.filter(version => gte(version, '3.1.0'))
   })
 }

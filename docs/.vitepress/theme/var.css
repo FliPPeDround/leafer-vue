@@ -134,3 +134,7 @@
   filter: var(--vp-home-hero-image-filter);
   transform: translate(-50%, -50%);
 }
+
+.VPHomeSponsors {
+  margin-bottom: 0 !important;
+}

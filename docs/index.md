@@ -27,6 +27,7 @@ features:
   - title: 在线演练场
     icon: 🎪
     details: 提供在线演练场，支持运行leafer-vue应用程序
+    link: https://leafer-vue.netlify.app/play/
   - title: 无需打包
     icon: ☁️
     details: 提供CDN引用，无需打包

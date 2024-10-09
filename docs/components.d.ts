@@ -11,5 +11,6 @@ declare module 'vue' {
     HomePage: typeof import('./.vitepress/theme/components/HomePage.vue')['default']
     MoreStarts: typeof import('./.vitepress/theme/components/MoreStarts.vue')['default']
     Repl: typeof import('./.vitepress/theme/components/repl/index.vue')['default']
+    Sponsors: typeof import('./.vitepress/theme/components/Sponsors.vue')['default']
   }
 }

@@ -35,6 +35,10 @@ export default defineConfig({
         link: 'https://leafer-vue.netlify.app/play/',
       },
       {
+        text: '赞助',
+        link: 'https://afdian.com/a/flippedround',
+      },
+      {
         text: '生态',
         items: [
           { text: 'vue2', link: '/intro/vue2' },

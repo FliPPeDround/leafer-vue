@@ -37,7 +37,7 @@ You can try leafer-vue in your browser, in the
 - [element-plus/element-plus-playground](https://github.com/element-plus/element-plus-playground)
 - Icon Design by [@马清路德汀](https://weibo.com/u/5225481233)
 
-## 🙇🏻‍♂️[赞助](https://afdian.com/a/flippedround)
+## 🙇🏻‍♂️[Sponsors](https://afdian.com/a/flippedround)
 
 <p align="center">
   <a href="https://afdian.com/a/flippedround">

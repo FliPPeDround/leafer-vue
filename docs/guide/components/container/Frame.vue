@@ -14,7 +14,7 @@ import { LeaferApp } from 'leafer-vue'
           :y="120"
           :width="100"
           :height="100"
-          fill="#00a98e"
+          fill="#66A659"
           draggable
         />
       </Frame>
@@ -22,7 +22,7 @@ import { LeaferApp } from 'leafer-vue'
         :width="200"
         :height="200"
         :x="400"
-        fill="#00a98e"
+        fill="#66A659"
         :overflow="true"
       >
         <Ellipse

@@ -23,7 +23,7 @@ function handelChange(e: PropertyEvent) {
       <Rect
         :width="width"
         :height="50"
-        fill="#00a98e"
+        fill="#66A659"
         @tap="width += 10"
         @property-change="handelChange"
       />

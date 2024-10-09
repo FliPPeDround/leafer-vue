@@ -23,7 +23,7 @@ function handelResize(e: ResizeEvent) {
     :width="width"
     :height="270"
     type="draw"
-    fill="#00a98e"
+    fill="#66A659"
   >
     <Leafer @resize="handelResize" />
   </LeaferApp>

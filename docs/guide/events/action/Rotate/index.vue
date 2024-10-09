@@ -18,7 +18,7 @@ function handeleRotate(e: IRotateEvent) {
         :x="250"
         :y="100"
         :rotation="rotation"
-        fill="#00a98e"
+        fill="#66A659"
         draggable
       />
     </Leafer>

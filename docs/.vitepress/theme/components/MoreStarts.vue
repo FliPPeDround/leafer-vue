@@ -33,8 +33,8 @@ function handleClick() {
               :key="col"
               around="center"
               :rotation="rotation"
-              :x="(row - 1) * 20" :y="(col - 1) * 20"
-              :width="15" :height="15"
+              :x="(row - 1) * 20 + 6" :y="(col - 1) * 20 + 6"
+              :width="12" :height="12"
               :fill="fill"
               :draggable="true"
             />

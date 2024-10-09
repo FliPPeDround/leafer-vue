@@ -8,7 +8,7 @@ import { LeaferApp } from 'leafer-vue'
       <Rect
         :width="50"
         :height="50"
-        fill="#00a98e"
+        fill="#66A659"
       />
     </Leafer>
   </LeaferApp>

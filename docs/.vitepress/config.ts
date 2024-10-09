@@ -13,6 +13,9 @@ export default defineConfig({
   ],
   themeConfig: {
     logo: '/logo.png',
+    search: {
+      provider: 'local',
+    },
     nav: [
       {
         text: '文档',

@@ -25,7 +25,7 @@ animate()
         :inner-radius="1"
         around="center"
         :rotation="rotation"
-        stroke="#00a98e"
+        stroke="#66A659"
         :stroke-width="10"
       />
       <Image

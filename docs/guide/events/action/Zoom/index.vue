@@ -20,7 +20,7 @@ function handeleZoom(e: IZoomEvent) {
         v-bind="size"
         :x="250"
         :y="100"
-        fill="#00a98e"
+        fill="#66A659"
         draggable
       />
     </Leafer>

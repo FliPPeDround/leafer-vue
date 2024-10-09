@@ -25,7 +25,7 @@ function handleRemove() {
         :height="50"
         :x="(item - 1) * 60"
         :y="0"
-        fill="#00a98e"
+        fill="#66A659"
       />
     </Leafer>
   </LeaferApp>

@@ -22,7 +22,8 @@
 npm install leafer-ui leafer-vue
 ```
 ## Try it Online
-[![Playground](https://img.shields.io/badge/leafer-Playground-66A659.svg?style=flat-square)](https://leafer-vue.netlify.app/play/)
+You can try leafer-vue in your browser, in the
+[![Playground](https://img.shields.io/badge/Playground-66A659.svg?style=flat-square)](https://leafer-vue.netlify.app/play/)
 
 ## License
 

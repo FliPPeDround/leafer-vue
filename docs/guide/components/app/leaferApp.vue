@@ -22,7 +22,7 @@ requestAnimationFrame(animate)
     <Leafer>
       <Text
         text="Hello Leafer Vue"
-        fill="#00a98e"
+        fill="#66A659"
         font-weight="black"
         :italic="true"
         :x="100"

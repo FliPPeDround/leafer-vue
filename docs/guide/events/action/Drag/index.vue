@@ -2,7 +2,7 @@
 import { LeaferApp } from 'leafer-vue'
 import { ref } from 'vue'
 
-const fill = ref('#00a98e')
+const fill = ref('#66A659')
 </script>
 
 <template>
@@ -14,7 +14,7 @@ const fill = ref('#00a98e')
         :fill="fill"
         draggable
         @drag-start="() => fill = '#a8b1ff'"
-        @drag-end="() => fill = '#00a98e'"
+        @drag-end="() => fill = '#66A659'"
       />
     </Leafer>
   </LeaferApp>

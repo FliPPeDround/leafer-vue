@@ -16,7 +16,7 @@ function handleTap() {
 <template>
   <LeaferApp :width="672" :height="340" type="draw">
     <Leafer>
-      <Rect v-bind="size" fill="#00a98e" @tap="handleTap" />
+      <Rect v-bind="size" fill="#66A659" @tap="handleTap" />
     </Leafer>
   </LeaferApp>
 </template>

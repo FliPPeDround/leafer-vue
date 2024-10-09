@@ -17,7 +17,7 @@ function handleDrop() {
       <Rect
         :width="50"
         :height="50"
-        fill="#00a98e"
+        fill="#66A659"
         draggable
       />
     </Leafer>

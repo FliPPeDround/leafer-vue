@@ -21,7 +21,7 @@ function handleLayout(e: WatchEvent) {
       <Rect
         :width="width"
         :height="50"
-        fill="#00a98e"
+        fill="#66A659"
       />
     </Leafer>
   </LeaferApp>

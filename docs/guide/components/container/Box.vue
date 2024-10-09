@@ -8,7 +8,7 @@ import { LeaferApp } from 'leafer-vue'
       <Box
         :width="210" :height="40"
         :corner-radius="20"
-        fill="#00a98e"
+        fill="#66A659"
         draggable
       >
         <Star

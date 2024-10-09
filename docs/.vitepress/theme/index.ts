@@ -6,6 +6,7 @@ import Layout from './Layout.vue'
 import 'virtual:group-icons.css'
 import 'uno.css'
 import './var.css'
+import './blur.css'
 
 export default {
   extends: DefaultTheme,

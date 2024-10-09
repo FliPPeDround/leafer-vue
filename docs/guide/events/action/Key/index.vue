@@ -24,7 +24,7 @@ function handeleZoom(e: IKeyEvent) {
         v-bind="position"
         :width="100"
         :height="100"
-        fill="#00a98e"
+        fill="#66A659"
       />
     </Leafer>
   </LeaferApp>

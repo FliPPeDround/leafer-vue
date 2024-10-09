@@ -12,7 +12,7 @@ const point = ref({ x: 250, y: 100 })
         v-bind="point"
         :width="100"
         :height="100"
-        fill="#00a98e"
+        fill="#66A659"
         @swipe-left="() => point.x -= 20"
         @swipe-right="() => point.x += 20"
         @swipe-up="() => point.y -= 20"

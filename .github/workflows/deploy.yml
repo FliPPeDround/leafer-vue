@@ -1,0 +1,13 @@
+name: Deploy to Netlify
+
+on:
+  push:
+    tags:
+      - 'docs*'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Deploy to Netlify
+      run: curl -X POST -d {} ${{ secrets.NETLIFY_BUILD_HOOK_URL }}

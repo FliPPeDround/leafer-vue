@@ -1,6 +1,6 @@
 # DragEvent
 拖动事件。
-> 详情请查看[DragEvent |🌿 Leafer UI](https://www.leaferjs.com/ui/guide/event/ui/Drag.html)
+> 详情请查看[DragEvent |🌿 Leafer UI](https://www.leaferjs.com/ui/reference/event/ui/Drag.html)
 
 ## 示例
 <script setup lang="ts">

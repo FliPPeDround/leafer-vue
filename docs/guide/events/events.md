@@ -16,7 +16,7 @@
 <Rect @tap.once="() => console.log('Tap')" />
 ```
 
-> 详情请查看 [once |🌿 Leafer UI ](https://www.leaferjs.com/ui/guide/property/on.html#%E5%8F%AA%E7%9B%91%E5%90%AC%E4%B8%80%E6%AC%A1%E4%BA%8B%E4%BB%B6)
+> 详情请查看 [once |🌿 Leafer UI ](https://www.leaferjs.com/ui/reference/property/on.html#%E5%8F%AA%E7%9B%91%E5%90%AC%E4%B8%80%E6%AC%A1%E4%BA%8B%E4%BB%B6)
 
 ## 移除事件
 
@@ -45,7 +45,7 @@ function handelTap() {
 ```
 :::
 
-> 详情请查看 [off |🌿 Leafer UI ](https://www.leaferjs.com/ui/guide/property/off.html)
+> 详情请查看 [off |🌿 Leafer UI ](https://www.leaferjs.com/ui/reference/property/off.html)
 
 ## 派发事件
 
@@ -71,6 +71,6 @@ nextTick(() => {
   </LeaferApp>
 </template>
 ```
-> 详情请查看 [emit |🌿 Leafer UI ](https://www.leaferjs.com/ui/guide/property/emit.html)
+> 详情请查看 [emit |🌿 Leafer UI ](https://www.leaferjs.com/ui/reference/property/emit.html)
 
-更复杂的[模拟交互](https://www.leaferjs.com/ui/guide/event/simulation.html)
+更复杂的[模拟交互](https://www.leaferjs.com/ui/reference/event/simulation.html)

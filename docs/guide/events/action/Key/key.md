@@ -2,7 +2,7 @@
 
 键盘事件。
 只能在 Leafer 实例上监听键盘事件。
-> 详情请查看[KeyEvent |🌿 Leafer UI](https://www.leaferjs.com/ui/guide/event/ui/Key.html)
+> 详情请查看[KeyEvent |🌿 Leafer UI](https://www.leaferjs.com/ui/reference/event/ui/Key.html)
 
 ## 示例
 

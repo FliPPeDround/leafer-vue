@@ -1,7 +1,7 @@
 # LeaferEvent
 Leafer 事件。
 
-> 详情请查看[LeaferEvent |🌿 Leafer UI](https://www.leaferjs.com/ui/guide/event/basic/Leafer.html)
+> 详情请查看[LeaferEvent |🌿 Leafer UI](https://www.leaferjs.com/ui/reference/event/basic/Leafer.html)
 
 ## 示例
 <script setup lang="ts">

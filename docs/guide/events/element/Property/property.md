@@ -1,7 +1,7 @@
 # PropertyEvent
 元素属性事件，leafer.ready 事件之后才会派发此事件。
 
-> 详情请查看[PropertyEvent |🌿 Leafer UI](https://www.leaferjs.com/ui/guide/event/basic/Property.html)
+> 详情请查看[PropertyEvent |🌿 Leafer UI](https://www.leaferjs.com/ui/reference/event/basic/Property.html)
 
 ## 示例
 

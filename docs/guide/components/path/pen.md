@@ -10,6 +10,6 @@ import code from './Pen.vue?raw'
 
 <Repl :code />
 
-> 详情查看[Path |🌿 Leafer UI](https://www.leaferjs.com/ui/guide/display/Path.html)。
+> 详情查看[Path |🌿 Leafer UI](https://www.leaferjs.com/ui/reference/display/Path.html)。
 >
 > 事件请查看[事件处理 |🌿 Leafer Vue](/guide/events/events)

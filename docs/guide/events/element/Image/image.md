@@ -1,6 +1,6 @@
 # ImageEvent
 图片事件。
-> 详情请查看[ImageEvent |🌿 Leafer UI](https://www.leaferjs.com/ui/guide/event/basic/Image.html)
+> 详情请查看[ImageEvent |🌿 Leafer UI](https://www.leaferjs.com/ui/reference/event/basic/Image.html)
 
 ## 示例
 

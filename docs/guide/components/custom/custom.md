@@ -1,5 +1,5 @@
 # Custom
-> 自定义元素，详情请查看[Custom |🌿 Leafer UI](https://www.leaferjs.com/ui/guide/display/custom/base/register.html)
+> 自定义元素，详情请查看[Custom |🌿 Leafer UI](https://www.leaferjs.com/ui/reference/display/custom/base/register.html)
 
 ## 用法
 <script setup lang="ts">

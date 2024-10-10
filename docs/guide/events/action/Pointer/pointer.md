@@ -1,6 +1,6 @@
 # PointerEvent
 鼠标、手写笔、触摸屏点击事件。
-> 详情请查看[PointerEvent |🌿 Leafer UI](https://www.leaferjs.com/ui/guide/event/ui/Pointer.html)
+> 详情请查看[PointerEvent |🌿 Leafer UI](https://www.leaferjs.com/ui/reference/event/ui/Pointer.html)
 
 ## 示例
 <script setup lang="ts">

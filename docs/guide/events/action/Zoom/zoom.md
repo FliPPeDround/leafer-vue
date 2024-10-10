@@ -3,7 +3,7 @@
 1. 移动端: 双指捏合
 2. 触摸板: 双指滑动
 3. 鼠标: Ctrl / Command + 滚轮
-> 详情请查看[ZoomEvent |🌿 Leafer UI](https://www.leaferjs.com/ui/guide/event/ui/Zoom.html)
+> 详情请查看[ZoomEvent |🌿 Leafer UI](https://www.leaferjs.com/ui/reference/event/ui/Zoom.html)
 
 ## 示例
 

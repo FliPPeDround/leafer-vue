@@ -18,6 +18,6 @@ import code from './Box.vue?raw'
 | width | ^[number] | —— | 宽度 |
 | height | ^[number] | —— | 高度 |
 | overflow | ^['show']\| ^['hide'] | ^['hide'] | 超出部分是否裁剪 |
-> 详情查看[Box |🌿 Leafer UI](https://www.leaferjs.com/ui/guide/display/Box.html)。
+> 详情查看[Box |🌿 Leafer UI](https://www.leaferjs.com/ui/reference/display/Box.html)。
 >
 > 事件请查看[事件处理 |🌿 Leafer Vue](/guide/events/events)

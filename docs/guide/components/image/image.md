@@ -4,7 +4,7 @@ import code from './Image.vue?raw'
 
 # Image
 >
-> 图片对象，另外所有图形都支持通过 图案填充 来显示图片。
+> 图片对象，另外所有图形都支持通过[图案填充](https://www.leaferjs.com/ui/reference/property/paint/image.html)来显示图片。
 >
 
 ## 用法
@@ -19,6 +19,6 @@ import code from './Image.vue?raw'
 | height | ^[number] | —— | 高度， 默认使用图片原始高度 |
 | url | ^[string] | —— | 图片地址 |
 
-> 详情查看[Image |🌿 Leafer UI](https://www.leaferjs.com/ui/guide/display/Image.html)。
+> 详情查看[Image |🌿 Leafer UI](https://www.leaferjs.com/ui/reference/display/Image.html)。
 >
 > 事件请查看[事件处理 |🌿 Leafer Vue](/guide/events/events)

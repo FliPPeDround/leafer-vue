@@ -1,6 +1,6 @@
 # SwipeEvent
 滑动事件。
-> 详情请查看[SwipeEvent |🌿 Leafer UI](https://www.leaferjs.com/ui/guide/event/ui/Swipe.html)
+> 详情请查看[SwipeEvent |🌿 Leafer UI](https://www.leaferjs.com/ui/reference/event/ui/Swipe.html)
 
 ## 示例
 

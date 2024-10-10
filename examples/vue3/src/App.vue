@@ -6,8 +6,11 @@ import { LeaferApp } from 'leafer-vue'
 <template>
   <LeaferApp :width="672" :height="340" type="draw">
     <Leafer>
+      <Frame />
+      <Box />
+      <Group />
+      <Image />
       <Custom
-        :is="Arrow"
         v-bind="{
           y: 50,
           strokeCap: 'square',

@@ -1,4 +1,4 @@
-import type { IBoxInputData, ICanvasInputData, IEllipseInputData, IFrameInputData, IGroupInputData, IImageInputData, ILeaferInputData, ILineInputData, IPathInputData, IPenInputData, IPolygonInputData, IRectInputData, IStarInputData, ITextInputData } from '@leafer-ui/interface'
+import type { IAppInputData, IBoxInputData, ICanvasInputData, IEllipseInputData, IFrameInputData, IGroupInputData, IImageInputData, ILeaferInputData, ILineInputData, IPathInputData, IPenInputData, IPolygonInputData, IRectInputData, IStarInputData, ITextInputData } from '@leafer-ui/interface'
 import type { _LeaferEvent } from './LeaferEventType'
 import type { LeaferVueComponent } from './LeaferVueComponent'
 
@@ -21,7 +21,9 @@ interface LeaferVueComponents {
   Canvas: LeaferVueComponent<ICanvasInputData>
 
   Text: LeaferVueComponent<ITextInputData>
-  Custom: LeaferVueComponent<{ is: new () => unknown }>
+  Custom: LeaferVueComponent<{
+    is: new () => unknown
+  }>
 }
 
 declare module 'vue' {
@@ -35,3 +37,6 @@ declare module '@vue/runtime-core' {
 declare module '@vue/runtime-dom' {
   interface GlobalComponents extends LeaferVueComponents {}
 }
+
+declare const LeaferApp: LeaferVueComponent<IAppInputData>
+export { LeaferApp }

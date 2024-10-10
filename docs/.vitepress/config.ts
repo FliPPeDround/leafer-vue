@@ -1,7 +1,6 @@
 import { defineConfig } from 'vitepress'
 import { mdPlugin } from './plugin'
 
-// https://vitepress.dev/reference/site-config
 export default defineConfig({
   outDir: './dist',
   title: 'leafer-vue',

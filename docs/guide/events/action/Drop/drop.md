@@ -1,6 +1,6 @@
 # DropEvent
 拖放事件。
-> 详情请查看[DropEvent |🌿 Leafer UI](https://www.leaferjs.com/ui/reference/event/ui/Drop.html)
+> 详情请查看[DropEvent |🌿 Leafer UI](https://www.leaferjs.com/ui/guide/event/ui/Drop.html)
 
 ## 示例
 

@@ -1,7 +1,7 @@
 # RenderEvent
 渲染事件。
 
-> 详情请查看[RenderEvent |🌿 Leafer UI](https://www.leaferjs.com/ui/reference/event/basic/Render.html)
+> 详情请查看[RenderEvent |🌿 Leafer UI](https://www.leaferjs.com/ui/guide/event/basic/Render.html)
 
 ## 示例
 

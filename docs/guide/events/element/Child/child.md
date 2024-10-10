@@ -1,10 +1,10 @@
 # ChildEvent
 Child 事件。
 
-`leafer.ready` 事件之后才会派发此事件，想在 ready 前 [执行相关事件](https://www.leaferjs.com/ui/reference/property/layer.html#waitparent)？
+`leafer.ready` 事件之后才会派发此事件，想在 ready 前 [执行相关事件](https://www.leaferjs.com/ui/guide/property/layer.html#waitparent)？
 
 事件派发的顺序为：子元素、父元素、Leafer 实例，[渲染生命周期](https://www.leaferjs.com/ui/guide/life/render.html) 中会监听此事件。
-> 详情请查看[ChildEvent |🌿 Leafer UI](https://www.leaferjs.com/ui/reference/event/basic/Child.html)
+> 详情请查看[ChildEvent |🌿 Leafer UI](https://www.leaferjs.com/ui/guide/event/basic/Child.html)
 
 ## 示例
 

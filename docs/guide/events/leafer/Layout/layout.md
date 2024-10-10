@@ -1,7 +1,7 @@
 # LayoutEvent
 布局事件。
 
-> 详情请查看[LayoutEvent |🌿 Leafer UI](https://www.leaferjs.com/ui/reference/event/basic/Layout.html)
+> 详情请查看[LayoutEvent |🌿 Leafer UI](https://www.leaferjs.com/ui/guide/event/basic/Layout.html)
 
 ## 示例
 

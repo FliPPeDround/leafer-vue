@@ -27,6 +27,11 @@ const SponsorsData = {
       url: 'https://www.leaferjs.com/',
       img: 'https://avatars.githubusercontent.com/u/83396016?v=4',
     },
+    {
+      name: 'cunzhiwang',
+      url: 'https://github.com/cunzhiwang',
+      img: 'https://avatars.githubusercontent.com/u/57314096?v=4',
+    },
   ],
 } satisfies Record<string, Sponsor[]>
 

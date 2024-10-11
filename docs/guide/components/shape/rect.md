@@ -18,6 +18,6 @@ import code from './Rect.vue?raw'
 | fill | ^[string] | —— | 填充色 |
 | cornerRadius | ^[number] | —— | 圆角大小，可以分别设置 4 个圆角 |
 
-> 详情查看[Rect |🌿 Leafer UI](https://www.leaferjs.com/ui/guide/display/Rect.html)。
+> 详情查看[Rect |🌿 Leafer UI](https://www.leaferjs.com/ui/reference/display/Rect.html)。
 >
 > 事件请查看[事件处理 |🌿 Leafer Vue](/guide/events/events)

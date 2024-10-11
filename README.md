@@ -8,12 +8,14 @@
   <img src="https://img.shields.io/github/forks/FliPPeDround/leafer-vue.svg?style=flat-square" />
   <img src="https://img.shields.io/github/stars/FliPPeDround/leafer-vue.svg?style=flat-square" />
   <img src="https://img.shields.io/npm/dm/leafer-vue.svg?style=flat-square" />
-  <img src="https://img.shields.io/npm/v/leafer-vue?color=a1b858&style=flat-square" alt="license" />
-  <img src="https://img.shields.io/badge/license-MIT-green.svg?style=flat-square" alt="license" />
+  <img src="https://img.shields.io/npm/v/leafer-vue?color=a1b858&style=flat-square" />
+  <img src="https://img.shields.io/badge/license-MIT-green.svg?style=flat-square" />
+  <img src="https://api.netlify.com/api/v1/badges/b7d65499-ee3a-44a2-92fc-0684ddb27918/deploy-status">
 </p>
 
 <h2 align="center">
-  <a href="https://leafer-vue.netlify.app/">Documentation</a>
+  <a href="https://leafer-vue.netlify.app/">Documentation</a> |
+  <a href="https://leafer-vue.netlify.app/play/">Playground</a>
 </h2>
 
 ## Install

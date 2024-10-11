@@ -21,6 +21,6 @@ import code from './Canvas.vue?raw'
 | smooth | ^[boolean] | ^[true] | 是否平滑绘制图像 |
 | contextSettings | ^[object] | —— | 画布上下文设置 |
 
-> 详情查看[Canvas |🌿 Leafer UI](https://www.leaferjs.com/ui/guide/display/Canvas.html)。
+> 详情查看[Canvas |🌿 Leafer UI](https://www.leaferjs.com/ui/reference/display/Canvas.html)。
 >
 > 事件请查看[事件处理 |🌿 Leafer Vue](/guide/events/events)

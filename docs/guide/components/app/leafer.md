@@ -18,9 +18,6 @@ import code from './leaferApp.vue?raw'
 | pixelRatio | ^[number] | 1 | 像素比 |
 | fill | ^[string] | —— | 填充色 |
 | hittable |^[boolean] | true | 是否响应交互事件 |
-| ready | ^[boolean] | —— | 否准备就绪（完成首次布局） |
-| viewReady | ^[boolean] | —— | 视图是否准备就绪（完成首次渲染） |
-| running | ^[boolean] | —— | 是否运行中 |
-> 更多属性请查看[Leafer |🌿 Leafer UI](https://www.leaferjs.com/ui/guide/display/Leafer.html)
+> 更多属性请查看[Leafer |🌿 Leafer UI](https://www.leaferjs.com/ui/reference/display/Leafer.html)
 >
 > 事件请查看[事件处理 |🌿 Leafer Vue](/guide/events/events)

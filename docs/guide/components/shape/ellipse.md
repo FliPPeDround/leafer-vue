@@ -21,6 +21,6 @@ import code from './Ellipse.vue?raw'
 | endAngle | ^[number] | —— | 弧形的结束`角度`, 取值范围为 -180 ～ 180 |
 | innerRadius | ^[number] | —— | 内半径比例, 取值范围为 0.0 ～ 1.0 |
 
-> 详情查看[Ellipse |🌿 Leafer UI](https://www.leaferjs.com/ui/guide/display/Ellipse.html)。
+> 详情查看[Ellipse |🌿 Leafer UI](https://www.leaferjs.com/ui/reference/display/Ellipse.html)。
 >
 > 事件请查看[事件处理 |🌿 Leafer Vue](/guide/events/events)

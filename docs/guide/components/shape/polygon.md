@@ -18,6 +18,6 @@ import code from './Polygon.vue?raw'
 | height | ^[number] | —— | 高度 |
 | sides | ^[number] | ^[3] | 多边形的边数，取值范围 ≥ 3 |
 
-> 详情查看[Polygon |🌿 Leafer UI](https://www.leaferjs.com/ui/guide/display/Polygon.html)。
+> 详情查看[Polygon |🌿 Leafer UI](https://www.leaferjs.com/ui/reference/display/Polygon.html)。
 >
 > 事件请查看[事件处理 |🌿 Leafer Vue](/guide/events/events)

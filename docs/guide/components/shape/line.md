@@ -23,6 +23,6 @@ import code from './Line.vue?raw'
 | rotation | ^[number] | —— | 旋转`角度`， 取值范围: -180 ～ 180 |
 | toPoint | {x:`^[number]`, y:`^[number]`} | —— | 画到某一点 setter（相对于元素起点的坐标）， 自动换算出 width 与 rotation |
 
-> 详情查看[Line |🌿 Leafer UI](https://www.leaferjs.com/ui/guide/display/Line.html)。
+> 详情查看[Line |🌿 Leafer UI](https://www.leaferjs.com/ui/reference/display/Line.html)。
 >
 > 事件请查看[事件处理 |🌿 Leafer Vue](/guide/events/events)

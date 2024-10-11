@@ -21,7 +21,7 @@ function useGetPropsByAttrs(attrs) {
 
 // components/application/index.ts
 import { App } from "leafer-ui";
-import { defineComponent, h, onMounted, onUnmounted, ref, renderSlot } from "vue";
+import { defineComponent, h, markRaw as markRaw2, onMounted, onUnmounted, renderSlot, shallowRef } from "vue";
 
 // composables/useLogger.ts
 function useLogger() {
@@ -155,31 +155,31 @@ var createApp = renderer.createApp;
 var LeaferApp = defineComponent({
   inheritAttrs: false,
   setup(_props, { slots, expose, attrs }) {
-    const canvas = ref();
+    const canvas = shallowRef();
+    const container = shallowRef();
     const config = useGetPropsByAttrs(attrs);
-    let container;
     function mount() {
-      container = new App({
+      const context = new App({
         ...config,
         view: canvas.value,
-        // start: false,
         width: config.width || 800,
         height: config.height || 600
       });
+      container.value = markRaw2(context);
       const app = createApp({
         render: () => renderSlot(slots, "default")
       });
-      app.mount(container);
+      app.mount(container.value);
     }
     function unMount() {
-      container.destroy();
+      container.value.destroy();
     }
     onMounted(() => {
       mount();
-      useEffectUpdate(attrs, container);
-      expose(container);
+      useEffectUpdate(attrs, container.value);
     });
     onUnmounted(unMount);
+    expose({ app: container });
     return () => h("canvas", { ref: canvas });
   }
 });

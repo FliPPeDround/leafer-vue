@@ -1,13 +1,27 @@
-name: Deploy to Netlify
+name: Conditional Deploy Based on Commit Message
 
-on:
-  push:
-    tags:
-      - 'docs*'
+on: push
 
 jobs:
-  deploy:
+  check_commit:
     runs-on: ubuntu-latest
     steps:
-    - name: Deploy to Netlify
-      run: curl -X POST -d {} ${{ secrets.NETLIFY_BUILD_HOOK_URL }}
+      - name: Checkout code
+        uses: actions/checkout@v2
+      
+      - name: Get commit message
+        id: commit-message
+        run: echo "::set-output name=message::$(git log -1 --pretty=%B)"
+      
+      - name: Check if commit starts with 'docs'
+        id: check-starts
+        run: |
+          if [[ "${{ steps.commit-message.outputs.message }}" == docs* ]]; then
+            echo "::set-output name=trigger::true"
+          else
+            echo "::set-output name=trigger::false"
+          fi
+      
+      - name: Deploy to Netlify
+        if: steps.check-starts.outputs.trigger == 'true'
+        run: curl -X POST -d {} ${{ secrets.NETLIFY_BUILD_HOOK_URL }}

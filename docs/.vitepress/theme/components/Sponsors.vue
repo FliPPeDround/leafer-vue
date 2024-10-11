@@ -21,14 +21,25 @@ const SponsorsData = {
       img: 'https://avatars.githubusercontent.com/u/31850793?v=4',
     },
   ],
-  platinum: [
+  sponsors: [
+    {
+      name: 'leaferjs',
+      url: 'https://www.leaferjs.com/',
+      img: 'https://avatars.githubusercontent.com/u/83396016?v=4',
+    },
   ],
 } satisfies Record<string, Sponsor[]>
 
 const sponsors = [
   {
-    size: 'small',
+    tier: 'Special Sponsors',
+    size: 'medium',
     items: SponsorsData.special,
+  },
+  {
+    tier: 'Sponsors',
+    size: 'small',
+    items: SponsorsData.sponsors,
   },
 ]
 </script>

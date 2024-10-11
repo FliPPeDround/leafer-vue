@@ -1,7 +1,7 @@
 import type { ElementWithProps } from '@/renderer/renderer'
 import { useEffectUpdate, useGetPropsByAttrs } from '@/composables'
 import { App } from 'leafer-ui'
-import { defineComponent, h, markRaw, onMounted, onUnmounted, ref, renderSlot, shallowRef } from 'vue'
+import { defineComponent, h, markRaw, onMounted, onUnmounted, renderSlot, shallowRef } from 'vue'
 import { createApp } from './../../renderer'
 
 export const LeaferApp = defineComponent({

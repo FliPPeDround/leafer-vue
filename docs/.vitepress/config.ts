@@ -199,6 +199,15 @@ export default defineConfig({
           ],
         },
         {
+          text: '其他',
+          items: [
+            {
+              text: '导出',
+              link: '/guide/other/export/export',
+            },
+          ],
+        },
+        {
           text: '更多',
           items: [
             {

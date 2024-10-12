@@ -66,12 +66,13 @@ module.exports = {
 ```
 :::
 
-> [!INFO]
-> 为什么需要配置插件？
->
-> 默认情况下，Vue 会将任何非原生的 HTML 标签优先当作 Vue 组件处理，而将“渲染一个自定义元素”作为后备选项。这会在开发时导致 Vue 抛出一个“解析组件失败”的警告。要让 Vue 知晓特定元素应该被视为自定义元素并跳过组件解析，我们可以指定 [compilerOptions.isCustomElement](https://cn.vuejs.org/api/application#app-config-compileroptions) 选项。
+<details>
+<summary class="info custom-block github-alert">为什么需要配置插件？</summary>
+
+> 默认情况下，Vue 会将任何非原生的 HTML 标签优先当作 Vue 组件处理，而将“渲染一个自定义元素”作为后备选项。这会在开发时导致 Vue 抛出一个“解析组件失败”的警告。要让 Vue 知晓特定元素应该被视为自定义元素并跳过组件解析，我们可以指定 [isCustomElement](https://cn.vuejs.org/api/application#app-config-compileroptions) 选项。
 >
 > 详情请参考 [跳过组件解析 | Vue官方文档](https://cn.vuejs.org/guide/extras/web-components.html#skipping-component-resolution)
+</details>
 
 ## 基础使用
 ::: code-group

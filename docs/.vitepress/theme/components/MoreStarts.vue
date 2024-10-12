@@ -21,7 +21,7 @@ function handleClick() {
 
 <template>
   <ClientOnly>
-    <div b="1 solid gray-500/20" flex="~ col" items-center pt2 rounded>
+    <div b="1 solid gray-500/20" flex="~ col" items-center pt2 rounded overflow-hidden>
       <LeaferApp :width="672" :height="340" type="draw">
         <Leafer type="draw" @tap="changeColor">
           <template

@@ -72,4 +72,9 @@ const previewOptions = computed(() => {
 .output-container {
   height: 100% !important;
 }
+@media (max-width: 720px) {
+  .vue-repl {
+    height: 400px !important;
+  }
+}
 </style>

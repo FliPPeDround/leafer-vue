@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { VPHomeSponsors } from 'vitepress/theme'
+import { ref } from 'vue'
 
 interface Sponsor {
   name: string
@@ -13,38 +14,55 @@ interface Props {
 
 const { message = 'Leafer Vue是一个免费的开源软件，社区的赞助使其成为可能。' } = defineProps<Props>()
 
-const SponsorsData = {
-  special: [
-    {
-      name: 'ModyQyW',
-      url: 'https://github.com/ModyQyW/sponsors',
-      img: 'https://avatars.githubusercontent.com/u/31850793?v=4',
-    },
-  ],
-  sponsors: [
-    {
-      name: 'leaferjs',
-      url: 'https://www.leaferjs.com/',
-      img: 'https://avatars.githubusercontent.com/u/83396016?v=4',
-    },
-    {
-      name: 'cunzhiwang',
-      url: 'https://github.com/cunzhiwang',
-      img: 'https://avatars.githubusercontent.com/u/57314096?v=4',
-    },
-  ],
-} satisfies Record<string, Sponsor[]>
+const SponsorsData = ref<Record<string, Sponsor[]>>({
+  special: [],
+  sponsors: [],
+})
+
+async function getSponsorData() {
+  const data = await fetch(
+    'https://raw.githubusercontent.com/FliPPeDround/sponsors/refs/heads/main/sponsorkit/sponsors.json',
+  ).then(res => res.json()) as {
+    raw: {
+      all_sum_amount: string
+    }
+    sponsor: {
+      avatarUrl: string
+      name: string
+      linkUrl: string
+    }
+  }[]
+
+  data.forEach((item) => {
+    const amount = Number.parseFloat(item.raw.all_sum_amount.replace(/,/g, ''))
+    if (amount >= 100) {
+      SponsorsData.value.special.push({
+        name: item.sponsor.name,
+        img: item.sponsor.avatarUrl,
+        url: item.sponsor.linkUrl,
+      })
+    }
+    else {
+      SponsorsData.value.sponsors.push({
+        name: item.sponsor.name,
+        img: item.sponsor.avatarUrl,
+        url: item.sponsor.linkUrl,
+      })
+    }
+  })
+}
+getSponsorData()
 
 const sponsors = [
   {
     tier: 'Special Sponsors',
     size: 'medium',
-    items: SponsorsData.special,
+    items: SponsorsData.value.special,
   },
   {
     tier: 'Sponsors',
     size: 'small',
-    items: SponsorsData.sponsors,
+    items: SponsorsData.value.sponsors,
   },
 ]
 </script>

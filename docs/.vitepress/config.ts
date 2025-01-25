@@ -205,6 +205,10 @@ export default defineConfig({
               text: '导出',
               link: '/guide/other/export/export',
             },
+            {
+              text: '动画',
+              link: '/guide/other/animate/animate',
+            },
           ],
         },
         {

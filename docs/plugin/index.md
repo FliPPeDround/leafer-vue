@@ -40,5 +40,6 @@ import code from './editor.vue?raw'
     '@leafer-ui/core': 'https://unpkg.com/@leafer-ui/core/lib/core.esm.js',
     'leafer-ui': 'https://unpkg.com/leafer-editor/dist/web.module.min.js',
     '@leafer-in/editor': 'https://unpkg.com/@leafer-in/editor/dist/editor.esm.js',
+    '@leafer-in/resize': 'https://unpkg.com/@leafer-in/resize/dist/resize.esm.js'
   }"
 />

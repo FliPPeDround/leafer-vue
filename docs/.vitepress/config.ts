@@ -43,6 +43,7 @@ export default defineConfig({
           { text: 'vue2', link: '/intro/vue2' },
           { text: 'uni-app', link: '/intro/uni' },
           { text: 'nuxt', link: '/intro/nuxt' },
+          { text: 'awesome', link: '/awesome' },
         ],
       },
     ],
@@ -229,6 +230,10 @@ export default defineConfig({
             {
               text: 'uni-app',
               link: '/intro/uni',
+            },
+            {
+              text: 'Awesome',
+              link: '/awesome',
             },
           ],
         },
